@@ -7,7 +7,7 @@ Sistema de autoservicio para restaurante que permite a los clientes visualizar e
 
 ---
 
-## Historias de Usuario Generadas (23 HU)
+## Historias de Usuario Generadas (56 HU)
 
 ### 1. Gestión del menú digital
 
@@ -42,10 +42,94 @@ Sistema de autoservicio para restaurante que permite a los clientes visualizar e
 | HU-22 | Informar al cliente que su pedido fue recibido | Alta | RF-22 | [#55](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/55) |
 | HU-23 | Mostrar estado del pedido al cliente | Media | RF-23 | [#56](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/56) |
 
+### 3. Gestión de pedidos
+
+| ID | Título | Prioridad | RF | Issue |
+|---|---|---|---|---|
+| HU-24 | Registrar y administrar pedidos realizados | Alta | RF-24 | [#57](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/57) |
+| HU-25 | Consultar y actualizar estado de pedidos | Alta | RF-25 | [#58](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/58) |
+| HU-26 | Cancelar pedidos y registrar motivo | Alta | RF-26 | [#59](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/59) |
+| HU-27 | Conservar historial de pedidos realizados | Media | RF-27 | [#60](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/60) |
+
+### 4. Gestión de cocina
+
+| ID | Título | Prioridad | RF | Issue |
+|---|---|---|---|---|
+| HU-28 | Enviar pedidos a estaciones de cocina | Alta | RF-28 | [#61](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/61) |
+| HU-29 | Visualizar y gestionar tareas por estacion | Alta | RF-29 | [#62](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/62) |
+| HU-30 | Actualizar estado del pedido segun tareas completadas | Alta | RF-30 | [#63](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/63) |
+| HU-31 | Establecer tiempos estimados y alertas de retraso | Alta | RF-31 | [#64](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/64) |
+
+### 5. Organización de estaciones de cocina
+
+| ID | Título | Prioridad | RF | Issue |
+|---|---|---|---|---|
+| HU-32 | Crear y configurar estaciones de trabajo | Alta | RF-32 | [#65](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/65) |
+| HU-33 | Asignar productos a estaciones de preparacion | Alta | RF-33 | [#66](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/66) |
+| HU-34 | Mostrar carga de trabajo y tareas por estacion | Media | RF-34 | [#67](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/67) |
+
+### 6. Sistema de riel de autoservicio
+
+| ID | Título | Prioridad | RF | Issue |
+|---|---|---|---|---|
+| HU-35 | Asociar pedido terminado con mesa de destino | Alta | RF-35 | [#68](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/68) |
+| HU-36 | Enviar orden de transporte al sistema de riel | Alta | RF-36 | [#69](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/69) |
+| HU-37 | Registrar estado del pedido durante transporte | Alta | RF-37 | [#70](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/70) |
+| HU-38 | Generar alerta ante falla en transporte | Alta | RF-38 | [#71](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/71) |
+
+### 7. Gestión de mesas
+
+| ID | Título | Prioridad | RF | Issue |
+|---|---|---|---|---|
+| HU-39 | Registrar y administrar mesas del restaurante | Alta | RF-39 | [#72](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/72) |
+| HU-40 | Mostrar estado de cada mesa y pedidos asociados | Alta | RF-40 | [#73](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/73) |
+| HU-41 | Actualizar estado de mesa segun ciclo de atencion | Alta | RF-41 | [#74](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/74) |
+
+### 8. Gestión de inventario
+
+| ID | Título | Prioridad | RF | Issue |
+|---|---|---|---|---|
+| HU-42 | Registrar y administrar ingredientes del inventario | Alta | RF-42 | [#75](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/75) |
+| HU-43 | Actualizar existencias de ingredientes automaticamente | Alta | RF-43 | [#76](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/76) |
+| HU-44 | Generar alertas de stock bajo en inventario | Alta | RF-44 | [#77](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/77) |
+| HU-45 | Consultar movimientos y existencias del inventario | Media | RF-45 | [#78](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/78) |
+
+### 9. Administración del menú
+
+| ID | Título | Prioridad | RF | Issue |
+|---|---|---|---|---|
+| HU-46 | Crear, modificar y eliminar productos del menu | Alta | RF-46 | [#79](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/79) |
+| HU-47 | Configurar precios, ingredientes y opciones de productos | Alta | RF-47 | [#80](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/80) |
+| HU-48 | Asociar producto con estacion y tiempo estimado | Alta | RF-48 | [#81](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/81) |
+
+### 10. Administración y reportes
+
+| ID | Título | Prioridad | RF | Issue |
+|---|---|---|---|---|
+| HU-49 | Administrar usuarios y asignar roles | Alta | RF-49 | [#82](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/82) |
+| HU-50 | Consultar informacion de ventas, pedidos y productos | Media | RF-50 | [#83](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/83) |
+| HU-51 | Consultar rendimiento de estaciones de cocina | Media | RF-51 | [#84](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/84) |
+
+### 11. Notificaciones y alertas
+
+| ID | Título | Prioridad | RF | Issue |
+|---|---|---|---|---|
+| HU-52 | Generar notificaciones de pedidos y estado | Alta | RF-52 | [#85](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/85) |
+| HU-53 | Generar alertas de retrasos, inventario y fallas | Alta | RF-53 | [#86](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/86) |
+
+### 12. Integración del sistema
+
+| ID | Título | Prioridad | RF | Issue |
+|---|---|---|---|---|
+| HU-54 | Integrar todos los modulos del sistema | Alta | RF-54 | [#87](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/87) |
+| HU-55 | Mantener informacion actualizada entre modulos | Alta | RF-55 | [#88](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/88) |
+| HU-56 | Registrar ciclo completo de cada pedido | Alta | RF-56 | [#89](https://github.com/miguelcebing/Trabajo-final-dise-o-/issues/89) |
+
 ---
 
 ## Flujo del Usuario
 
+### Flujo Principal (Cliente - Pantalla Tactil)
 ```
 [Inicio] → HU-15 (Iniciar nueva orden)
     ↓
@@ -68,6 +152,31 @@ Sistema de autoservicio para restaurante que permite a los clientes visualizar e
 [Seguimiento] → HU-23 (Estado del pedido)
 ```
 
+### Flujo Cocina (Personal)
+```
+[Recibir pedido] → HU-28 (Enviar a estaciones) → HU-29 (Gestionar tareas por estacion)
+    ↓
+[Preparar] → HU-30 (Actualizar estado segun tareas) → HU-31 (Controlar tiempos)
+    ↓
+[Listo] → HU-35 (Asociar con mesa) → HU-36 (Enviar a riel)
+```
+
+### Flujo Riel (Transporte)
+```
+[Recibir orden] → HU-37 (Transportar pedido) → HU-38 (Alertar si hay falla)
+    ↓
+[Entregar] → HU-41 (Actualizar estado mesa)
+```
+
+### Flujo Administracion
+```
+[Configurar] → HU-32/33 (Estaciones) → HU-46/47/48 (Menu) → HU-42 (Inventario) → HU-39 (Mesas) → HU-49 (Usuarios)
+    ↓
+[Monitorear] → HU-24/25/26/27 (Pedidos) → HU-50/51 (Reportes) → HU-52/53 (Notificaciones)
+    ↓
+[Integrar] → HU-54/55/56 (Sistema completo)
+```
+
 ---
 
 ## Requerimientos No Funcionales Detectados
@@ -76,6 +185,9 @@ Sistema de autoservicio para restaurante que permite a los clientes visualizar e
 - La disponibilidad de productos debe actualizarse en tiempo real
 - El sistema de cocina debe recibir pedidos inmediatamente tras confirmación
 - La interfaz debe ser accesible para usuarios sin experiencia técnica
+- El sistema de riel debe funcionar de forma autonoma con monitoreo
+- Los reportes deben actualizarse en tiempo real
+- Las alertas deben ser visuales y opcionalemente sonoras
 
 ---
 
@@ -86,6 +198,9 @@ Sistema de autoservicio para restaurante que permite a los clientes visualizar e
 3. El sistema aplica IVA automáticamente
 4. Existe integración con sistema de gestión de cocina
 5. El número máximo de mesas está configurado en el sistema
+6. Existe un sistema de riel de transporte automatizado
+7. Cada estacion de cocina tiene una pantalla dedicada
+8. Los usuarios tienen roles definidos con permisos especificos
 
 ---
 
@@ -116,12 +231,45 @@ Sistema de autoservicio para restaurante que permite a los clientes visualizar e
 | RF-21 | Enviar pedido confirmado al sistema de cocina | HU-21 |
 | RF-22 | Informar al cliente que su pedido fue recibido correctamente | HU-22 |
 | RF-23 | Mostrar estado del pedido al cliente | HU-23 |
+| RF-24 | Registrar y administrar pedidos realizados | HU-24 |
+| RF-25 | Consultar y actualizar estado de pedidos | HU-25 |
+| RF-26 | Cancelar pedidos y registrar motivo de cancelacion | HU-26 |
+| RF-27 | Conservar historial de pedidos realizados | HU-27 |
+| RF-28 | Enviar pedidos automaticamente a estaciones de cocina | HU-28 |
+| RF-29 | Visualizar y gestionar tareas por estacion | HU-29 |
+| RF-30 | Actualizar estado del pedido segun tareas completadas | HU-30 |
+| RF-31 | Establecer tiempos estimados y generar alertas de retraso | HU-31 |
+| RF-32 | Crear y configurar estaciones de trabajo | HU-32 |
+| RF-33 | Asignar productos o procesos a cada estacion | HU-33 |
+| RF-34 | Mostrar carga de trabajo y tareas pendientes por estacion | HU-34 |
+| RF-35 | Asociar cada pedido terminado con su mesa de destino | HU-35 |
+| RF-36 | Enviar orden de transporte al sistema de control del riel | HU-36 |
+| RF-37 | Registrar y actualizar estado del pedido durante transporte | HU-37 |
+| RF-38 | Generar alerta cuando se presente falla durante transporte | HU-38 |
+| RF-39 | Registrar y administrar mesas disponibles en el restaurante | HU-39 |
+| RF-40 | Mostrar estado de cada mesa y pedidos asociados | HU-40 |
+| RF-41 | Actualizar estado de la mesa segun ciclo de atencion | HU-41 |
+| RF-42 | Registrar y administrar ingredientes y productos del inventario | HU-42 |
+| RF-43 | Actualizar automaticamente existencias de ingredientes en pedidos | HU-43 |
+| RF-44 | Generar alertas cuando existencias alcancen niveles minimos | HU-44 |
+| RF-45 | Consultar movimientos y existencias del inventario | HU-45 |
+| RF-46 | Crear, modificar, desactivar y eliminar productos del menu | HU-46 |
+| RF-47 | Configurar precios, ingredientes, complementos y opciones | HU-47 |
+| RF-48 | Asociar cada producto con su estacion y tiempo estimado | HU-48 |
+| RF-49 | Administrar usuarios y asignarles roles segun sus funciones | HU-49 |
+| RF-50 | Consultar informacion sobre ventas, pedidos, productos y tiempos | HU-50 |
+| RF-51 | Consultar el rendimiento de las estaciones de cocina | HU-51 |
+| RF-52 | Generar notificaciones de nuevos pedidos, terminados y cambios | HU-52 |
+| RF-53 | Generar alertas ante retrasos, falta de inventario o fallas | HU-53 |
+| RF-54 | Integrar pantallas de autoservicio, pagos, cocina, inventario y riel | HU-54 |
+| RF-55 | Mantener informacion actualizada entre los diferentes modulos | HU-55 |
+| RF-56 | Registrar el ciclo completo de cada pedido hasta su entrega | HU-56 |
 
 ---
 
 ## Wireframes de Referencia (SVG)
 
-Los wireframes de baja fidelidad están almacenados como archivos SVG en la carpeta `wireframes/images/`. Cada wireframe representa la interfaz de usuario para las Historias de Usuario, con el estilo tradicional de cajas grises/esqueléticas.
+Los wireframes de baja fidelidad están almacenados como archivos SVG en la carpeta `wireframes/images/`.
 
 ### Pantalla de Menú (HU-01 a HU-04, HU-13, HU-14)
 ![Wireframe: Menú Digital](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu1-menu.svg)
@@ -141,11 +289,39 @@ Los wireframes de baja fidelidad están almacenados como archivos SVG en la carp
 ### Pantalla de Seguimiento (HU-23)
 ![Wireframe: Seguimiento](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu6-seguimiento.svg)
 
+### Panel de Gestión de Pedidos (HU-24 a HU-27)
+![Wireframe: Gestión de Pedidos](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu7-gestion-pedidos.svg)
+
+### Panel de Cocina (HU-28 a HU-31)
+![Wireframe: Cocina](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu8-cocina.svg)
+
+### Panel de Estaciones (HU-32 a HU-34)
+![Wireframe: Estaciones](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu9-estaciones.svg)
+
+### Panel de Riel (HU-35 a HU-38)
+![Wireframe: Riel](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu10-riel.svg)
+
+### Panel de Mesas (HU-39 a HU-41)
+![Wireframe: Mesas](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu11-mesas.svg)
+
+### Panel de Inventario (HU-42 a HU-45)
+![Wireframe: Inventario](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu12-inventario.svg)
+
+### Panel de Administración del Menú (HU-46 a HU-48)
+![Wireframe: Admin Menú](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu13-admin-menu.svg)
+
+### Panel de Reportes (HU-49 a HU-51)
+![Wireframe: Reportes](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu14-reportes.svg)
+
+### Panel de Notificaciones (HU-52 a HU-53)
+![Wireframe: Notificaciones](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu15-notificaciones.svg)
+
+### Panel de Integración (HU-54 a HU-56)
+![Wireframe: Integración](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu16-integracion.svg)
+
 ---
 
 ## Wireframes Interactivos (HTML)
-
-Además de los SVGs estáticos, se ha creado un wireframe interactivo completo en HTML con Tailwind CSS:
 
 **Archivo:** [`wireframes/index.html`](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/index.html)
 
