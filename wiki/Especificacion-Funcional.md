@@ -101,22 +101,22 @@ Sistema de autoservicio para restaurante que permite a los clientes visualizar e
 Los wireframes de baja fidelidad están almacenados como archivos SVG en la carpeta `wireframes/images/`. Cada wireframe representa la interfaz de usuario para una Historia de Usuario específica, con el estilo tradicional de cajas grises/esqueléticas.
 
 ### HU-1: Visualización del menú digital
-![Wireframe HU-1: Menú Digital](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/images/hu1-menu.svg)
+![Wireframe HU-1: Menú Digital](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu1-menu.svg)
 
 ### HU-2: Personalización de productos
-![Wireframe HU-2: Personalización](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/images/hu2-personalizacion.svg)
+![Wireframe HU-2: Personalización](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu2-personalizacion.svg)
 
 ### HU-3: Gestión del carrito
-![Wireframe HU-3: Carrito](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/images/hu3-carrito.svg)
+![Wireframe HU-3: Carrito](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu3-carrito.svg)
 
 ### HU-4: Inicio de pedido
-![Wireframe HU-4: Inicio Pedido](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/images/hu4-inicio-pedido.svg)
+![Wireframe HU-4: Inicio Pedido](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu4-inicio-pedido.svg)
 
 ### HU-5: Confirmación del pedido
-![Wireframe HU-5: Confirmación](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/images/hu5-confirmacion.svg)
+![Wireframe HU-5: Confirmación](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu5-confirmacion.svg)
 
 ### HU-6: Seguimiento del pedido
-![Wireframe HU-6: Seguimiento](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/images/hu6-seguimiento.svg)
+![Wireframe HU-6: Seguimiento](https://raw.githubusercontent.com/miguelcebing/Trabajo-final-dise-o-/main/wireframes/images/hu6-seguimiento.svg)
 
 ---
 
