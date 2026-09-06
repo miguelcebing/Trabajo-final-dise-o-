@@ -1,0 +1,54 @@
+<svg width="400" height="350" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo -->
+  <rect width="400" height="350" fill="#f9fafb"/>
+  
+  <!-- Borde del kiosco -->
+  <rect x="5" y="5" width="390" height="340" fill="none" stroke="#374151" stroke-width="3" rx="8"/>
+  
+  <!-- Header -->
+  <rect x="15" y="15" width="370" height="40" fill="#e5e7eb" stroke="#9ca3af" rx="4"/>
+  <text x="25" y="40" font-family="Arial, sans-serif" font-size="11" fill="#374151" font-weight="bold">Seguimiento de Pedido</text>
+  <text x="300" y="40" font-family="Arial, sans-serif" font-size="9" fill="#6b7280">Pedido #12345</text>
+  
+  <!-- Estado actual -->
+  <rect x="120" y="70" width="160" height="35" fill="#fef3c7" stroke="#f59e0b" rx="18"/>
+  <text x="145" y="92" font-family="Arial, sans-serif" font-size="10" fill="#92400e" font-weight="bold">Estado: En preparación</text>
+  
+  <!-- Barra de progreso -->
+  <!-- Recibido (completado) -->
+  <circle cx="60" cy="140" r="18" fill="#dcfce7" stroke="#22c55e" stroke-width="2"/>
+  <text x="52" y="145" font-family="Arial, sans-serif" font-size="12" fill="#22c55e">✓</text>
+  <text x="35" y="170" font-family="Arial, sans-serif" font-size="8" fill="#374151">Recibido</text>
+  
+  <!-- Línea 1 (completada) -->
+  <line x1="80" y1="140" x2="150" y2="140" stroke="#22c55e" stroke-width="3"/>
+  
+  <!-- En preparación (actual) -->
+  <circle cx="170" cy="140" r="18" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+  <rect x="162" y="132" width="16" height="16" fill="#f59e0b" rx="2"/>
+  <text x="167" y="145" font-family="Arial, sans-serif" font-size="10" fill="white">●</text>
+  <text x="135" y="170" font-family="Arial, sans-serif" font-size="8" fill="#374151">En preparación</text>
+  
+  <!-- Línea 2 (pendiente) -->
+  <line x1="190" y1="140" x2="260" y2="140" stroke="#d1d5db" stroke-width="3" stroke-dasharray="5,5"/>
+  
+  <!-- Listo (pendiente) -->
+  <circle cx="280" cy="140" r="18" fill="#f3f4f6" stroke="#d1d5db" stroke-width="2"/>
+  <text x="275" y="145" font-family="Arial, sans-serif" font-size="12" fill="#9ca3af">○</text>
+  <text x="265" y="170" font-family="Arial, sans-serif" font-size="8" fill="#374151">Listo</text>
+  
+  <!-- Tiempo estimado -->
+  <text x="150" y="210" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Tiempo estimado:</text>
+  <text x="170" y="235" font-family="Arial, sans-serif" font-size="24" fill="#374151" font-weight="bold">10 minutos</text>
+  
+  <!-- Detalles del pedido -->
+  <rect x="15" y="250" width="370" height="80" fill="white" stroke="#d1d5db" rx="4"/>
+  <text x="25" y="270" font-family="Arial, sans-serif" font-size="9" fill="#6b7280" font-weight="bold">Detalles del pedido:</text>
+  <text x="25" y="290" font-family="Arial, sans-serif" font-size="9" fill="#374151">Hamburguesa Clásica (Mediana) x1</text>
+  <text x="25" y="305" font-family="Arial, sans-serif" font-size="9" fill="#374151">Ensalada César x2</text>
+  <text x="25" y="320" font-family="Arial, sans-serif" font-size="9" fill="#374151">Bebida (Cola) x1 • Mesa: 3</text>
+  
+  <!-- Botón Volver -->
+  <rect x="125" y="340" width="150" height="30" fill="#3b82f6" stroke="#2563eb" rx="4"/>
+  <text x="155" y="360" font-family="Arial, sans-serif" font-size="10" fill="white">Volver al Inicio</text>
+</svg>
