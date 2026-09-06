@@ -96,165 +96,42 @@ Sistema de autoservicio para restaurante que permite a los clientes visualizar e
 
 ---
 
-## Maquetas de Referencia
+## Wireframes de Referencia (SVG)
 
-### HU-1: Visualización del menú
-```
-+-------------------------------------------------+
-|  SISTEMA DE PEDIDOS - RESTAURANTE               |
-+-------------------------------------------------+
-|  [Categorías]                                   |
-|  +-----------+  +-----------+  +-----------+    |
-|  | Bebidas   |  | Platos    |  | Postres   |    |
-|  +-----------+  | Fuertes   |  +-----------+    |
-|                 +-----------+                    |
-+-------------------------------------------------+
-|  Menú - Platos Fuertes                          |
-|  +-------------------+  +-------------------+   |
-|  | [Imagen]          |  | [Imagen]          |   |
-|  | Hamburguesa Clásica|  | Ensalada César   |   |
-|  | $8.99             |  | $7.49             |   |
-|  +-------------------+  +-------------------+   |
-+-------------------------------------------------+
-|  [Seleccionar] |
-+-------------------------------------------------+
-```
+Los wireframes de baja fidelidad están almacenados como archivos SVG en la carpeta `wireframes/images/`. Cada wireframe representa la interfaz de usuario para una Historia de Usuario específica, con el estilo tradicional de cajas grises/esqueléticas.
+
+### HU-1: Visualización del menú digital
+![Wireframe HU-1: Menú Digital](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/images/hu1-menu.svg)
 
 ### HU-2: Personalización de productos
-```
-+-------------------------------------------------+
-|  Personalizar: Hamburguesa Clásica              |
-+-------------------------------------------------+
-|  Tamaño:                                        |
-|  [Pequeña] [Mediana] [Grande]                   |
-|                                                 |
-|  Ingredientes:                                  |
-|  [x] Lechuga [x] Tomate    [ ] Cebolla |
-|  [x] Queso      [x] Carne     [x] Mostaza      |
-|                                                 |
-|  Complementos:                                  |
-|  [ ] Papas Fritas +$2.00   [ ] Bebida +$1.50  |
-|  [ ] Ensalada Extra +$3.00                      |
-|                                                 |
-|  Precio Actual: $8.99                           |
-+-------------------------------------------------+
-|  [Agregar al Carrito]                           |
-+-------------------------------------------------+
-```
+![Wireframe HU-2: Personalización](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/images/hu2-personalizacion.svg)
 
 ### HU-3: Gestión del carrito
-```
-+-------------------------------------------------+
-|  Mi Carrito                                     |
-+-------------------------------------------------+
-|  Hamburguesa Clásica (Mediana)                 |
-|  Cantidad: [-] 1 [+]          Subtotal: $8.99  |
-|                                                 |
-|  Ensalada César                                 |
-|  Cantidad: [-] 2 [+]          Subtotal: $14.98 |
-|                                                 |
-|  Bebida (Cola)                                  |
-|  Cantidad: [-] 1 [+]          Subtotal: $1.50  |
-+-------------------------------------------------+
-|  Subtotal: $25.47                               |
-|  Total: $25.47 |
-+-------------------------------------------------+
-|  [Seguir Comprando]   [Continuar al Pago]       |
-+-------------------------------------------------+
-```
+![Wireframe HU-3: Carrito](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/images/hu3-carrito.svg)
 
 ### HU-4: Inicio de pedido
-```
-+-------------------------------------------------+
-|  Tipo de Pedido                                 |
-+-------------------------------------------------+
-|  Seleccione una opción:                         |
-|                                                 |
-|  [Consumir aquí]                                |
-|  [Para llevar]                                  |
-|                                                 |
-+-------------------------------------------------+
-|  Si selecciona "Consumir aquí":                 |
-|  +---------------------------------------------+
-|  |  Número de Mesa:                             |
-|  |  [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] |
-|  |  [11] [12] [13] [14] [15] [16] [17] [18]   |
-|  |  [19] [20]                                  |
-|  +---------------------------------------------+
-+-------------------------------------------------+
-|  [Continuar]                                    |
-+-------------------------------------------------+
-```
+![Wireframe HU-4: Inicio Pedido](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/images/hu4-inicio-pedido.svg)
 
 ### HU-5: Confirmación del pedido
-```
-+-------------------------------------------------+
-|  Resumen del Pedido                             |
-+-------------------------------------------------+
-|  Pedido #12345                                  |
-|  Tipo: Consumir aquí - Mesa 5                   |
-|                                                 |
-|  Hamburguesa Clásica (Mediana) x1 $8.99    |
-|  Ensalada César x2                   $14.98 |
-|  Bebida (Cola) x1                    $1.50    |
-|                                                 |
-|  Total: $25.47                                  |
-+-------------------------------------------------+
-|  [Cancelar Pedido]   [Confirmar Pedido]         |
-+-------------------------------------------------+
-
-Después de confirmar:
-+-------------------------------------------------+
-|  ¡Pedido Recibido!                              |
-+-------------------------------------------------+
-|  Su número de pedido es: #12345                 |
-|  Tiempo estimado de preparación: 15 minutos |
-|                                                 |
-|  [Volver al Inicio]                             |
-+-------------------------------------------------+
-```
+![Wireframe HU-5: Confirmación](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/images/hu5-confirmacion.svg)
 
 ### HU-6: Seguimiento del pedido
-```
-+-------------------------------------------------+
-|  Seguimiento de Pedido                          |
-+-------------------------------------------------+
-|  Pedido #12345                                  |
-|                                                 |
-|  Estado: [En preparación]                       |
-|                                                 |
-|  Progreso:                                      |
-|  [Recibido] → [En preparación] → [Listo]       |
-|         ✓ ●                          |
-|                                                 |
-|  Tiempo estimado: 10 minutos                    |
-+-------------------------------------------------+
-|  [Volver al Inicio]                             |
-+-------------------------------------------------+
-```
+![Wireframe HU-6: Seguimiento](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/images/hu6-seguimiento.svg)
 
 ---
 
-## Wireframes Interactivos
+## Wireframes Interactivos (HTML)
 
-Se han creado wireframes interactivos de baja fidelidad para todas las historias de usuario. Estos wireframes utilizan Tailwind CSS para los componentes y siguen el estándar de cajas grises/esqueléticas tradicionales.
+Además de los SVGs estáticos, se ha creado un wireframe interactivo completo en HTML con Tailwind CSS:
 
 **Archivo:** [`wireframes/index.html`](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/index.html)
 
-### Características de los Wireframes:
+### Características:
 - **Plataforma:** Touchscreen / kiosco
 - **Estilo:** Baja fidelidad con cajas grises, líneas de texto y botones genéricos
 - **Interactividad:** Navegación entre pantallas, botones clickeables, formularios interactivos
 - **Tecnología:** HTML5 con Tailwind CSS vía CDN
 - **Modularidad:** Cada HU tiene su propia pantalla con navegación fluida
-
-### Contenido del Wireframe:
-1. **HU-1:** Visualización del menú digital con categorías y grid de productos
-2. **HU-2:** Personalización de productos con opciones de tamaño, ingredientes y complementos
-3. **HU-3:** Gestión del carrito con cantidades, subtotales y totales
-4. **HU-4:** Inicio de pedido con selección de tipo y mesa
-5. **HU-5:** Confirmación del pedido con resumen y opciones de confirmar/cancelar
-6. **HU-6:** Seguimiento del estado con barra de progreso y tiempo estimado
 
 ### Cómo visualizar:
 1. Abrir [`wireframes/index.html`](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/index.html) en un navegador
