@@ -232,3 +232,32 @@ Después de confirmar:
 |  [Volver al Inicio]                             |
 +-------------------------------------------------+
 ```
+
+---
+
+## Wireframes Interactivos
+
+Se han creado wireframes interactivos de baja fidelidad para todas las historias de usuario. Estos wireframes utilizan Tailwind CSS para los componentes y siguen el estándar de cajas grises/esqueléticas tradicionales.
+
+**Archivo:** [`wireframes/index.html`](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/index.html)
+
+### Características de los Wireframes:
+- **Plataforma:** Touchscreen / kiosco
+- **Estilo:** Baja fidelidad con cajas grises, líneas de texto y botones genéricos
+- **Interactividad:** Navegación entre pantallas, botones clickeables, formularios interactivos
+- **Tecnología:** HTML5 con Tailwind CSS vía CDN
+- **Modularidad:** Cada HU tiene su propia pantalla con navegación fluida
+
+### Contenido del Wireframe:
+1. **HU-1:** Visualización del menú digital con categorías y grid de productos
+2. **HU-2:** Personalización de productos con opciones de tamaño, ingredientes y complementos
+3. **HU-3:** Gestión del carrito con cantidades, subtotales y totales
+4. **HU-4:** Inicio de pedido con selección de tipo y mesa
+5. **HU-5:** Confirmación del pedido con resumen y opciones de confirmar/cancelar
+6. **HU-6:** Seguimiento del estado con barra de progreso y tiempo estimado
+
+### Cómo visualizar:
+1. Abrir [`wireframes/index.html`](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/wireframes/index.html) en un navegador
+2. Usar los botones de navegación en la parte superior para cambiar entre HU
+3. Cada pantalla muestra el wireframe interactivo correspondiente
+4. Los botones y elementos son clickeables para simular la interacción
