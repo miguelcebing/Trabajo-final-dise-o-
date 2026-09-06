@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 700" fill="none">
+  <rect width="400" height="700" fill="#f5f5f5" stroke="#ccc" stroke-width="2"/>
+  <text x="200" y="40" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">Gestion de Mesas</text>
+  <rect x="20" y="60" width="85" height="35" rx="6" fill="#4CAF50"/>
+  <text x="62" y="82" text-anchor="middle" font-size="10" fill="#fff">Libres (8)</text>
+  <rect x="115" y="60" width="85" height="35" rx="6" fill="#f44336"/>
+  <text x="157" y="82" text-anchor="middle" font-size="10" fill="#fff">Ocupadas (5)</text>
+  <rect x="210" y="60" width="85" height="35" rx="6" fill="#FF9800"/>
+  <text x="252" y="82" text-anchor="middle" font-size="10" fill="#fff">Reservadas (2)</text>
+  <rect x="305" y="60" width="75" height="35" rx="6" fill="#9E9E9E"/>
+  <text x="342" y="82" text-anchor="middle" font-size="10" fill="#fff">Mantenimiento</text>
+  <rect x="20" y="110" width="85" height="80" rx="8" fill="#4CAF50"/>
+  <text x="62" y="145" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">1</text>
+  <text x="62" y="170" text-anchor="middle" font-size="10" fill="#fff">Libre</text>
+  <rect x="115" y="110" width="85" height="80" rx="8" fill="#f44336"/>
+  <text x="157" y="145" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">2</text>
+  <text x="157" y="170" text-anchor="middle" font-size="10" fill="#fff">#0021</text>
+  <rect x="210" y="110" width="85" height="80" rx="8" fill="#f44336"/>
+  <text x="252" y="145" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">3</text>
+  <text x="252" y="170" text-anchor="middle" font-size="10" fill="#fff">#0020</text>
+  <rect x="305" y="110" width="85" height="80" rx="8" fill="#4CAF50"/>
+  <text x="347" y="145" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">4</text>
+  <text x="347" y="170" text-anchor="middle" font-size="10" fill="#fff">Libre</text>
+  <rect x="20" y="200" width="85" height="80" rx="8" fill="#f44336"/>
+  <text x="62" y="235" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">5</text>
+  <text x="62" y="260" text-anchor="middle" font-size="10" fill="#fff">#0024</text>
+  <rect x="115" y="200" width="85" height="80" rx="8" fill="#4CAF50"/>
+  <text x="157" y="235" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">6</text>
+  <text x="157" y="260" text-anchor="middle" font-size="10" fill="#fff">Libre</text>
+  <rect x="210" y="200" width="85" height="80" rx="8" fill="#FF9800"/>
+  <text x="252" y="235" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">7</text>
+  <text x="252" y="260" text-anchor="middle" font-size="10" fill="#fff">Reservada</text>
+  <rect x="305" y="200" width="85" height="80" rx="8" fill="#4CAF50"/>
+  <text x="347" y="235" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">8</text>
+  <text x="347" y="260" text-anchor="middle" font-size="10" fill="#fff">Libre</text>
+  <rect x="20" y="620" width="360" height="50" rx="8" fill="#2196F3"/>
+  <text x="200" y="650" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">+ Nueva Mesa</text>
+</svg>

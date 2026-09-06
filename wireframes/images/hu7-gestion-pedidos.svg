@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 700" fill="none">
+  <rect width="400" height="700" fill="#f5f5f5" stroke="#ccc" stroke-width="2"/>
+  <text x="200" y="40" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">Gestión de Pedidos</text>
+  <rect x="20" y="60" width="360" height="50" rx="8" fill="#e0e0e0" stroke="#bbb"/>
+  <text x="200" y="90" text-anchor="middle" font-size="14" fill="#666">Buscar pedido por # o mesa...</text>
+  <rect x="20" y="120" width="170" height="35" rx="6" fill="#ddd" stroke="#bbb"/>
+  <text x="105" y="142" text-anchor="middle" font-size="12" fill="#555">Todos</text>
+  <rect x="210" y="120" width="170" height="35" rx="6" fill="#ddd" stroke="#bbb"/>
+  <text x="295" y="142" text-anchor="middle" font-size="12" fill="#555">En Curso</text>
+  <rect x="20" y="170" width="360" height="80" rx="8" fill="#fff" stroke="#ccc"/>
+  <text x="35" y="195" font-size="14" fill="#333" font-weight="bold">#0024 - Mesa 5</text>
+  <text x="35" y="215" font-size="12" fill="#666">2 Hamburguesas, 1 Papa</text>
+  <text x="35" y="235" font-size="11" fill="#888">Estado: En preparación | 12:34 PM</text>
+  <rect x="300" y="180" width="70" height="25" rx="4" fill="#4CAF50"/>
+  <text x="335" y="197" text-anchor="middle" font-size="10" fill="#fff">Ver</text>
+  <rect x="20" y="260" width="360" height="80" rx="8" fill="#fff" stroke="#ccc"/>
+  <text x="35" y="285" font-size="14" fill="#333" font-weight="bold">#0023 - Para Llevar</text>
+  <text x="35" y="305" font-size="12" fill="#666">1 Ensalada, 2 Jugos</text>
+  <text x="35" y="325" font-size="11" fill="#888">Estado: Listo | 12:30 PM</text>
+  <rect x="300" y="270" width="70" height="25" rx="4" fill="#2196F3"/>
+  <text x="335" y="287" text-anchor="middle" font-size="10" fill="#fff">Ver</text>
+  <rect x="20" y="350" width="360" height="80" rx="8" fill="#fff" stroke="#ccc"/>
+  <text x="35" y="375" font-size="14" fill="#333" font-weight="bold">#0022 - Mesa 1</text>
+  <text x="35" y="395" font-size="12" fill="#666">3 Pizzas, 2 Refrescos</text>
+  <text x="35" y="415" font-size="11" fill="#888">Estado: Entregado | 12:15 PM</text>
+  <rect x="300" y="360" width="70" height="25" rx="4" fill="#9E9E9E"/>
+  <text x="335" y="377" text-anchor="middle" font-size="10" fill="#fff">Ver</text>
+  <rect x="20" y="620" width="360" height="50" rx="8" fill="#2196F3"/>
+  <text x="200" y="650" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">+ Nuevo Pedido</text>
+</svg>

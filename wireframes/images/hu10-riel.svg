@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 700" fill="none">
+  <rect width="400" height="700" fill="#f5f5f5" stroke="#ccc" stroke-width="2"/>
+  <text x="200" y="40" text-anchor="middle" font-size="18" fill="#333" font-weight="bold">Sistema de Riel</text>
+  <rect x="20" y="60" width="360" height="40" rx="6" fill="#4CAF50"/>
+  <text x="200" y="85" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">En Transporte (2)</text>
+  <rect x="20" y="110" width="360" height="80" rx="8" fill="#fff" stroke="#ccc"/>
+  <text x="35" y="135" font-size="14" fill="#333" font-weight="bold">#0024 - Mesa 5</text>
+  <text x="35" y="155" font-size="12" fill="#666">2 Hamburguesas, 1 Papa</text>
+  <text x="35" y="175" font-size="11" fill="#888">Estado: En transito | Destino: Mesa 5</text>
+  <rect x="300" y="125" width="70" height="25" rx="4" fill="#4CAF50"/>
+  <text x="335" y="142" text-anchor="middle" font-size="10" fill="#fff">Entregar</text>
+  <rect x="20" y="200" width="360" height="80" rx="8" fill="#fff" stroke="#ccc"/>
+  <text x="35" y="225" font-size="14" fill="#333" font-weight="bold">#0023 - Para Llevar</text>
+  <text x="35" y="245" font-size="12" fill="#666">1 Ensalada, 2 Jugos</text>
+  <text x="35" y="265" font-size="11" fill="#888">Estado: Preparando | Destino: Mostrador</text>
+  <rect x="300" y="215" width="70" height="25" rx="4" fill="#FF9800"/>
+  <text x="335" y="232" text-anchor="middle" font-size="10" fill="#fff">Esperar</text>
+  <rect x="20" y="290" width="360" height="40" rx="6" fill="#FF9800"/>
+  <text x="200" y="315" text-anchor="middle" font-size="13" fill="#fff" font-weight="bold">Entregados Hoy (5)</text>
+  <rect x="20" y="340" width="360" height="60" rx="8" fill="#fff" stroke="#ccc"/>
+  <text x="35" y="365" font-size="13" fill="#333" font-weight="bold">#0022 - Mesa 1</text>
+  <text x="35" y="385" font-size="11" fill="#888">Entregado a las 12:45 PM</text>
+  <rect x="20" y="620" width="360" height="50" rx="8" fill="#f44336"/>
+  <text x="200" y="650" text-anchor="middle" font-size="14" fill="#fff" font-weight="bold">Alertas de Falla (0)</text>
+</svg>
