@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" font-family="Arial, sans-serif">
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  <rect width="800" height="60" fill="#2c3e50"/>
+  <text x="400" y="38" text-anchor="middle" fill="white" font-size="20" font-weight="bold">Panel de Administración - Gestión de Usuarios</text>
+  <rect x="0" y="60" width="200" height="540" fill="#34495e"/>
+  <text x="100" y="100" text-anchor="middle" fill="white" font-size="14">Dashboard</text>
+  <rect x="10" y="115" width="180" height="35" fill="#2c3e50" rx="5"/>
+  <text x="100" y="138" text-anchor="middle" fill="white" font-size="13">Usuarios</text>
+  <text x="100" y="175" text-anchor="middle" fill="white" font-size="14">Reportes</text>
+  <text x="100" y="215" text-anchor="middle" fill="white" font-size="14">Menú</text>
+  <text x="100" y="255" text-anchor="middle" fill="white" font-size="14">Cocina</text>
+  <text x="100" y="295" text-anchor="middle" fill="white" font-size="14">Inventario</text>
+  <rect x="220" y="80" width="560" height="500" fill="white" rx="8"/>
+  <text x="240" y="115" fill="#2c3e50" font-size="18" font-weight="bold">Usuarios del Sistema</text>
+  <rect x="240" y="130" width="300" height="35" fill="#ecf0f1" rx="5" stroke="#bdc3c7"/>
+  <text x="255" y="152" fill="#95a5a6" font-size="12">Buscar por nombre, email o rol...</text>
+  <rect x="560" y="130" width="200" height="35" fill="#27ae60" rx="5"/>
+  <text x="660" y="152" text-anchor="middle" fill="white" font-size="13" font-weight="bold">+ Nuevo Usuario</text>
+  <rect x="240" y="180" width="520" height="35" fill="#ecf0f1" rx="3"/>
+  <text x="260" y="202" fill="#7f8c8d" font-size="12" font-weight="bold">Nombre</text>
+  <text x="400" y="202" fill="#7f8c8d" font-size="12" font-weight="bold">Email</text>
+  <text x="550" y="202" fill="#7f8c8d" font-size="12" font-weight="bold">Rol</text>
+  <text x="660" y="202" fill="#7f8c8d" font-size="12" font-weight="bold">Estado</text>
+  <text x="730" y="202" fill="#7f8c8d" font-size="12" font-weight="bold">Acciones</text>
+  <rect x="240" y="220" width="520" height="45" fill="white" stroke="#ecf0f1"/>
+  <circle cx="260" cy="242" r="15" fill="#3498db"/>
+  <text x="260" y="247" text-anchor="middle" fill="white" font-size="11">MC</text>
+  <text x="290" y="247" fill="#2c3e50" font-size="13">María Ceballos</text>
+  <text x="400" y="247" fill="#7f8c8d" font-size="12">maria@restaurante.com</text>
+  <rect x="550" y="232" width="70" height="22" fill="#27ae60" rx="11"/>
+  <text x="585" y="247" text-anchor="middle" fill="white" font-size="10">Admin</text>
+  <rect x="660" y="232" width="65" height="22" fill="#2ecc71" rx="11"/>
+  <text x="692" y="247" text-anchor="middle" fill="white" font-size="10">Activo</text>
+  <text x="730" y="247" fill="#3498db" font-size="12" text-decoration="underline">Editar</text>
+  <rect x="240" y="270" width="520" height="45" fill="white" stroke="#ecf0f1"/>
+  <circle cx="260" cy="292" r="15" fill="#e67e22"/>
+  <text x="260" y="297" text-anchor="middle" fill="white" font-size="11">JR</text>
+  <text x="290" y="297" fill="#2c3e50" font-size="13">Juan Rodríguez</text>
+  <text x="400" y="297" fill="#7f8c8d" font-size="12">juan@restaurante.com</text>
+  <rect x="550" y="282" width="70" height="22" fill="#e67e22" rx="11"/>
+  <text x="585" y="297" text-anchor="middle" fill="white" font-size="10">Cajero</text>
+  <rect x="660" y="282" width="65" height="22" fill="#2ecc71" rx="11"/>
+  <text x="692" y="297" text-anchor="middle" fill="white" font-size="10">Activo</text>
+  <text x="730" y="297" fill="#3498db" font-size="12" text-decoration="underline">Editar</text>
+  <rect x="240" y="320" width="520" height="45" fill="white" stroke="#ecf0f1"/>
+  <circle cx="260" cy="342" r="15" fill="#e74c3c"/>
+  <text x="260" y="347" text-anchor="middle" fill="white" font-size="11">CP</text>
+  <text x="290" y="347" fill="#2c3e50" font-size="13">Carlos Pérez</text>
+  <text x="400" y="347" fill="#7f8c8d" font-size="12">carlos@restaurante.com</text>
+  <rect x="550" y="332" width="70" height="22" fill="#e74c3c" rx="11"/>
+  <text x="585" y="347" text-anchor="middle" fill="white" font-size="10">Cocina</text>
+  <rect x="660" y="332" width="65" height="22" fill="#2ecc71" rx="11"/>
+  <text x="692" y="347" text-anchor="middle" fill="white" font-size="10">Activo</text>
+  <text x="730" y="347" fill="#3498db" font-size="12" text-decoration="underline">Editar</text>
+  <rect x="240" y="370" width="520" height="45" fill="white" stroke="#ecf0f1"/>
+  <circle cx="260" cy="392" r="15" fill="#9b59b6"/>
+  <text x="260" y="397" text-anchor="middle" fill="white" font-size="11">AL</text>
+  <text x="290" y="397" fill="#2c3e50" font-size="13">Ana López</text>
+  <text x="400" y="397" fill="#7f8c8d" font-size="12">ana@restaurante.com</text>
+  <rect x="550" y="382" width="70" height="22" fill="#9b59b6" rx="11"/>
+  <text x="585" y="397" text-anchor="middle" fill="white" font-size="10">Riel</text>
+  <rect x="660" y="382" width="65" height="22" fill="#95a5a6" rx="11"/>
+  <text x="692" y="397" text-anchor="middle" fill="white" font-size="10">Inactivo</text>
+  <text x="730" y="397" fill="#3498db" font-size="12" text-decoration="underline">Editar</text>
+  <rect x="240" y="420" width="520" height="45" fill="white" stroke="#ecf0f1"/>
+  <circle cx="260" cy="442" r="15" fill="#3498db"/>
+  <text x="260" y="447" text-anchor="middle" fill="white" font-size="11">LM</text>
+  <text x="290" y="447" fill="#2c3e50" font-size="13">Luis Martínez</text>
+  <text x="400" y="447" fill="#7f8c8d" font-size="12">luis@restaurante.com</text>
+  <rect x="550" y="432" width="70" height="22" fill="#e67e22" rx="11"/>
+  <text x="585" y="447" text-anchor="middle" fill="white" font-size="10">Cajero</text>
+  <rect x="660" y="432" width="65" height="22" fill="#2ecc71" rx="11"/>
+  <text x="692" y="447" text-anchor="middle" fill="white" font-size="10">Activo</text>
+  <text x="730" y="447" fill="#3498db" font-size="12" text-decoration="underline">Editar</text>
+  <rect x="240" y="530" width="520" height="40" fill="#ecf0f1" rx="3"/>
+  <text x="260" y="555" fill="#7f8c8d" font-size="12">Mostrando 1-5 de 12 usuarios</text>
+  <rect x="620" y="538" width="60" height="25" fill="#3498db" rx="3"/>
+  <text x="650" y="555" text-anchor="middle" fill="white" font-size="11">Anterior</text>
+  <rect x="690" y="538" width="60" height="25" fill="#3498db" rx="3"/>
+  <text x="720" y="555" text-anchor="middle" fill="white" font-size="11">Siguiente</text>
+  <text x="400" y="590" text-anchor="middle" fill="#95a5a6" font-size="10">Wireframe HU-42a: Gestión de Usuarios y Roles</text>
+</svg>
