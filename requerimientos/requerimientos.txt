@@ -1,0 +1,68 @@
+1. Gestión del menú digital
+RF-01: El sistema deberá permitir visualizar el menú completo del restaurante mediante pantallas táctiles.
+RF-02: El sistema deberá permitir organizar los productos por categorías.
+RF-03: El sistema deberá mostrar para cada producto su nombre, descripción, precio e imagen.
+RF-04: El sistema deberá permitir seleccionar un producto y consultar sus ingredientes y características.
+RF-05: El sistema deberá permitir seleccionar tamaños, presentaciones o variantes de un producto.
+RF-06: El sistema deberá permitir agregar o eliminar ingredientes de acuerdo con las opciones disponibles.
+RF-07: El sistema deberá permitir seleccionar complementos o productos adicionales.
+RF-08: El sistema deberá actualizar automáticamente el precio del producto según las modificaciones realizadas.
+RF-09: El sistema deberá permitir agregar productos al carrito de compra.
+RF-10: El sistema deberá permitir modificar las cantidades de productos del carrito.
+RF-11: El sistema deberá permitir eliminar productos del carrito.
+RF-12: El sistema deberá mostrar el subtotal y total de la orden antes de realizar el pago.
+RF-13: El sistema deberá mostrar la disponibilidad de los productos en tiempo real.
+RF-14: El sistema deberá ocultar o marcar como no disponibles los productos agotados.
+2. Toma de pedidos mediante autoservicio
+RF-15: El sistema deberá permitir al cliente iniciar una nueva orden desde una pantalla de autoservicio.
+RF-16: El sistema deberá permitir seleccionar el tipo de pedido: consumir en el restaurante o para llevar.
+RF-17: El sistema deberá permitir seleccionar o ingresar el número de mesa cuando el pedido sea para consumo en el restaurante.
+RF-18: El sistema deberá generar un identificador único para cada pedido.
+RF-19: El sistema deberá mostrar al cliente un resumen completo de su pedido antes de confirmar.
+RF-20: El sistema deberá permitir al cliente confirmar o cancelar el pedido antes del pago.
+RF-21: El sistema deberá enviar automáticamente el pedido confirmado al sistema de gestión de cocina.
+RF-22: El sistema deberá informar al cliente que su pedido fue recibido correctamente.
+RF-23: El sistema deberá mostrar el estado del pedido al cliente.
+3. Gestión de pedidos
+RF-24: El sistema deberá registrar y administrar los pedidos realizados, asociándolos con su respectiva mesa y cliente cuando corresponda.
+RF-25: El sistema deberá permitir consultar y actualizar el estado de los pedidos durante las diferentes etapas de atención.
+RF-26: El sistema deberá permitir cancelar pedidos y registrar el motivo de la cancelación.
+RF-27: El sistema deberá conservar un historial de los pedidos realizados.
+4. Gestión de cocina
+RF-28: El sistema deberá enviar automáticamente los pedidos confirmados a las estaciones de cocina correspondientes.
+RF-29: El sistema deberá permitir que cada estación visualice y gestione las tareas que le corresponden.
+RF-30: El sistema deberá actualizar el estado del pedido conforme las estaciones completen sus tareas.
+RF-31: El sistema deberá permitir establecer tiempos estimados de preparación y generar alertas cuando un pedido presente retrasos.
+5. Organización de estaciones de cocina
+RF-32: El sistema deberá permitir crear y configurar las diferentes estaciones de trabajo de la cocina.
+RF-33: El sistema deberá permitir asignar productos o procesos a cada estación.
+RF-34: El sistema deberá mostrar la carga de trabajo y las tareas pendientes de cada estación.
+6. Sistema de riel de autoservicio
+RF-35: El sistema deberá asociar cada pedido terminado con su mesa de destino.
+RF-36: El sistema deberá enviar la orden de transporte al sistema de control del riel.
+RF-37: El sistema deberá registrar y actualizar el estado del pedido durante su transporte hasta la mesa.
+RF-38: El sistema deberá generar una alerta cuando se presente una falla durante el transporte.
+7. Gestión de mesas
+RF-39: El sistema deberá permitir registrar y administrar las mesas disponibles en el restaurante.
+RF-40: El sistema deberá mostrar el estado de cada mesa y los pedidos asociados a ella.
+RF-41: El sistema deberá actualizar el estado de la mesa de acuerdo con el ciclo de atención del pedido.
+8. Gestión de inventario
+RF-42: El sistema deberá permitir registrar y administrar los ingredientes y productos utilizados en el restaurante.
+RF-43: El sistema deberá actualizar automáticamente las existencias de los ingredientes utilizados en los pedidos.
+RF-44: El sistema deberá generar alertas cuando las existencias alcancen los niveles mínimos establecidos.
+RF-45: El sistema deberá permitir consultar los movimientos y existencias del inventario.
+9. Administración del menú
+RF-46: El sistema deberá permitir crear, modificar, desactivar y eliminar productos del menú.
+RF-47: El sistema deberá permitir configurar precios, ingredientes, complementos y opciones de los productos.
+RF-48: El sistema deberá permitir asociar cada producto con su estación de preparación y tiempo estimado.
+10. Administración y reportes
+RF-49: El sistema deberá permitir administrar usuarios y asignarles roles según sus funciones.
+RF-50: El sistema deberá permitir consultar información sobre ventas, pedidos, productos y tiempos de preparación.
+RF-51: El sistema deberá permitir consultar el rendimiento de las diferentes estaciones de cocina.
+11. Notificaciones y alertas
+RF-52: El sistema deberá generar notificaciones relacionadas con nuevos pedidos, pedidos terminados y cambios en su estado.
+RF-53: El sistema deberá generar alertas ante retrasos, falta de inventario o fallas en el sistema de transporte.
+12. Integración del sistema
+RF-54: El sistema deberá integrar las pantallas de autoservicio, pagos, cocina, inventario y sistema de riel.
+RF-55: El sistema deberá mantener actualizada la información de los pedidos entre los diferentes módulos.
+RF-56: El sistema deberá registrar el ciclo completo de cada pedido desde su creación hasta su entrega.
