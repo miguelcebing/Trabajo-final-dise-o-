@@ -1,0 +1,180 @@
+@startuml diagrama-clases-arquitectura
+' ============================================================
+' Diagrama de clases (software) - capas APLICACION / INFRAESTRUCTURA / INTERFAZ
+' Puertos (interfaces), servicios de caso de uso, implementaciones y UI.
+' ============================================================
+skinparam linetype ortho
+skinparam classAttributeIconSize 0
+skinparam nodesep 30
+skinparam ranksep 40
+hide circle
+
+package "aplicacion" {
+  interface RepositorioPedidos {
+    + guardar(pedido : Pedido) : void
+    + buscarPorId(id : UUID) : Pedido
+    + listarPorEstado(estado : EstadoPedido) : List~Pedido~
+  }
+  interface RepositorioProductos {
+    + guardar(producto : Producto) : void
+    + buscarPorId(id : UUID) : Producto
+    + listarDisponibles() : List~Producto~
+  }
+  interface RepositorioIngredientes {
+    + guardar(ingrediente : Ingrediente) : void
+    + buscarPorId(id : UUID) : Ingrediente
+    + listarBajoMinimo() : List~Ingrediente~
+  }
+  interface RepositorioMesas {
+    + guardar(mesa : Mesa) : void
+    + buscarPorNumero(numero : String) : Mesa
+    + listarLibres() : List~Mesa~
+  }
+  interface RepositorioTareas {
+    + guardar(tarea : TareaCocina) : void
+    + listarPorEstacion(idEstacion : UUID) : List~TareaCocina~
+  }
+  interface PuertoTransporteRiel {
+    + despachar(transporte : TransporteRiel) : void
+    + consultarEstado(idTransporte : UUID) : EstadoTransporte
+  }
+  interface EstrategiaPago {
+    + procesar(monto : BigDecimal) : boolean
+  }
+  interface ObservadorPedido {
+    + actualizar(pedido : Pedido, evento : String) : void
+  }
+  interface Notificador {
+    + enviar(destino : String, mensaje : String) : void
+  }
+
+  class ServicioPedidos {
+    + crearDesdeCarrito(carrito : Carrito) : Pedido
+    + confirmarPedido(idPedido : UUID) : void
+    + cancelarPedido(idPedido : UUID, motivo : String) : void
+    + registrarPago(idPedido : UUID, estrategia : EstrategiaPago) : boolean
+  }
+  class ServicioMenu {
+    + listarMenu() : List~Producto~
+    + buscarProducto(id : UUID) : Producto
+  }
+  class ServicioCocina {
+    + enviarAEstaciones(pedido : Pedido) : void
+    + iniciarTarea(idTarea : UUID) : void
+    + completarTarea(idTarea : UUID) : void
+  }
+  class ServicioRiel {
+    + despacharPedido(idPedido : UUID) : void
+    + reportarFalla(idTransporte : UUID, descripcion : String) : void
+  }
+  class ServicioInventario {
+    + descontarPorPedido(pedido : Pedido) : void
+    + registrarMovimiento(movimiento : MovimientoInventario) : void
+    + ingredientesBajoMinimo() : List~Ingrediente~
+  }
+  class ServicioMesas {
+    + ocuparMesa(numero : String) : void
+    + liberarMesa(numero : String) : void
+  }
+  class ServicioReportes {
+    + ventasPorProducto() : Map~String,BigDecimal~
+    + rendimientoPorEstacion() : Map~String,Double~
+  }
+  class ServicioAlertas <<Observer>> {
+    + actualizar(pedido : Pedido, evento : String) : void
+  }
+}
+
+package "infraestructura" {
+  class RepositorioPedidosEnMemoria implements RepositorioPedidos
+  class RepositorioProductosEnMemoria implements RepositorioProductos
+  class RepositorioIngredientesEnMemoria implements RepositorioIngredientes
+  class RepositorioMesasEnMemoria implements RepositorioMesas
+  class RepositorioTareasEnMemoria implements RepositorioTareas
+  class AdaptadorRiel implements PuertoTransporteRiel
+  class PagoEfectivo implements EstrategiaPago
+  class PagoTarjeta implements EstrategiaPago
+  class NotificadorCorreo implements Notificador
+}
+
+package "interfaz" {
+  class PantallaKiosco {
+    + iniciarPedido() : Carrito
+    + agregarAlCarrito(idProducto : UUID, cantidad : int) : void
+    + confirmarPedido() : Pedido
+  }
+  class PantallaCocina {
+    + verTareas(idEstacion : UUID) : List~TareaCocina~
+    + completarTarea(idTarea : UUID) : void
+  }
+  class PantallaMesero {
+    + verEstadoMesa(numero : String) : EstadoMesa
+  }
+  class PanelAdministracion {
+    + gestionarProducto(producto : Producto) : void
+    + verReporte(nombre : String) : Map~String,Object~
+  }
+}
+
+package "dominio" as DOM {
+  note "Entidades y enums del dominio:\nver diagrama-clases-dominio" as Ndom
+}
+
+' --- Servicios -> puertos ---
+ServicioPedidos ..> RepositorioPedidos
+ServicioPedidos ..> RepositorioMesas
+ServicioPedidos ..> EstrategiaPago
+ServicioMenu ..> RepositorioProductos
+ServicioCocina ..> RepositorioTareas
+ServicioRiel ..> PuertoTransporteRiel
+ServicioInventario ..> RepositorioIngredientes
+ServicioMesas ..> RepositorioMesas
+ServicioAlertas ..> Notificador
+
+' --- Realizaciones (infraestructura) ---
+RepositorioPedidosEnMemoria ..|> RepositorioPedidos
+RepositorioProductosEnMemoria ..|> RepositorioProductos
+RepositorioIngredientesEnMemoria ..|> RepositorioIngredientes
+RepositorioMesasEnMemoria ..|> RepositorioMesas
+RepositorioTareasEnMemoria ..|> RepositorioTareas
+AdaptadorRiel ..|> PuertoTransporteRiel
+PagoEfectivo ..|> EstrategiaPago
+PagoTarjeta ..|> EstrategiaPago
+NotificadorCorreo ..|> Notificador
+ServicioAlertas ..|> ObservadorPedido
+
+' --- Servicios -> dominio ---
+ServicioPedidos ..> DOM
+ServicioMenu ..> DOM
+ServicioCocina ..> DOM
+ServicioRiel ..> DOM
+ServicioInventario ..> DOM
+ServicioMesas ..> DOM
+ServicioReportes ..> DOM
+ServicioAlertas ..> DOM
+
+' --- Interfaz de usuario -> servicios ---
+PantallaKiosco ..> ServicioMenu
+PantallaKiosco ..> ServicioPedidos
+PantallaCocina ..> ServicioCocina
+PantallaMesero ..> ServicioMesas
+PanelAdministracion ..> ServicioReportes
+PanelAdministracion ..> ServicioMenu
+
+note bottom of ServicioPedidos
+  Patrón <<Facade>>: los servicios de aplicación
+  exponen casos de uso y ocultan el dominio.
+end note
+note bottom of EstrategiaPago
+  Patrón <<Strategy>>: formas de pago
+  intercambiables (efectivo, tarjeta, externo).
+end note
+note bottom of RepositorioPedidos
+  Patrón <<Repository>>: abstrae la persistencia;
+  las implementaciones viven en infraestructura.
+end note
+note bottom of PuertoTransporteRiel
+  Patrón <<Adapter>>: AdaptadorRiel traduce el
+  dominio al sistema externo de riel.
+end note
+@enduml

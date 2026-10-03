@@ -9,7 +9,10 @@
 > hasta que exista implementación. Cuando se programe, el código deberá ajustarse a este diagrama (o el diagrama al
 > código, documentando el cambio).
 
-Fuente editable: [`fuentes/diagrama-clases.puml`](fuentes/diagrama-clases.puml) · Exportaciones: `diagrama-clases.png` / `diagrama-clases.svg`.
+El diagrama se presenta en **dos vistas** para mantener la legibilidad:
+
+- **Clases del dominio:** fuente [`fuentes/diagrama-clases-dominio.puml`](fuentes/diagrama-clases-dominio.puml) · `diagrama-clases-dominio.png` / `.svg`
+- **Arquitectura (aplicación, infraestructura e interfaz):** fuente [`fuentes/diagrama-clases-arquitectura.puml`](fuentes/diagrama-clases-arquitectura.puml) · `diagrama-clases-arquitectura.png` / `.svg`
 
 ---
 

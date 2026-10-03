@@ -1,14 +1,12 @@
-@startuml diagrama-clases
+@startuml diagrama-clases-dominio
 ' ============================================================
-' Diagrama de clases - Sistema de Autoservicio para Restaurante
-' Diseno de software en 4 paquetes: dominio / aplicacion / infraestructura / interfaz.
-' NO existe codigo fuente todavia: este diagrama es el diseno propuesto.
+' Diagrama de clases (software) - paquete DOMINIO
+' Entidades con comportamiento, enumeraciones y jerarquia de Alerta.
 ' ============================================================
 skinparam linetype ortho
 skinparam classAttributeIconSize 0
 skinparam nodesep 35
 skinparam ranksep 45
-skinparam packageStyle rectangle
 hide circle
 
 package "dominio" {
@@ -199,122 +197,63 @@ package "dominio" {
     - motivo : String
   }
 
-  enum EstadoCarrito { Abierto Confirmado Abandonado }
-  enum TipoPedido { EnRestaurante ParaLlevar }
-  enum EstadoPedido { Pendiente Confirmado EnPreparacion ListoParaEntregar EnTransporte Entregado Cancelado Pagado }
-  enum EstadoMesa { Libre Ocupada Reservada EnLimpieza }
-  enum EstadoTareaCocina { Pendiente EnProceso Completada Cancelada }
-  enum EstadoTransporte { PendienteDespacho EnTransporte EntregadoEnMesa Falla }
-  enum TipoMovimiento { Entrada SalidaPedido AjustePositivo AjusteNegativo Merma }
-  enum AccionPersonalizacion { Quitado AgregadoExtra }
-  enum MedioPago { Efectivo Tarjeta Externo }
-  enum EstadoPago { Pendiente Aprobado Rechazado }
-}
-
-package "aplicacion" {
-  interface RepositorioPedidos {
-    + guardar(pedido : Pedido) : void
-    + buscarPorId(id : UUID) : Pedido
-    + listarPorEstado(estado : EstadoPedido) : List~Pedido~
+  enum EstadoCarrito {
+    Abierto
+    Confirmado
+    Abandonado
   }
-  interface RepositorioProductos {
-    + guardar(producto : Producto) : void
-    + buscarPorId(id : UUID) : Producto
-    + listarDisponibles() : List~Producto~
+  enum TipoPedido {
+    EnRestaurante
+    ParaLlevar
   }
-  interface RepositorioIngredientes {
-    + guardar(ingrediente : Ingrediente) : void
-    + buscarPorId(id : UUID) : Ingrediente
-    + listarBajoMinimo() : List~Ingrediente~
+  enum EstadoPedido {
+    Pendiente
+    Confirmado
+    EnPreparacion
+    ListoParaEntregar
+    EnTransporte
+    Entregado
+    Cancelado
+    Pagado
   }
-  interface RepositorioMesas {
-    + guardar(mesa : Mesa) : void
-    + buscarPorNumero(numero : String) : Mesa
-    + listarLibres() : List~Mesa~
+  enum EstadoMesa {
+    Libre
+    Ocupada
+    Reservada
+    EnLimpieza
   }
-  interface RepositorioTareas {
-    + guardar(tarea : TareaCocina) : void
-    + listarPorEstacion(idEstacion : UUID) : List~TareaCocina~
+  enum EstadoTareaCocina {
+    Pendiente
+    EnProceso
+    Completada
+    Cancelada
   }
-  interface PuertoTransporteRiel {
-    + despachar(transporte : TransporteRiel) : void
-    + consultarEstado(idTransporte : UUID) : EstadoTransporte
+  enum EstadoTransporte {
+    PendienteDespacho
+    EnTransporte
+    EntregadoEnMesa
+    Falla
   }
-  interface EstrategiaPago {
-    + procesar(monto : BigDecimal) : boolean
+  enum TipoMovimiento {
+    Entrada
+    SalidaPedido
+    AjustePositivo
+    AjusteNegativo
+    Merma
   }
-  interface ObservadorPedido {
-    + actualizar(pedido : Pedido, evento : String) : void
+  enum AccionPersonalizacion {
+    Quitado
+    AgregadoExtra
   }
-  interface Notificador {
-    + enviar(destino : String, mensaje : String) : void
+  enum MedioPago {
+    Efectivo
+    Tarjeta
+    Externo
   }
-
-  class ServicioPedidos {
-    + crearDesdeCarrito(carrito : Carrito) : Pedido
-    + confirmarPedido(idPedido : UUID) : void
-    + cancelarPedido(idPedido : UUID, motivo : String) : void
-    + registrarPago(idPedido : UUID, estrategia : EstrategiaPago) : boolean
-  }
-  class ServicioMenu {
-    + listarMenu() : List~Producto~
-    + buscarProducto(id : UUID) : Producto
-  }
-  class ServicioCocina {
-    + enviarAEstaciones(pedido : Pedido) : void
-    + iniciarTarea(idTarea : UUID) : void
-    + completarTarea(idTarea : UUID) : void
-  }
-  class ServicioRiel {
-    + despacharPedido(idPedido : UUID) : void
-    + reportarFalla(idTransporte : UUID, descripcion : String) : void
-  }
-  class ServicioInventario {
-    + descontarPorPedido(pedido : Pedido) : void
-    + registrarMovimiento(movimiento : MovimientoInventario) : void
-    + ingredientesBajoMinimo() : List~Ingrediente~
-  }
-  class ServicioMesas {
-    + ocuparMesa(numero : String) : void
-    + liberarMesa(numero : String) : void
-  }
-  class ServicioReportes {
-    + ventasPorProducto() : Map~String,BigDecimal~
-    + rendimientoPorEstacion() : Map~String,Double~
-  }
-  class ServicioAlertas <<Observer>> {
-    + actualizar(pedido : Pedido, evento : String) : void
-  }
-}
-
-package "infraestructura" {
-  class RepositorioPedidosEnMemoria implements RepositorioPedidos
-  class RepositorioProductosEnMemoria implements RepositorioProductos
-  class RepositorioIngredientesEnMemoria implements RepositorioIngredientes
-  class RepositorioMesasEnMemoria implements RepositorioMesas
-  class RepositorioTareasEnMemoria implements RepositorioTareas
-  class AdaptadorRiel implements PuertoTransporteRiel
-  class PagoEfectivo implements EstrategiaPago
-  class PagoTarjeta implements EstrategiaPago
-  class NotificadorCorreo implements Notificador
-}
-
-package "interfaz" {
-  class PantallaKiosco {
-    + iniciarPedido() : Carrito
-    + agregarAlCarrito(idProducto : UUID, cantidad : int) : void
-    + confirmarPedido() : Pedido
-  }
-  class PantallaCocina {
-    + verTareas(idEstacion : UUID) : List~TareaCocina~
-    + completarTarea(idTarea : UUID) : void
-  }
-  class PantallaMesero {
-    + verEstadoMesa(numero : String) : EstadoMesa
-  }
-  class PanelAdministracion {
-    + gestionarProducto(producto : Producto) : void
-    + verReporte(nombre : String) : Map~String,Object~
+  enum EstadoPago {
+    Pendiente
+    Aprobado
+    Rechazado
   }
 }
 
@@ -346,57 +285,9 @@ TransporteRiel "*" --> "1" Mesa : se dirige a >
 Ingrediente "1" --> "0..*" MovimientoInventario : registra >
 MovimientoInventario "*" --> "0..1" Pedido : se origina por >
 
-' --- Aplicación: dependencias de servicios ---
-ServicioPedidos ..> RepositorioPedidos
-ServicioPedidos ..> RepositorioMesas
-ServicioPedidos ..> EstrategiaPago
-ServicioPedidos ..> Carrito
-ServicioPedidos ..> Pedido
-ServicioMenu ..> RepositorioProductos
-ServicioCocina ..> RepositorioTareas
-ServicioCocina ..> Pedido
-ServicioRiel ..> PuertoTransporteRiel
-ServicioRiel ..> TransporteRiel
-ServicioInventario ..> RepositorioIngredientes
-ServicioInventario ..> MovimientoInventario
-ServicioMesas ..> RepositorioMesas
-ServicioAlertas ..> Alerta
-ServicioAlertas ..> Notificador
-Pedido o--> ObservadorPedido : notifica
-ServicioAlertas ..|> ObservadorPedido
-
-' --- Interfaz de usuario ---
-PantallaKiosco ..> ServicioMenu
-PantallaKiosco ..> ServicioPedidos
-PantallaCocina ..> ServicioCocina
-PantallaMesero ..> ServicioMesas
-PanelAdministracion ..> ServicioReportes
-PanelAdministracion ..> ServicioMenu
-
-note bottom of ServicioPedidos
-  Patrón <<Facade>>: los servicios de aplicación
-  exponen operaciones de caso de uso y ocultan
-  el dominio a la capa de interfaz.
-end note
-
 note bottom of Pedido
   Patrón <<Observer>>: Pedido notifica a
-  ObservadorPedido (ServicioAlertas) ante cambios
-  de estado relevantes.
-end note
-
-note bottom of EstrategiaPago
-  Patrón <<Strategy>>: distintas formas de pago
-  (efectivo, tarjeta, externo) intercambiables.
-end note
-
-note bottom of RepositorioPedidos
-  Patrón <<Repository>>: abstrae la persistencia;
-  las implementaciones viven en infraestructura.
-end note
-
-note bottom of PuertoTransporteRiel
-  Patrón <<Adapter>>: AdaptadorRiel traduce el
-  dominio al sistema externo de riel.
+  ObservadorPedido (ServicioAlertas) ante
+  cambios de estado relevantes.
 end note
 @enduml
