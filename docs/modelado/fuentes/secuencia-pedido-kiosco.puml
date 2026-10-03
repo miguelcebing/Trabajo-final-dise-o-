@@ -1,0 +1,31 @@
+@startuml secuencia-pedido-kiosco
+' Caso de uso principal 1: pedido desde el kiosco hasta la cocina (RF-15..RF-23, RF-28)
+skinparam sequenceMessageAlign center
+title Flujo: Pedido en kiosco -> cocina
+
+actor "Cliente" as Cliente
+participant "KioscoCliente" as Kiosco
+participant "GestionMenu" as Menu
+participant "GestionPedidos" as Pedidos
+participant "GestionInventario" as Inv
+participant "MotorCocina" as Cocina
+participant "Notificaciones" as Notif
+
+Cliente -> Kiosco : iniciar pedido
+Kiosco -> Menu : listar menu disponible()
+Menu --> Kiosco : productos y categorias
+Cliente -> Kiosco : agregar productos / personalizar
+Kiosco -> Pedidos : crear carrito y agregar lineas
+Pedidos -> Menu : consultar precio y receta
+Menu --> Pedidos : precios, ingredientes, estaciones
+Cliente -> Kiosco : confirmar pedido
+Kiosco -> Pedidos : confirmarPedido()
+Pedidos -> Inv : validar y descontar stock
+Inv --> Pedidos : stock suficiente
+Pedidos -> Pedidos : generar codigo y tareas de cocina
+Pedidos -> Cocina : enviarAEstaciones(pedido)
+Cocina -> Notif : notificar nuevo pedido
+Notif --> Cocina : alerta enviada
+Pedidos --> Kiosco : pedido confirmado (codigo)
+Kiosco --> Cliente : mostrar estado del pedido
+@enduml

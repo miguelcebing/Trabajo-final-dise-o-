@@ -1,0 +1,31 @@
+@startuml secuencia-preparacion-riel
+' Caso de uso principal 2: preparacion en cocina y entrega por riel (RF-29..RF-38)
+skinparam sequenceMessageAlign center
+title Flujo: Preparacion -> riel -> entrega en mesa
+
+actor "Cocinero" as Cocinero
+participant "PantallaCocina" as PCocina
+participant "MotorCocina" as Cocina
+participant "GestionPedidos" as Pedidos
+participant "ControlRiel" as Riel
+participant "SistemaRielExterno" as RielExt
+participant "GestionMesas" as Mesas
+
+Cocinero -> PCocina : ver tareas de su estacion
+PCocina -> Cocina : listar tareas(idEstacion)
+Cocina --> PCocina : tareas pendientes
+Cocinero -> PCocina : completar tarea
+PCocina -> Cocina : completarTarea(idTarea)
+Cocina -> Pedidos : actualizar estado de tarea
+alt todas las tareas completadas
+  Cocina -> Pedidos : pedido ListoParaEntregar
+  Pedidos -> Riel : despacharPedido(idPedido)
+  Riel -> RielExt : orden de transporte a mesa
+  RielExt --> Riel : transporte iniciado
+  Riel -> Mesas : ocuparMesa(numero)
+  Mesas --> Riel : mesa ocupada
+  Riel -> Pedidos : pedido Entregado
+else quedan tareas pendientes
+  Cocina --> PCocina : tarea completada
+end
+@enduml
