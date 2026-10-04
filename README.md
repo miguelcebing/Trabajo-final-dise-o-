@@ -101,8 +101,7 @@ El repositorio es **documental** (no hay programa que compilar ni ejecutar).
 
 ## Integrantes
 
-<!-- Completar con los nombres de los integrantes del equipo -->
-- _(pendiente)_
+- Miguel Felipe Ceballos Ramírez
 
 ---
 
