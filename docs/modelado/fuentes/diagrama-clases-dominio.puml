@@ -1,0 +1,293 @@
+@startuml diagrama-clases-dominio
+' ============================================================
+' Diagrama de clases (software) - paquete DOMINIO
+' Entidades con comportamiento, enumeraciones y jerarquia de Alerta.
+' ============================================================
+skinparam linetype ortho
+skinparam classAttributeIconSize 0
+skinparam nodesep 35
+skinparam ranksep 45
+hide circle
+
+package "dominio" {
+
+  package "alertas" {
+    abstract class Alerta {
+      - id : UUID
+      - descripcion : String
+      - fechaHoraGeneracion : LocalDateTime
+      - atendida : boolean
+      + atender() : void
+      + estaAtendida() : boolean
+    }
+    class AlertaRetraso {
+      - minutosRetraso : int
+    }
+    class AlertaStockBajo {
+      - stockActual : BigDecimal
+      - stockMinimo : BigDecimal
+    }
+    class AlertaFallaTransporte {
+      - descripcionFalla : String
+    }
+    Alerta <|-- AlertaRetraso
+    Alerta <|-- AlertaStockBajo
+    Alerta <|-- AlertaFallaTransporte
+  }
+
+  class Categoria {
+    - id : UUID
+    - nombre : String
+    - ordenVisualizacion : int
+    - activa : boolean
+    + activar() : void
+    + desactivar() : void
+  }
+
+  class Producto {
+    - id : UUID
+    - codigo : String
+    - nombre : String
+    - descripcion : String
+    - precioBase : BigDecimal
+    - imagen : String
+    - tiempoPreparacionMinutos : int
+    - disponible : boolean
+    + calcularPrecio(ajusteVariante : BigDecimal, extras : List~BigDecimal~) : BigDecimal
+    + marcarAgotado() : void
+    + estaDisponible() : boolean
+  }
+
+  class VarianteProducto {
+    - id : UUID
+    - nombre : String
+    - ajustePrecio : BigDecimal
+    - orden : int
+    - activa : boolean
+  }
+
+  class Ingrediente {
+    - id : UUID
+    - codigo : String
+    - nombre : String
+    - unidadMedida : String
+    - stockActual : BigDecimal
+    - stockMinimo : BigDecimal
+    - costoUnitario : BigDecimal
+    + tieneStock(cantidad : BigDecimal) : boolean
+    + aplicarMovimiento(movimiento : MovimientoInventario) : void
+    + requiereReposicion() : boolean
+  }
+
+  class RecetaProducto <<clase de asociación>> {
+    - cantidadRequerida : BigDecimal
+    - esOpcional : boolean
+    - cargoExtra : BigDecimal
+  }
+
+  class ComplementoProducto <<clase de asociación>> {
+    - obligatorio : boolean
+    - orden : int
+  }
+
+  class Carrito {
+    - id : UUID
+    - fechaHoraApertura : LocalDateTime
+    - estado : EstadoCarrito
+    - lineas : List~LineaPedido~
+    + agregarProducto(producto : Producto, cantidad : int) : void
+    + quitarProducto(lineaId : UUID) : void
+    + calcularTotal() : BigDecimal
+    + confirmar() : Pedido
+  }
+
+  class Pedido {
+    - id : UUID
+    - codigo : String
+    - fechaHoraCreacion : LocalDateTime
+    - tipo : TipoPedido
+    - estado : EstadoPedido
+    - observaciones : String
+    - motivoCancelacion : String
+    - lineas : List~LineaPedido~
+    + {static} generarCodigo(fecha : LocalDate) : String
+    + agregarLinea(linea : LineaPedido) : void
+    + confirmar() : void
+    + cancelar(motivo : String) : void
+    + calcularTotal() : BigDecimal
+    + cambiarEstado(nuevo : EstadoPedido) : void
+  }
+
+  class LineaPedido {
+    - id : UUID
+    - cantidad : int
+    - precioUnitario : BigDecimal
+    - notasPersonalizacion : String
+    + calcularSubtotal() : BigDecimal
+  }
+
+  class PersonalizacionIngrediente <<clase de asociación>> {
+    - accion : AccionPersonalizacion
+    - cantidadExtra : BigDecimal
+    - cargoExtra : BigDecimal
+  }
+
+  class ComplementoSeleccionado <<clase de asociación>> {
+    - cantidad : int
+    - precioUnitario : BigDecimal
+  }
+
+  class Pago {
+    - id : UUID
+    - monto : BigDecimal
+    - medio : MedioPago
+    - fechaHora : LocalDateTime
+    - estado : EstadoPago
+    + aprobar() : void
+    + rechazar() : void
+  }
+
+  class Mesa {
+    - id : UUID
+    - numero : String
+    - capacidad : int
+    - ubicacion : String
+    - estado : EstadoMesa
+    + ocupar() : void
+    + liberar() : void
+    + estaLibre() : boolean
+  }
+
+  class EstacionCocina {
+    - id : UUID
+    - nombre : String
+    - activa : boolean
+    + activar() : void
+    + desactivar() : void
+  }
+
+  class TareaCocina {
+    - id : UUID
+    - estado : EstadoTareaCocina
+    - fechaHoraInicio : LocalDateTime
+    - fechaHoraFin : LocalDateTime
+    - tiempoEstimadoMinutos : int
+    - prioridad : int
+    + iniciar() : void
+    + completar() : void
+    + estaRetrasada(ahora : LocalDateTime) : boolean
+  }
+
+  class TransporteRiel {
+    - id : UUID
+    - estado : EstadoTransporte
+    - fechaHoraDespacho : LocalDateTime
+    - fechaHoraEntrega : LocalDateTime
+    - descripcionFalla : String
+    + despachar() : void
+    + entregar() : void
+    + reportarFalla(descripcion : String) : void
+  }
+
+  class MovimientoInventario {
+    - id : UUID
+    - tipo : TipoMovimiento
+    - cantidad : BigDecimal
+    - fechaHora : LocalDateTime
+    - motivo : String
+  }
+
+  enum EstadoCarrito {
+    Abierto
+    Confirmado
+    Abandonado
+  }
+  enum TipoPedido {
+    EnRestaurante
+    ParaLlevar
+  }
+  enum EstadoPedido {
+    Pendiente
+    Confirmado
+    EnPreparacion
+    ListoParaEntregar
+    EnTransporte
+    Entregado
+    Cancelado
+    Pagado
+  }
+  enum EstadoMesa {
+    Libre
+    Ocupada
+    Reservada
+    EnLimpieza
+  }
+  enum EstadoTareaCocina {
+    Pendiente
+    EnProceso
+    Completada
+    Cancelada
+  }
+  enum EstadoTransporte {
+    PendienteDespacho
+    EnTransporte
+    EntregadoEnMesa
+    Falla
+  }
+  enum TipoMovimiento {
+    Entrada
+    SalidaPedido
+    AjustePositivo
+    AjusteNegativo
+    Merma
+  }
+  enum AccionPersonalizacion {
+    Quitado
+    AgregadoExtra
+  }
+  enum MedioPago {
+    Efectivo
+    Tarjeta
+    Externo
+  }
+  enum EstadoPago {
+    Pendiente
+    Aprobado
+    Rechazado
+  }
+}
+
+' --- Relaciones del dominio ---
+Categoria "1" o-- "0..*" Producto : agrupa >
+Producto "1" *-- "0..*" VarianteProducto : ofrece >
+Producto "1" *-- "0..*" RecetaProducto : define >
+RecetaProducto "*" --> "1" Ingrediente : usa >
+Producto "1" --> "0..*" ComplementoProducto : ofrece >
+ComplementoProducto "*" --> "1" Producto : complementa >
+Producto "*" --> "1" EstacionCocina : se prepara en >
+
+Carrito "1" *-- "0..*" LineaPedido : reúne >
+Carrito "0..1" --> "0..1" Pedido : se confirma como >
+Pedido "1" *-- "1..*" LineaPedido : contiene >
+LineaPedido "*" --> "1" Producto : refiere a >
+LineaPedido "*" --> "0..1" VarianteProducto : usa >
+LineaPedido "1" *-- "0..*" PersonalizacionIngrediente : personaliza >
+PersonalizacionIngrediente "*" --> "1" Ingrediente : refiere a >
+LineaPedido "1" *-- "0..*" ComplementoSeleccionado : incluye >
+ComplementoSeleccionado "*" --> "1" Producto : refiere a >
+Pago "1" --> "1" Pedido : corresponde a >
+Pedido "0..*" --> "0..1" Mesa : se atiende en >
+Pedido "1" *-- "0..*" TareaCocina : genera >
+TareaCocina "*" --> "1" EstacionCocina : se realiza en >
+TareaCocina "*" --> "1" LineaPedido : prepara >
+Pedido "0..1" *-- "0..1" TransporteRiel : se transporta mediante >
+TransporteRiel "*" --> "1" Mesa : se dirige a >
+Ingrediente "1" --> "0..*" MovimientoInventario : registra >
+MovimientoInventario "*" --> "0..1" Pedido : se origina por >
+
+note bottom of Pedido
+  Patrón <<Observer>>: Pedido notifica a
+  ObservadorPedido (ServicioAlertas) ante
+  cambios de estado relevantes.
+end note
+@enduml

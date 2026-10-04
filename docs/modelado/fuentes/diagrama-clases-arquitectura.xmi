@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1">
+<uml:Model xmi:id="model" name="diagrama-clases-arquitectura">
+  <packagedElement xmi:type="uml:Package" xmi:id="pkg_app" name="aplicacion">
+    <packagedElement xmi:type="uml:Interface" xmi:id="RepositorioPedidos" name="RepositorioPedidos">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioPedidos_o0" name="guardar" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioPedidos_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioPedidos_o0_p0" name="pedido" type="Pedido"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioPedidos_o1" name="buscarPorId" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioPedidos_o1_ret" name="return" type="Pedido" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioPedidos_o1_p0" name="id" type="UUID"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioPedidos_o2" name="listarPorEstado" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioPedidos_o2_ret" name="return" type="Pedido" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioPedidos_o2_p0" name="estado" type="EstadoPedido"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="RepositorioProductos" name="RepositorioProductos">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioProductos_o0" name="guardar" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioProductos_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioProductos_o0_p0" name="producto" type="Producto"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioProductos_o1" name="buscarPorId" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioProductos_o1_ret" name="return" type="Producto" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioProductos_o1_p0" name="id" type="UUID"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioProductos_o2" name="listarDisponibles" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioProductos_o2_ret" name="return" type="Producto" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="RepositorioIngredientes" name="RepositorioIngredientes">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioIngredientes_o0" name="guardar" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioIngredientes_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioIngredientes_o0_p0" name="ingrediente" type="Ingrediente"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioIngredientes_o1" name="buscarPorId" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioIngredientes_o1_ret" name="return" type="Ingrediente" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioIngredientes_o1_p0" name="id" type="UUID"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioIngredientes_o2" name="listarBajoMinimo" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioIngredientes_o2_ret" name="return" type="Ingrediente" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="RepositorioMesas" name="RepositorioMesas">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioMesas_o0" name="guardar" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioMesas_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioMesas_o0_p0" name="mesa" type="Mesa"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioMesas_o1" name="buscarPorNumero" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioMesas_o1_ret" name="return" type="Mesa" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioMesas_o1_p0" name="numero" type="String"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioMesas_o2" name="listarLibres" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioMesas_o2_ret" name="return" type="Mesa" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="RepositorioTareas" name="RepositorioTareas">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioTareas_o0" name="guardar" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioTareas_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioTareas_o0_p0" name="tarea" type="TareaCocina"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="RepositorioTareas_o1" name="listarPorEstacion" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioTareas_o1_ret" name="return" type="TareaCocina" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="RepositorioTareas_o1_p0" name="idEstacion" type="UUID"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="PuertoTransporteRiel" name="PuertoTransporteRiel">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="PuertoTransporteRiel_o0" name="despachar" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PuertoTransporteRiel_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PuertoTransporteRiel_o0_p0" name="transporte" type="TransporteRiel"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="PuertoTransporteRiel_o1" name="consultarEstado" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PuertoTransporteRiel_o1_ret" name="return" type="EstadoTransporte" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PuertoTransporteRiel_o1_p0" name="idTransporte" type="UUID"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="EstrategiaPago" name="EstrategiaPago">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="EstrategiaPago_o0" name="procesar" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="EstrategiaPago_o0_ret" name="return" type="boolean" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="EstrategiaPago_o0_p0" name="monto" type="BigDecimal"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="ObservadorPedido" name="ObservadorPedido">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ObservadorPedido_o0" name="actualizar" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ObservadorPedido_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ObservadorPedido_o0_p0" name="pedido" type="Pedido"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ObservadorPedido_o0_p1" name="evento" type="String"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Interface" xmi:id="Notificador" name="Notificador">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="Notificador_o0" name="enviar" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="Notificador_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="Notificador_o0_p0" name="destino" type="String"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="Notificador_o0_p1" name="mensaje" type="String"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="ServicioPedidos" name="ServicioPedidos" isAbstract="false">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioPedidos_o0" name="crearDesdeCarrito" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioPedidos_o0_ret" name="return" type="Pedido" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioPedidos_o0_p0" name="carrito" type="Carrito"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioPedidos_o1" name="confirmarPedido" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioPedidos_o1_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioPedidos_o1_p0" name="idPedido" type="UUID"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioPedidos_o2" name="cancelarPedido" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioPedidos_o2_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioPedidos_o2_p0" name="idPedido" type="UUID"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioPedidos_o2_p1" name="motivo" type="String"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioPedidos_o3" name="registrarPago" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioPedidos_o3_ret" name="return" type="boolean" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioPedidos_o3_p0" name="idPedido" type="UUID"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioPedidos_o3_p1" name="estrategia" type="EstrategiaPago"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="ServicioMenu" name="ServicioMenu" isAbstract="false">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioMenu_o0" name="listarMenu" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioMenu_o0_ret" name="return" type="Producto" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioMenu_o1" name="buscarProducto" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioMenu_o1_ret" name="return" type="Producto" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioMenu_o1_p0" name="id" type="UUID"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="ServicioCocina" name="ServicioCocina" isAbstract="false">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioCocina_o0" name="enviarAEstaciones" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioCocina_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioCocina_o0_p0" name="pedido" type="Pedido"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioCocina_o1" name="iniciarTarea" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioCocina_o1_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioCocina_o1_p0" name="idTarea" type="UUID"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioCocina_o2" name="completarTarea" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioCocina_o2_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioCocina_o2_p0" name="idTarea" type="UUID"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="ServicioRiel" name="ServicioRiel" isAbstract="false">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioRiel_o0" name="despacharPedido" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioRiel_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioRiel_o0_p0" name="idPedido" type="UUID"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioRiel_o1" name="reportarFalla" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioRiel_o1_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioRiel_o1_p0" name="idTransporte" type="UUID"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioRiel_o1_p1" name="descripcion" type="String"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="ServicioInventario" name="ServicioInventario" isAbstract="false">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioInventario_o0" name="descontarPorPedido" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioInventario_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioInventario_o0_p0" name="pedido" type="Pedido"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioInventario_o1" name="registrarMovimiento" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioInventario_o1_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioInventario_o1_p0" name="movimiento" type="MovimientoInventario"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioInventario_o2" name="ingredientesBajoMinimo" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioInventario_o2_ret" name="return" type="Ingrediente" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="ServicioMesas" name="ServicioMesas" isAbstract="false">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioMesas_o0" name="ocuparMesa" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioMesas_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioMesas_o0_p0" name="numero" type="String"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioMesas_o1" name="liberarMesa" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioMesas_o1_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioMesas_o1_p0" name="numero" type="String"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="ServicioReportes" name="ServicioReportes" isAbstract="false">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioReportes_o0" name="ventasPorProducto" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioReportes_o0_ret" name="return" type="Map" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioReportes_o1" name="rendimientoPorEstacion" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioReportes_o1_ret" name="return" type="Map" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="ServicioAlertas" name="ServicioAlertas" isAbstract="false">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="ServicioAlertas_o0" name="actualizar" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioAlertas_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioAlertas_o0_p0" name="pedido" type="Pedido"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="ServicioAlertas_o0_p1" name="evento" type="String"/>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="pkg_infra" name="infraestructura">
+    <packagedElement xmi:type="uml:Class" xmi:id="RepositorioPedidosEnMemoria" name="RepositorioPedidosEnMemoria" isAbstract="false">
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="RepositorioProductosEnMemoria" name="RepositorioProductosEnMemoria" isAbstract="false">
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="RepositorioIngredientesEnMemoria" name="RepositorioIngredientesEnMemoria" isAbstract="false">
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="RepositorioMesasEnMemoria" name="RepositorioMesasEnMemoria" isAbstract="false">
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="RepositorioTareasEnMemoria" name="RepositorioTareasEnMemoria" isAbstract="false">
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="AdaptadorRiel" name="AdaptadorRiel" isAbstract="false">
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="PagoEfectivo" name="PagoEfectivo" isAbstract="false">
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="PagoTarjeta" name="PagoTarjeta" isAbstract="false">
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="NotificadorCorreo" name="NotificadorCorreo" isAbstract="false">
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="pkg_ui" name="interfaz">
+    <packagedElement xmi:type="uml:Class" xmi:id="PantallaKiosco" name="PantallaKiosco" isAbstract="false">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="PantallaKiosco_o0" name="iniciarPedido" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PantallaKiosco_o0_ret" name="return" type="Carrito" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="PantallaKiosco_o1" name="agregarAlCarrito" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PantallaKiosco_o1_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PantallaKiosco_o1_p0" name="idProducto" type="UUID"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PantallaKiosco_o1_p1" name="cantidad" type="int"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="PantallaKiosco_o2" name="confirmarPedido" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PantallaKiosco_o2_ret" name="return" type="Pedido" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="PantallaCocina" name="PantallaCocina" isAbstract="false">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="PantallaCocina_o0" name="verTareas" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PantallaCocina_o0_ret" name="return" type="TareaCocina" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PantallaCocina_o0_p0" name="idEstacion" type="UUID"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="PantallaCocina_o1" name="completarTarea" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PantallaCocina_o1_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PantallaCocina_o1_p0" name="idTarea" type="UUID"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="PantallaMesero" name="PantallaMesero" isAbstract="false">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="PantallaMesero_o0" name="verEstadoMesa" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PantallaMesero_o0_ret" name="return" type="EstadoMesa" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PantallaMesero_o0_p0" name="numero" type="String"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="PanelAdministracion" name="PanelAdministracion" isAbstract="false">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="PanelAdministracion_o0" name="gestionarProducto" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PanelAdministracion_o0_ret" name="return" type="void" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PanelAdministracion_o0_p0" name="producto" type="Producto"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="PanelAdministracion_o1" name="verReporte" visibility="public" isStatic="false">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PanelAdministracion_o1_ret" name="return" type="Map" direction="return"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="PanelAdministracion_o1_p0" name="nombre" type="String"/>
+      </ownedOperation>
+    </packagedElement>
+  </packagedElement>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="RepositorioPedidosEnMemoria_ir_RepositorioPedidos" name="RepositorioPedidos" client="RepositorioPedidosEnMemoria" supplier="RepositorioPedidos"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="RepositorioProductosEnMemoria_ir_RepositorioProductos" name="RepositorioProductos" client="RepositorioProductosEnMemoria" supplier="RepositorioProductos"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="RepositorioIngredientesEnMemoria_ir_RepositorioIngredientes" name="RepositorioIngredientes" client="RepositorioIngredientesEnMemoria" supplier="RepositorioIngredientes"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="RepositorioMesasEnMemoria_ir_RepositorioMesas" name="RepositorioMesas" client="RepositorioMesasEnMemoria" supplier="RepositorioMesas"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="RepositorioTareasEnMemoria_ir_RepositorioTareas" name="RepositorioTareas" client="RepositorioTareasEnMemoria" supplier="RepositorioTareas"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="AdaptadorRiel_ir_PuertoTransporteRiel" name="PuertoTransporteRiel" client="AdaptadorRiel" supplier="PuertoTransporteRiel"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="PagoEfectivo_ir_EstrategiaPago" name="EstrategiaPago" client="PagoEfectivo" supplier="EstrategiaPago"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="PagoTarjeta_ir_EstrategiaPago" name="EstrategiaPago" client="PagoTarjeta" supplier="EstrategiaPago"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="NotificadorCorreo_ir_Notificador" name="Notificador" client="NotificadorCorreo" supplier="Notificador"/>
+    <packagedElement xmi:type="uml:InterfaceRealization" xmi:id="ServicioAlertas_ir_ObservadorPedido" name="ObservadorPedido" client="ServicioAlertas" supplier="ObservadorPedido"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="ServicioPedidos_dep_RepositorioPedidos" name="" client="ServicioPedidos" supplier="RepositorioPedidos"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="ServicioPedidos_dep_RepositorioMesas" name="" client="ServicioPedidos" supplier="RepositorioMesas"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="ServicioPedidos_dep_EstrategiaPago" name="" client="ServicioPedidos" supplier="EstrategiaPago"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="ServicioMenu_dep_RepositorioProductos" name="" client="ServicioMenu" supplier="RepositorioProductos"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="ServicioCocina_dep_RepositorioTareas" name="" client="ServicioCocina" supplier="RepositorioTareas"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="ServicioRiel_dep_PuertoTransporteRiel" name="" client="ServicioRiel" supplier="PuertoTransporteRiel"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="ServicioInventario_dep_RepositorioIngredientes" name="" client="ServicioInventario" supplier="RepositorioIngredientes"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="ServicioMesas_dep_RepositorioMesas" name="" client="ServicioMesas" supplier="RepositorioMesas"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="ServicioAlertas_dep_Notificador" name="" client="ServicioAlertas" supplier="Notificador"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="PantallaKiosco_dep_ServicioMenu" name="" client="PantallaKiosco" supplier="ServicioMenu"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="PantallaKiosco_dep_ServicioPedidos" name="" client="PantallaKiosco" supplier="ServicioPedidos"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="PantallaCocina_dep_ServicioCocina" name="" client="PantallaCocina" supplier="ServicioCocina"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="PantallaMesero_dep_ServicioMesas" name="" client="PantallaMesero" supplier="ServicioMesas"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="PanelAdministracion_dep_ServicioReportes" name="" client="PanelAdministracion" supplier="ServicioReportes"/>
+    <packagedElement xmi:type="uml:Dependency" xmi:id="PanelAdministracion_dep_ServicioMenu" name="" client="PanelAdministracion" supplier="ServicioMenu"/>
+</uml:Model>
+</xmi:XMI>

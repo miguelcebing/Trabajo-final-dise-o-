@@ -1,0 +1,23 @@
+@startuml secuencia-alerta-stock
+' Caso de uso principal 3: alerta por stock bajo (RF-43..RF-45, RF-53)
+skinparam sequenceMessageAlign center
+title Flujo: consumo de inventario -> alerta de stock bajo
+
+participant "GestionPedidos" as Pedidos
+participant "GestionInventario" as Inv
+participant "Notificaciones" as Notif
+actor "Administrador" as Admin
+participant "PanelAdministracion" as PAdmin
+
+Pedidos -> Inv : descontarPorPedido(pedido)
+Inv -> Inv : registrar MovimientoInventario (SalidaPedido)
+Inv -> Inv : actualizar stockActual
+alt stockActual <= stockMinimo
+  Inv -> Notif : generar Alerta de StockBajo
+  Notif -> PAdmin : mostrar alerta
+  PAdmin --> Admin : alerta visible
+  Admin -> PAdmin : gestionar reposicion
+else stock suficiente
+  Inv --> Pedidos : consumo registrado
+end
+@enduml
