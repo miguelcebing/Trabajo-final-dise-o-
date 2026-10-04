@@ -57,7 +57,7 @@ Trabajo-final-diseño/
 │   │   ├── modelo-dominio.md             # Modelo conceptual (mundo del problema)
 │   │   ├── diagrama-clases.md            # Diseño de software (clases)
 │   │   ├── como-usar-visual-paradigm.md  # Procedimiento en Visual Paradigm
-│   │   ├── fuentes/                      # Fuentes PlantUML editables
+│   │   ├── fuentes/                      # Fuentes PlantUML y modelos XMI importables
 │   │   └── *.png / *.svg                 # Diagramas exportados
 │   ├── arquitectura/
 │   │   └── vista-funcional.md            # Vista funcional (Rozanski & Woods)
@@ -84,6 +84,9 @@ El repositorio es **documental** (no hay programa que compilar ni ejecutar).
    java -jar plantuml.jar -tpng -o .. docs/modelado/fuentes/*.puml
    java -jar plantuml.jar -tsvg -o .. docs/modelado/fuentes/*.puml
    ```
+5. **Importar en Visual Paradigm** (opcional): usar los modelos **XMI** de `docs/modelado/fuentes/`
+   (`File > Import > XMI`). Ver [cómo usar Visual Paradigm](docs/modelado/como-usar-visual-paradigm.md).
+   > El código PlantUML **no** se importa en Visual Paradigm; solo sirve como fuente editable.
 
 ---
 

@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://schema.omg.org/spec/UML/2.1">
+<uml:Model xmi:id="model" name="modelo-dominio">
+  <packagedElement xmi:type="uml:Package" xmi:id="pkg_menu" name="Menu">
+    <packagedElement xmi:type="uml:Class" xmi:id="Categoria" name="Categoria" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Categoria_a0" name="nombre" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Categoria_a1" name="descripcion" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Categoria_a2" name="ordenVisualizacion" type="Entero" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Categoria_a3" name="activa" type="Booleano" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="Producto" name="Producto" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Producto_a0" name="codigo" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Producto_a1" name="nombre" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Producto_a2" name="descripcion" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Producto_a3" name="precioBase" type="Moneda" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Producto_a4" name="imagen" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Producto_a5" name="tiempoPreparacionEstimado" type="Entero" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Producto_a6" name="disponible" type="Booleano" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="VarianteProducto" name="VarianteProducto" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="VarianteProducto_a0" name="nombre" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="VarianteProducto_a1" name="descripcion" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="VarianteProducto_a2" name="ajustePrecio" type="Moneda" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="VarianteProducto_a3" name="ordenVisualizacion" type="Entero" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="VarianteProducto_a4" name="activa" type="Booleano" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="Ingrediente" name="Ingrediente" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Ingrediente_a0" name="codigo" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Ingrediente_a1" name="nombre" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Ingrediente_a2" name="unidadMedida" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Ingrediente_a3" name="stockActual" type="Decimal" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Ingrediente_a4" name="stockMinimo" type="Decimal" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Ingrediente_a5" name="costoUnitario" type="Moneda" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="RecetaProducto" name="RecetaProducto" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="RecetaProducto_a0" name="cantidadRequerida" type="Decimal" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="RecetaProducto_a1" name="esOpcional" type="Booleano" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="RecetaProducto_a2" name="cargoExtra" type="Moneda" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="ComplementoProducto" name="ComplementoProducto" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="ComplementoProducto_a0" name="obligatorio" type="Booleano" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="ComplementoProducto_a1" name="ordenVisualizacion" type="Entero" visibility="public" isStatic="false"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="pkg_pedido" name="Pedido">
+    <packagedElement xmi:type="uml:Class" xmi:id="Carrito" name="Carrito" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Carrito_a0" name="fechaHoraApertura" type="FechaHora" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Carrito_a1" name="estado" type="Texto" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="Pedido" name="Pedido" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Pedido_a0" name="codigo" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Pedido_a1" name="fechaHoraCreacion" type="FechaHora" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Pedido_a2" name="tipo" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Pedido_a3" name="estado" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Pedido_a4" name="subtotal" type="Moneda" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Pedido_a5" name="total" type="Moneda" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Pedido_a6" name="observaciones" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Pedido_a7" name="motivoCancelacion" type="Texto" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="LineaPedido" name="LineaPedido" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="LineaPedido_a0" name="cantidad" type="Entero" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="LineaPedido_a1" name="precioUnitario" type="Moneda" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="LineaPedido_a2" name="subtotalLinea" type="Moneda" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="LineaPedido_a3" name="notasPersonalizacion" type="Texto" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="PersonalizacionIngrediente" name="PersonalizacionIngrediente" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="PersonalizacionIngrediente_a0" name="accion" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="PersonalizacionIngrediente_a1" name="cantidadExtra" type="Decimal" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="PersonalizacionIngrediente_a2" name="cargoExtra" type="Moneda" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="ComplementoSeleccionado" name="ComplementoSeleccionado" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="ComplementoSeleccionado_a0" name="cantidad" type="Entero" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="ComplementoSeleccionado_a1" name="precioUnitario" type="Moneda" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="Pago" name="Pago" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Pago_a0" name="monto" type="Moneda" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Pago_a1" name="medio" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Pago_a2" name="fechaHora" type="FechaHora" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Pago_a3" name="estado" type="Texto" visibility="public" isStatic="false"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="pkg_operacion" name="Operacion">
+    <packagedElement xmi:type="uml:Class" xmi:id="Mesa" name="Mesa" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Mesa_a0" name="numero" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Mesa_a1" name="capacidad" type="Entero" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Mesa_a2" name="ubicacion" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Mesa_a3" name="estado" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Mesa_a4" name="activa" type="Booleano" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="EstacionCocina" name="EstacionCocina" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="EstacionCocina_a0" name="nombre" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="EstacionCocina_a1" name="descripcion" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="EstacionCocina_a2" name="ordenVisualizacion" type="Entero" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="EstacionCocina_a3" name="activa" type="Booleano" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="TareaCocina" name="TareaCocina" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="TareaCocina_a0" name="estado" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="TareaCocina_a1" name="fechaHoraInicio" type="FechaHora" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="TareaCocina_a2" name="fechaHoraFin" type="FechaHora" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="TareaCocina_a3" name="tiempoEstimadoMinutos" type="Entero" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="TareaCocina_a4" name="prioridad" type="Entero" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="TransporteRiel" name="TransporteRiel" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="TransporteRiel_a0" name="estado" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="TransporteRiel_a1" name="fechaHoraDespacho" type="FechaHora" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="TransporteRiel_a2" name="fechaHoraEntrega" type="FechaHora" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="TransporteRiel_a3" name="descripcionFalla" type="Texto" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="MovimientoInventario" name="MovimientoInventario" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="MovimientoInventario_a0" name="tipo" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="MovimientoInventario_a1" name="cantidad" type="Decimal" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="MovimientoInventario_a2" name="fechaHora" type="FechaHora" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="MovimientoInventario_a3" name="motivo" type="Texto" visibility="public" isStatic="false"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="Alerta" name="Alerta" isAbstract="false">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Alerta_a0" name="tipo" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Alerta_a1" name="descripcion" type="Texto" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Alerta_a2" name="fechaHoraGeneracion" type="FechaHora" visibility="public" isStatic="false"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="Alerta_a3" name="atendida" type="Booleano" visibility="public" isStatic="false"/>
+    </packagedElement>
+  </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_cat_prod" name="agrupa">
+      <memberEnd xmi:idref="a_cat_prod_e0"/>
+      <memberEnd xmi:idref="a_cat_prod_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_cat_prod_e0" name="categoria" type="Categoria" association="a_cat_prod">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_cat_prod_e0_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_cat_prod_e0_u" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_cat_prod_e1" name="productos" type="Producto" association="a_cat_prod" aggregation="shared">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_cat_prod_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_cat_prod_e1_u" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_prod_var" name="ofrece">
+      <memberEnd xmi:idref="a_prod_var_e0"/>
+      <memberEnd xmi:idref="a_prod_var_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_prod_var_e0" name="producto" type="Producto" association="a_prod_var">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_prod_var_e0_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_prod_var_e0_u" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_prod_var_e1" name="variantes" type="VarianteProducto" association="a_prod_var" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_prod_var_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_prod_var_e1_u" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_prod_rec" name="define">
+      <memberEnd xmi:idref="a_prod_rec_e0"/>
+      <memberEnd xmi:idref="a_prod_rec_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_prod_rec_e0" name="producto" type="Producto" association="a_prod_rec">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_prod_rec_e0_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_prod_rec_e0_u" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_prod_rec_e1" name="receta" type="RecetaProducto" association="a_prod_rec" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_prod_rec_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_prod_rec_e1_u" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_rec_ing" name="usa">
+      <memberEnd xmi:idref="a_rec_ing_e0"/>
+      <memberEnd xmi:idref="a_rec_ing_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_rec_ing_e0" name="receta" type="RecetaProducto" association="a_rec_ing">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_rec_ing_e0_l" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_rec_ing_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_rec_ing_e1" name="ingrediente" type="Ingrediente" association="a_rec_ing">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_rec_ing_e1_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_rec_ing_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_prod_comp" name="ofrece">
+      <memberEnd xmi:idref="a_prod_comp_e0"/>
+      <memberEnd xmi:idref="a_prod_comp_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_prod_comp_e0" name="productoPrincipal" type="Producto" association="a_prod_comp">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_prod_comp_e0_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_prod_comp_e0_u" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_prod_comp_e1" name="complementos" type="ComplementoProducto" association="a_prod_comp">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_prod_comp_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_prod_comp_e1_u" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_comp_prod" name="complementa">
+      <memberEnd xmi:idref="a_comp_prod_e0"/>
+      <memberEnd xmi:idref="a_comp_prod_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_comp_prod_e0" name="complemento" type="ComplementoProducto" association="a_comp_prod">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_comp_prod_e0_l" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_comp_prod_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_comp_prod_e1" name="productoComplemento" type="Producto" association="a_comp_prod">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_comp_prod_e1_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_comp_prod_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_prod_est" name="se prepara en">
+      <memberEnd xmi:idref="a_prod_est_e0"/>
+      <memberEnd xmi:idref="a_prod_est_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_prod_est_e0" name="producto" type="Producto" association="a_prod_est">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_prod_est_e0_l" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_prod_est_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_prod_est_e1" name="estacion" type="EstacionCocina" association="a_prod_est">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_prod_est_e1_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_prod_est_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_car_lin" name="reune">
+      <memberEnd xmi:idref="a_car_lin_e0"/>
+      <memberEnd xmi:idref="a_car_lin_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_car_lin_e0" name="carrito" type="Carrito" association="a_car_lin">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_car_lin_e0_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_car_lin_e0_u" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_car_lin_e1" name="lineas" type="LineaPedido" association="a_car_lin" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_car_lin_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_car_lin_e1_u" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_car_ped" name="se confirma como">
+      <memberEnd xmi:idref="a_car_ped_e0"/>
+      <memberEnd xmi:idref="a_car_ped_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_car_ped_e0" name="carrito" type="Carrito" association="a_car_ped">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_car_ped_e0_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_car_ped_e0_u" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_car_ped_e1" name="pedido" type="Pedido" association="a_car_ped">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_car_ped_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_car_ped_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_ped_lin" name="contiene">
+      <memberEnd xmi:idref="a_ped_lin_e0"/>
+      <memberEnd xmi:idref="a_ped_lin_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ped_lin_e0" name="pedido" type="Pedido" association="a_ped_lin">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ped_lin_e0_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_ped_lin_e0_u" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ped_lin_e1" name="lineas" type="LineaPedido" association="a_ped_lin" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ped_lin_e1_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_ped_lin_e1_u" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_lin_prod" name="refiere a">
+      <memberEnd xmi:idref="a_lin_prod_e0"/>
+      <memberEnd xmi:idref="a_lin_prod_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_lin_prod_e0" name="linea" type="LineaPedido" association="a_lin_prod">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_lin_prod_e0_l" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_lin_prod_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_lin_prod_e1" name="producto" type="Producto" association="a_lin_prod">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_lin_prod_e1_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_lin_prod_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_lin_var" name="usa">
+      <memberEnd xmi:idref="a_lin_var_e0"/>
+      <memberEnd xmi:idref="a_lin_var_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_lin_var_e0" name="linea" type="LineaPedido" association="a_lin_var">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_lin_var_e0_l" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_lin_var_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_lin_var_e1" name="variante" type="VarianteProducto" association="a_lin_var">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_lin_var_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_lin_var_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_lin_pers" name="personaliza">
+      <memberEnd xmi:idref="a_lin_pers_e0"/>
+      <memberEnd xmi:idref="a_lin_pers_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_lin_pers_e0" name="linea" type="LineaPedido" association="a_lin_pers">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_lin_pers_e0_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_lin_pers_e0_u" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_lin_pers_e1" name="personalizaciones" type="PersonalizacionIngrediente" association="a_lin_pers" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_lin_pers_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_lin_pers_e1_u" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_pers_ing" name="refiere a">
+      <memberEnd xmi:idref="a_pers_ing_e0"/>
+      <memberEnd xmi:idref="a_pers_ing_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_pers_ing_e0" name="personalizacion" type="PersonalizacionIngrediente" association="a_pers_ing">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_pers_ing_e0_l" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_pers_ing_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_pers_ing_e1" name="ingrediente" type="Ingrediente" association="a_pers_ing">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_pers_ing_e1_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_pers_ing_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_lin_csel" name="incluye">
+      <memberEnd xmi:idref="a_lin_csel_e0"/>
+      <memberEnd xmi:idref="a_lin_csel_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_lin_csel_e0" name="linea" type="LineaPedido" association="a_lin_csel">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_lin_csel_e0_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_lin_csel_e0_u" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_lin_csel_e1" name="complementos" type="ComplementoSeleccionado" association="a_lin_csel" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_lin_csel_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_lin_csel_e1_u" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_csel_prod" name="refiere a">
+      <memberEnd xmi:idref="a_csel_prod_e0"/>
+      <memberEnd xmi:idref="a_csel_prod_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_csel_prod_e0" name="seleccion" type="ComplementoSeleccionado" association="a_csel_prod">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_csel_prod_e0_l" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_csel_prod_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_csel_prod_e1" name="producto" type="Producto" association="a_csel_prod">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_csel_prod_e1_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_csel_prod_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_pago_ped" name="corresponde a">
+      <memberEnd xmi:idref="a_pago_ped_e0"/>
+      <memberEnd xmi:idref="a_pago_ped_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_pago_ped_e0" name="pago" type="Pago" association="a_pago_ped">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_pago_ped_e0_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_pago_ped_e0_u" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_pago_ped_e1" name="pedido" type="Pedido" association="a_pago_ped">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_pago_ped_e1_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_pago_ped_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_ped_mesa" name="se atiende en">
+      <memberEnd xmi:idref="a_ped_mesa_e0"/>
+      <memberEnd xmi:idref="a_ped_mesa_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ped_mesa_e0" name="pedido" type="Pedido" association="a_ped_mesa">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ped_mesa_e0_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_ped_mesa_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ped_mesa_e1" name="mesa" type="Mesa" association="a_ped_mesa">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ped_mesa_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_ped_mesa_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_ped_tar" name="genera">
+      <memberEnd xmi:idref="a_ped_tar_e0"/>
+      <memberEnd xmi:idref="a_ped_tar_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ped_tar_e0" name="pedido" type="Pedido" association="a_ped_tar">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ped_tar_e0_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_ped_tar_e0_u" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ped_tar_e1" name="tareas" type="TareaCocina" association="a_ped_tar" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ped_tar_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_ped_tar_e1_u" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_tar_est" name="se realiza en">
+      <memberEnd xmi:idref="a_tar_est_e0"/>
+      <memberEnd xmi:idref="a_tar_est_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_tar_est_e0" name="tarea" type="TareaCocina" association="a_tar_est">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_tar_est_e0_l" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_tar_est_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_tar_est_e1" name="estacion" type="EstacionCocina" association="a_tar_est">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_tar_est_e1_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_tar_est_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_tar_lin" name="prepara">
+      <memberEnd xmi:idref="a_tar_lin_e0"/>
+      <memberEnd xmi:idref="a_tar_lin_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_tar_lin_e0" name="tarea" type="TareaCocina" association="a_tar_lin">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_tar_lin_e0_l" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_tar_lin_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_tar_lin_e1" name="linea" type="LineaPedido" association="a_tar_lin">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_tar_lin_e1_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_tar_lin_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_ped_tr" name="se transporta mediante">
+      <memberEnd xmi:idref="a_ped_tr_e0"/>
+      <memberEnd xmi:idref="a_ped_tr_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ped_tr_e0" name="pedido" type="Pedido" association="a_ped_tr">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ped_tr_e0_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_ped_tr_e0_u" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ped_tr_e1" name="transporte" type="TransporteRiel" association="a_ped_tr" aggregation="composite">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ped_tr_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_ped_tr_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_tr_mesa" name="se dirige a">
+      <memberEnd xmi:idref="a_tr_mesa_e0"/>
+      <memberEnd xmi:idref="a_tr_mesa_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_tr_mesa_e0" name="transporte" type="TransporteRiel" association="a_tr_mesa">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_tr_mesa_e0_l" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_tr_mesa_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_tr_mesa_e1" name="mesaDestino" type="Mesa" association="a_tr_mesa">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_tr_mesa_e1_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_tr_mesa_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_ing_mov" name="registra">
+      <memberEnd xmi:idref="a_ing_mov_e0"/>
+      <memberEnd xmi:idref="a_ing_mov_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ing_mov_e0" name="ingrediente" type="Ingrediente" association="a_ing_mov">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ing_mov_e0_l" value="1"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_ing_mov_e0_u" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ing_mov_e1" name="movimientos" type="MovimientoInventario" association="a_ing_mov">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ing_mov_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_ing_mov_e1_u" value="*"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_mov_ped" name="se origina por">
+      <memberEnd xmi:idref="a_mov_ped_e0"/>
+      <memberEnd xmi:idref="a_mov_ped_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_mov_ped_e0" name="movimiento" type="MovimientoInventario" association="a_mov_ped">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_mov_ped_e0_l" value="*"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_mov_ped_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_mov_ped_e1" name="pedido" type="Pedido" association="a_mov_ped">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_mov_ped_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_mov_ped_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_ale_ped" name="se refiere a">
+      <memberEnd xmi:idref="a_ale_ped_e0"/>
+      <memberEnd xmi:idref="a_ale_ped_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ale_ped_e0" name="alerta" type="Alerta" association="a_ale_ped">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ale_ped_e0_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_ale_ped_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ale_ped_e1" name="pedido" type="Pedido" association="a_ale_ped">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ale_ped_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_ale_ped_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_ale_ing" name="se refiere a">
+      <memberEnd xmi:idref="a_ale_ing_e0"/>
+      <memberEnd xmi:idref="a_ale_ing_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ale_ing_e0" name="alerta" type="Alerta" association="a_ale_ing">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ale_ing_e0_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_ale_ing_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ale_ing_e1" name="ingrediente" type="Ingrediente" association="a_ale_ing">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ale_ing_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_ale_ing_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="a_ale_tr" name="se refiere a">
+      <memberEnd xmi:idref="a_ale_tr_e0"/>
+      <memberEnd xmi:idref="a_ale_tr_e1"/>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ale_tr_e0" name="alerta" type="Alerta" association="a_ale_tr">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ale_tr_e0_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="a_ale_tr_e0_u" value="*"/>
+      </ownedEnd>
+      <ownedEnd xmi:type="uml:Property" xmi:id="a_ale_tr_e1" name="transporte" type="TransporteRiel" association="a_ale_tr">
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="a_ale_tr_e1_l" value="0"/>
+        <upperValue xmi:type="uml:LiteralInteger" xmi:id="a_ale_tr_e1_u" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+</uml:Model>
+</xmi:XMI>
