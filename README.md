@@ -8,36 +8,12 @@ Restaurante con autoservicio digital: menú en pantallas táctiles, pedidos, coc
 
 ---
 
-## Diagramas
+## Diagrama de clases
 
-### Modelo de dominio
-![Modelo de dominio](docs/modelado/modelo-dominio.png)
+Diseño de todo el sistema en un solo diagrama (51 clases + 10 enumeraciones, 4 capas coloreadas).
+Detalle, inventario y relaciones en [docs/modelado/diagrama-clases.md](docs/modelado/diagrama-clases.md).
 
-### Diagrama de clases — dominio
-![Diagrama de clases - dominio](docs/modelado/diagrama-clases-dominio.png)
-
-### Diagrama de clases — arquitectura
-![Diagrama de clases - arquitectura](docs/modelado/diagrama-clases-arquitectura.png)
-
-### Vista funcional — componentes
-![Vista funcional - componentes](docs/modelado/vista-funcional-componentes.png)
-
-<details>
-<summary><b>Diagramas de secuencia</b></summary>
-
-**Pedido en kiosco → cocina**
-
-![Secuencia pedido](docs/modelado/secuencia-pedido-kiosco.png)
-
-**Preparación → riel → entrega**
-
-![Secuencia riel](docs/modelado/secuencia-preparacion-riel.png)
-
-**Alerta de stock bajo**
-
-![Secuencia stock](docs/modelado/secuencia-alerta-stock.png)
-
-</details>
+![Diagrama de clases](docs/modelado/diagrama-clases.png)
 
 ---
 
@@ -47,12 +23,10 @@ Restaurante con autoservicio digital: menú en pantallas táctiles, pedidos, coc
 |---|---|
 | [Especificación funcional](docs/especificacion/especificacion-funcional.md) | 56 historias de usuario (INVEST) |
 | [Requerimientos](docs/especificacion/requerimientos.txt) | RF-01 a RF-56 |
-| [Modelo de dominio](docs/modelado/modelo-dominio.md) | Conceptos del negocio |
-| [Diagrama de clases](docs/modelado/diagrama-clases.md) | Diseño de software |
-| [Vista funcional](docs/arquitectura/vista-funcional.md) | Componentes y flujos (Rozanski & Woods) |
-| [Wireframes](docs/wireframes/index.html) | 18 maquetas de pantalla |
+| [Diagrama de clases](docs/modelado/diagrama-clases.md) | Diseño de software (imagen + relaciones + patrones) |
 
-> **¿Necesitas editarlos?** En [`docs/modelado/fuentes/`](docs/modelado/fuentes/) están las fuentes en **PlantUML** (código) y en **XMI** para **Visual Paradigm**. Ver la [guía de Visual Paradigm](docs/modelado/como-usar-visual-paradigm.md).
+> **Fuente del diagrama:** [`docs/modelado/diagrama-clases.mmd`](docs/modelado/diagrama-clases.mmd) (Mermaid).
+> Para regenerar el PNG: `mmdc -i docs/modelado/diagrama-clases.mmd -o docs/modelado/diagrama-clases.png -b white -w 7502 -H 5224`.
 
 ---
 
@@ -62,9 +36,7 @@ Restaurante con autoservicio digital: menú en pantallas táctiles, pedidos, coc
 ├── README.md
 └── docs/
     ├── especificacion/   # Requerimientos e historias de usuario
-    ├── modelado/         # Dominio, clases, diagramas y fuentes (PlantUML/XMI)
-    ├── arquitectura/     # Vista funcional
-    └── wireframes/       # Maquetas de interfaz
+    └── modelado/         # Diagrama de clases (.mmd, .png y documentación)
 ```
 
 ---

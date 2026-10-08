@@ -188,39 +188,12 @@ FASE 8 - TRANSVERSAL (Sprint 11)
 
 ---
 
-## Wireframes
-
-| Archivo | Módulo | HUs |
-|---------|--------|-----|
-| hu1-menu.svg | Menú | HU-01 a HU-03, HU-13, HU-14 |
-| hu2-personalizacion.svg | Personalización | HU-04 a HU-08 |
-| hu3-carrito.svg | Carrito | HU-09 a HU-12 |
-| hu4-inicio-pedido.svg | Inicio | HU-15 a HU-17 |
-| hu5-confirmacion.svg | Confirmación | HU-18 a HU-22 |
-| hu6-seguimiento.svg | Seguimiento | HU-23 |
-| hu7-gestion-pedidos.svg | Pedidos | HU-24a/b/c, HU-25a/b, HU-26, HU-27 |
-| hu8-cocina.svg | Cocina | HU-28, HU-29a/b/c |
-| hu9-estaciones.svg | Estaciones | HU-30a/b, HU-31 |
-| hu10-riel.svg | Riel | HU-32 a HU-35 |
-| hu11-mesas.svg | Mesas | HU-36, HU-37 |
-| hu12-inventario.svg | Inventario | HU-38, HU-39a/b/c |
-| hu13-admin-menu.svg | Admin Menú | HU-40a/b, HU-41 |
-| hu14-reportes.svg | Reportes | HU-42b |
-| hu15-notificaciones.svg | Notificaciones | HU-43a, HU-43b |
-| hu16-integracion.svg | Integración | HU-44a, HU-44b, HU-44c |
-| **hu42a-usuarios.svg** | **Admin Usuarios** | **HU-42a (NUEVO)** |
-| **hu42c-rendimiento.svg** | **Rendimiento** | **HU-42c (NUEVO)** |
-
----
-
 ## Checkpoint INVEST Final
 
 | Métrica | Antes | Después |
 |---------|-------|---------|
 | Total HUs | 44 | 56 |
 | HUs con violaciones | 16 | 0 |
-| Wireframes dañados | — | 0 |
-| Wireframes nuevos | — | 2 |
 | Issues creados | — | 22 |
 | Issues reescritos | — | 3 |
 | Dependencias documentadas | — | 8 |

@@ -1,0 +1,436 @@
+%%{init: {"layout": "elk"}}%%
+classDiagram
+    direction TB
+
+    namespace dominio {
+
+      class Alerta:::dominio {
+        <<abstract>>
+        -id : UUID
+        -descripcion : String
+        -fechaHoraGeneracion : LocalDateTime
+        -atendida : boolean
+        +atender() void
+        +estaAtendida() boolean
+      }
+      class AlertaRetraso:::dominio {
+        -minutosRetraso : int
+      }
+      class AlertaStockBajo:::dominio {
+        -stockActual : BigDecimal
+        -stockMinimo : BigDecimal
+      }
+      class AlertaFallaTransporte:::dominio {
+        -descripcionFalla : String
+      }
+
+      class Categoria:::dominio {
+        -id : UUID
+        -nombre : String
+        -ordenVisualizacion : int
+        -activa : boolean
+        +activar() void
+        +desactivar() void
+      }
+      class Producto:::dominio {
+        -id : UUID
+        -codigo : String
+        -nombre : String
+        -descripcion : String
+        -precioBase : BigDecimal
+        -imagen : String
+        -tiempoPreparacionMinutos : int
+        -disponible : boolean
+        +calcularPrecio(ajusteVariante : BigDecimal, extras : List~BigDecimal~) BigDecimal
+        +marcarAgotado() void
+        +estaDisponible() boolean
+      }
+      class VarianteProducto:::dominio {
+        -id : UUID
+        -nombre : String
+        -ajustePrecio : BigDecimal
+        -orden : int
+        -activa : boolean
+      }
+      class Ingrediente:::dominio {
+        -id : UUID
+        -codigo : String
+        -nombre : String
+        -unidadMedida : String
+        -stockActual : BigDecimal
+        -stockMinimo : BigDecimal
+        -costoUnitario : BigDecimal
+        +tieneStock(cantidad : BigDecimal) boolean
+        +aplicarMovimiento(movimiento : MovimientoInventario) void
+        +requiereReposicion() boolean
+      }
+      class RecetaProducto:::dominio {
+        <<clase de asociacion>>
+        -cantidadRequerida : BigDecimal
+        -esOpcional : boolean
+        -cargoExtra : BigDecimal
+      }
+      class ComplementoProducto:::dominio {
+        <<clase de asociacion>>
+        -obligatorio : boolean
+        -orden : int
+      }
+      class Carrito:::dominio {
+        -id : UUID
+        -fechaHoraApertura : LocalDateTime
+        -estado : EstadoCarrito
+        -lineas : List~LineaPedido~
+        +agregarProducto(producto : Producto, cantidad : int) void
+        +quitarProducto(lineaId : UUID) void
+        +calcularTotal() BigDecimal
+        +confirmar() Pedido
+      }
+      class Pedido:::dominio {
+        -id : UUID
+        -codigo : String
+        -fechaHoraCreacion : LocalDateTime
+        -tipo : TipoPedido
+        -estado : EstadoPedido
+        -observaciones : String
+        -motivoCancelacion : String
+        -lineas : List~LineaPedido~
+        +generarCodigo(fecha : LocalDate) String
+        +agregarLinea(linea : LineaPedido) void
+        +confirmar() void
+        +cancelar(motivo : String) void
+        +calcularTotal() BigDecimal
+        +cambiarEstado(nuevo : EstadoPedido) void
+      }
+      class LineaPedido:::dominio {
+        -id : UUID
+        -cantidad : int
+        -precioUnitario : BigDecimal
+        -notasPersonalizacion : String
+        +calcularSubtotal() BigDecimal
+      }
+      class PersonalizacionIngrediente:::dominio {
+        <<clase de asociacion>>
+        -accion : AccionPersonalizacion
+        -cantidadExtra : BigDecimal
+        -cargoExtra : BigDecimal
+      }
+      class ComplementoSeleccionado:::dominio {
+        <<clase de asociacion>>
+        -cantidad : int
+        -precioUnitario : BigDecimal
+      }
+      class Pago:::dominio {
+        -id : UUID
+        -monto : BigDecimal
+        -medio : MedioPago
+        -fechaHora : LocalDateTime
+        -estado : EstadoPago
+        +aprobar() void
+        +rechazar() void
+      }
+      class Mesa:::dominio {
+        -id : UUID
+        -numero : String
+        -capacidad : int
+        -ubicacion : String
+        -estado : EstadoMesa
+        +ocupar() void
+        +liberar() void
+        +estaLibre() boolean
+      }
+      class EstacionCocina:::dominio {
+        -id : UUID
+        -nombre : String
+        -activa : boolean
+        +activar() void
+        +desactivar() void
+      }
+      class TareaCocina:::dominio {
+        -id : UUID
+        -estado : EstadoTareaCocina
+        -fechaHoraInicio : LocalDateTime
+        -fechaHoraFin : LocalDateTime
+        -tiempoEstimadoMinutos : int
+        -prioridad : int
+        +iniciar() void
+        +completar() void
+        +estaRetrasada(ahora : LocalDateTime) boolean
+      }
+      class TransporteRiel:::dominio {
+        -id : UUID
+        -estado : EstadoTransporte
+        -fechaHoraDespacho : LocalDateTime
+        -fechaHoraEntrega : LocalDateTime
+        -descripcionFalla : String
+        +despachar() void
+        +entregar() void
+        +reportarFalla(descripcion : String) void
+      }
+      class MovimientoInventario:::dominio {
+        -id : UUID
+        -tipo : TipoMovimiento
+        -cantidad : BigDecimal
+        -fechaHora : LocalDateTime
+        -motivo : String
+      }
+
+      class EstadoCarrito:::dominio {
+        <<enumeration>>
+        Abierto
+        Confirmado
+        Abandonado
+      }
+      class TipoPedido:::dominio {
+        <<enumeration>>
+        EnRestaurante
+        ParaLlevar
+      }
+      class EstadoPedido:::dominio {
+        <<enumeration>>
+        Pendiente
+        Confirmado
+        EnPreparacion
+        ListoParaEntregar
+        EnTransporte
+        Entregado
+        Cancelado
+        Pagado
+      }
+      class EstadoMesa:::dominio {
+        <<enumeration>>
+        Libre
+        Ocupada
+        Reservada
+        EnLimpieza
+      }
+      class EstadoTareaCocina:::dominio {
+        <<enumeration>>
+        Pendiente
+        EnProceso
+        Completada
+        Cancelada
+      }
+      class EstadoTransporte:::dominio {
+        <<enumeration>>
+        PendienteDespacho
+        EnTransporte
+        EntregadoEnMesa
+        Falla
+      }
+      class TipoMovimiento:::dominio {
+        <<enumeration>>
+        Entrada
+        SalidaPedido
+        AjustePositivo
+        AjusteNegativo
+        Merma
+      }
+      class AccionPersonalizacion:::dominio {
+        <<enumeration>>
+        Quitado
+        AgregadoExtra
+      }
+      class MedioPago:::dominio {
+        <<enumeration>>
+        Efectivo
+        Tarjeta
+        Externo
+      }
+      class EstadoPago:::dominio {
+        <<enumeration>>
+        Pendiente
+        Aprobado
+        Rechazado
+      }
+    }
+
+    namespace aplicacion {
+
+      class RepositorioPedidos:::aplicacion {
+        <<interface>>
+        +guardar(pedido : Pedido) void
+        +buscarPorId(id : UUID) Pedido
+        +listarPorEstado(estado : EstadoPedido) List~Pedido~
+      }
+      class RepositorioProductos:::aplicacion {
+        <<interface>>
+        +guardar(producto : Producto) void
+        +buscarPorId(id : UUID) Producto
+        +listarDisponibles() List~Producto~
+      }
+      class RepositorioIngredientes:::aplicacion {
+        <<interface>>
+        +guardar(ingrediente : Ingrediente) void
+        +buscarPorId(id : UUID) Ingrediente
+        +listarBajoMinimo() List~Ingrediente~
+      }
+      class RepositorioMesas:::aplicacion {
+        <<interface>>
+        +guardar(mesa : Mesa) void
+        +buscarPorNumero(numero : String) Mesa
+        +listarLibres() List~Mesa~
+      }
+      class RepositorioTareas:::aplicacion {
+        <<interface>>
+        +guardar(tarea : TareaCocina) void
+        +listarPorEstacion(idEstacion : UUID) List~TareaCocina~
+      }
+      class PuertoTransporteRiel:::aplicacion {
+        <<interface>>
+        +despachar(transporte : TransporteRiel) void
+        +consultarEstado(idTransporte : UUID) EstadoTransporte
+      }
+      class EstrategiaPago:::aplicacion {
+        <<interface>>
+        +procesar(monto : BigDecimal) boolean
+      }
+      class ObservadorPedido:::aplicacion {
+        <<interface>>
+        +actualizar(pedido : Pedido, evento : String) void
+      }
+      class Notificador:::aplicacion {
+        <<interface>>
+        +enviar(destino : String, mensaje : String) void
+      }
+
+      class ServicioPedidos:::aplicacion {
+        +crearDesdeCarrito(carrito : Carrito) Pedido
+        +confirmarPedido(idPedido : UUID) void
+        +cancelarPedido(idPedido : UUID, motivo : String) void
+        +registrarPago(idPedido : UUID, estrategia : EstrategiaPago) boolean
+      }
+      class ServicioMenu:::aplicacion {
+        +listarMenu() List~Producto~
+        +buscarProducto(id : UUID) Producto
+      }
+      class ServicioCocina:::aplicacion {
+        +enviarAEstaciones(pedido : Pedido) void
+        +iniciarTarea(idTarea : UUID) void
+        +completarTarea(idTarea : UUID) void
+      }
+      class ServicioRiel:::aplicacion {
+        +despacharPedido(idPedido : UUID) void
+        +reportarFalla(idTransporte : UUID, descripcion : String) void
+      }
+      class ServicioInventario:::aplicacion {
+        +descontarPorPedido(pedido : Pedido) void
+        +registrarMovimiento(movimiento : MovimientoInventario) void
+        +ingredientesBajoMinimo() List~Ingrediente~
+      }
+      class ServicioMesas:::aplicacion {
+        +ocuparMesa(numero : String) void
+        +liberarMesa(numero : String) void
+      }
+      class ServicioReportes:::aplicacion {
+        +ventasPorProducto() Map~String,BigDecimal~
+        +rendimientoPorEstacion() Map~String,Double~
+      }
+      class ServicioAlertas:::aplicacion {
+        <<Observer>>
+        +actualizar(pedido : Pedido, evento : String) void
+      }
+    }
+
+    namespace infraestructura {
+      class RepositorioPedidosEnMemoria:::infraestructura
+      class RepositorioProductosEnMemoria:::infraestructura
+      class RepositorioIngredientesEnMemoria:::infraestructura
+      class RepositorioMesasEnMemoria:::infraestructura
+      class RepositorioTareasEnMemoria:::infraestructura
+      class AdaptadorRiel:::infraestructura
+      class PagoEfectivo:::infraestructura
+      class PagoTarjeta:::infraestructura
+      class NotificadorCorreo:::infraestructura
+    }
+
+    namespace interfaz {
+      class PantallaKiosco:::interfaz {
+        +iniciarPedido() Carrito
+        +agregarAlCarrito(idProducto : UUID, cantidad : int) void
+        +confirmarPedido() Pedido
+      }
+      class PantallaCocina:::interfaz {
+        +verTareas(idEstacion : UUID) List~TareaCocina~
+        +completarTarea(idTarea : UUID) void
+      }
+      class PantallaMesero:::interfaz {
+        +verEstadoMesa(numero : String) EstadoMesa
+      }
+      class PanelAdministracion:::interfaz {
+        +gestionarProducto(producto : Producto) void
+        +verReporte(nombre : String) Map~String,Object~
+      }
+    }
+
+    Alerta <|-- AlertaRetraso
+    Alerta <|-- AlertaStockBajo
+    Alerta <|-- AlertaFallaTransporte
+
+    Categoria "1" o-- "0..*" Producto : agrupa
+    Producto "1" *-- "0..*" VarianteProducto : ofrece
+    Producto "1" *-- "0..*" RecetaProducto : define
+    RecetaProducto "*" --> "1" Ingrediente : usa
+    Producto "1" --> "0..*" ComplementoProducto : ofrece
+    ComplementoProducto "*" --> "1" Producto : complementa
+    Producto "*" --> "1" EstacionCocina : se prepara en
+
+    Carrito "1" *-- "0..*" LineaPedido : reune
+    Carrito "0..1" --> "0..1" Pedido : se confirma como
+    Pedido "1" *-- "1..*" LineaPedido : contiene
+    LineaPedido "*" --> "1" Producto : refiere a
+    LineaPedido "*" --> "0..1" VarianteProducto : usa
+    LineaPedido "1" *-- "0..*" PersonalizacionIngrediente : personaliza
+    PersonalizacionIngrediente "*" --> "1" Ingrediente : refiere a
+    LineaPedido "1" *-- "0..*" ComplementoSeleccionado : incluye
+    ComplementoSeleccionado "*" --> "1" Producto : refiere a
+
+    Pago "1" --> "1" Pedido : corresponde a
+    Pedido "0..*" --> "0..1" Mesa : se atiende en
+    Pedido "1" *-- "0..*" TareaCocina : genera
+    TareaCocina "*" --> "1" EstacionCocina : se realiza en
+    TareaCocina "*" --> "1" LineaPedido : prepara
+    Pedido "0..1" *-- "0..1" TransporteRiel : se transporta mediante
+    TransporteRiel "*" --> "1" Mesa : se dirige a
+    Ingrediente "1" --> "0..*" MovimientoInventario : registra
+    MovimientoInventario "*" --> "0..1" Pedido : se origina por
+
+    Alerta "0..*" --> "0..1" Pedido : se refiere a
+    Alerta "0..*" --> "0..1" Ingrediente : se refiere a
+    Alerta "0..*" --> "0..1" TransporteRiel : se refiere a
+
+    RepositorioPedidosEnMemoria ..|> RepositorioPedidos
+    RepositorioProductosEnMemoria ..|> RepositorioProductos
+    RepositorioIngredientesEnMemoria ..|> RepositorioIngredientes
+    RepositorioMesasEnMemoria ..|> RepositorioMesas
+    RepositorioTareasEnMemoria ..|> RepositorioTareas
+    AdaptadorRiel ..|> PuertoTransporteRiel
+    PagoEfectivo ..|> EstrategiaPago
+    PagoTarjeta ..|> EstrategiaPago
+    NotificadorCorreo ..|> Notificador
+    ServicioAlertas ..|> ObservadorPedido
+
+    ServicioPedidos ..> RepositorioPedidos
+    ServicioPedidos ..> RepositorioMesas
+    ServicioPedidos ..> EstrategiaPago
+    ServicioMenu ..> RepositorioProductos
+    ServicioCocina ..> RepositorioTareas
+    ServicioRiel ..> PuertoTransporteRiel
+    ServicioInventario ..> RepositorioIngredientes
+    ServicioMesas ..> RepositorioMesas
+    ServicioAlertas ..> Notificador
+
+    PantallaKiosco ..> ServicioMenu
+    PantallaKiosco ..> ServicioPedidos
+    PantallaCocina ..> ServicioCocina
+    PantallaMesero ..> ServicioMesas
+    PanelAdministracion ..> ServicioReportes
+    PanelAdministracion ..> ServicioMenu
+
+    note for ServicioPedidos "Patron Facade: los servicios exponen los casos de uso y ocultan el dominio a la interfaz."
+    note for EstrategiaPago "Patron Strategy: formas de pago intercambiables (efectivo, tarjeta, externo)."
+    note for AdaptadorRiel "Patron Adapter: traduce el dominio al sistema externo del riel."
+    note for ServicioAlertas "Patron Observer: Pedido notifica a ServicioAlertas ante cambios de estado."
+classDef dominio fill:#e3f2fd,stroke:#1565c0,color:#0d47a1
+classDef aplicacion fill:#fff8e1,stroke:#ef6c00,color:#e65100
+classDef infraestructura fill:#e8f5e9,stroke:#2e7d32,color:#1b5e20
+classDef interfaz fill:#fce4ec,stroke:#ad1457,color:#880e4f

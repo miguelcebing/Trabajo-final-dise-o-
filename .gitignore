@@ -3,11 +3,6 @@
 AGENTS/
 opencode.json
 
-# Archivos temporales / de bloqueo de Visual Paradigm
-*.vpp.bak
-*.vpp.lck
-*.vpp~*
-
 # Sistema operativo / editor
 Thumbs.db
 desktop.ini
