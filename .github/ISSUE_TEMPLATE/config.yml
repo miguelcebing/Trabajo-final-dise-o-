@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentación del proyecto
+    url: https://github.com/miguelcebing/Trabajo-final-dise-o-/tree/main/docs
+    about: Requerimientos funcionales, historias de usuario y wireframes del sistema.
