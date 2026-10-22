@@ -6,9 +6,30 @@ labels: ["HU"]
 assignees: []
 ---
 
-# [HU-XX] Verbo + objeto
+**Como** <actor>
 
-## 1. Campos de la historia
+**Quiero** <acción>
+
+**Para** <beneficio>
+
+## 1. Criterios de aceptación
+
+- [ ] **CA-1** — Dado <contexto>, cuando <acción>, entonces <resultado>.
+- [ ] **CA-2** — Dado <contexto alterno o de error>, cuando <acción>, entonces <resultado>.
+- [ ] **CA-3** — Dado <contexto de borde o usabilidad táctil>, cuando <acción>, entonces <resultado medible>.
+
+## 2. Wireframe
+
+![WF-XX](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/docs/wireframes/WF-XX.svg?raw=true)
+
+<details>
+<summary>Versión en texto del wireframe</summary>
+
+- [Zona] Descripción del elemento.
+
+</details>
+
+## 3. Campos de la historia
 
 | Campo | Valor |
 |---|---|
@@ -21,36 +42,15 @@ assignees: []
 | Dependencias | <!-- HU-XX o — --> |
 | Wireframe | <!-- docs/wireframes/WF-XX.svg --> |
 
-## 2. Historia
-
-Como **<actor>** quiero <acción> para <beneficio>.
-
-## 3. Contexto
+## 4. Contexto
 
 <!-- 2 a 3 líneas: por qué existe esta historia y en qué momento del flujo ocurre. -->
-
-## 4. Criterios de aceptación
-
-- [ ] **CA-1** — Dado <contexto>, cuando <acción>, entonces <resultado>.
-- [ ] **CA-2** — Dado <contexto alterno o de error>, cuando <acción>, entonces <resultado>.
-- [ ] **CA-3** — Dado <contexto de borde o usabilidad táctil>, cuando <acción>, entonces <resultado medible>.
 
 ## 5. Reglas de negocio
 
 - <!-- Regla verificable. -->
 
-## 6. Wireframe
-
-![WF-XX](https://github.com/miguelcebing/Trabajo-final-dise-o-/blob/main/docs/wireframes/WF-XX.svg?raw=true)
-
-<details>
-<summary>Versión en texto del wireframe</summary>
-
-- [Zona] Descripción del elemento.
-
-</details>
-
-## 7. Validación INVEST
+## 6. Validación INVEST
 
 | Criterio | Cumple | Nota |
 |---|---|---|
@@ -61,7 +61,7 @@ Como **<actor>** quiero <acción> para <beneficio>.
 | Pequeña | ✔ | |
 | Testable | ✔ | |
 
-## 8. Definición de hecho (DoD)
+## 7. Definición de hecho (DoD)
 
 - [ ] Criterios de aceptación verificados en la pantalla táctil.
 - [ ] Wireframe revisado y coherente con los criterios de aceptación.
@@ -69,6 +69,6 @@ Como **<actor>** quiero <acción> para <beneficio>.
 - [ ] Sin dependencias pendientes que bloqueen la prueba.
 - [ ] Revisada por un integrante distinto al autor.
 
-## 9. Fuera de alcance
+## 8. Fuera de alcance
 
 - <!-- Lo que esta historia no cubre. -->
