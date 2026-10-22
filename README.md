@@ -1,4 +1,4 @@
-# Sistema de Autoservicio para Restaurante
+# Sistema de Autoservicio para Restaurante "RESTSMART"
 
 **Proyecto Final — Diseño de Software**
 
