@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Disponibilidad de productos">
+<rect width="1280" height="720" fill="#FFFFFF"/>
+<rect x="0" y="0" width="1280" height="72" fill="#2B2B2B"/>
+<text x="24" y="46" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="start">Disponibilidad de productos</text>
+<text x="1256" y="44" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#BFBFBF" text-anchor="end">Desactivar producto · Administrador</text>
+<rect x="24" y="120" width="876" height="110" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="148" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Bandeja paisa</text><text x="38" y="172" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">Disponible</text>
+<rect x="24" y="250" width="876" height="110" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="278" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Limonada natural</text><text x="38" y="302" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">Agotado</text>
+<rect x="24" y="380" width="876" height="110" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="408" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Brownie con helado</text><text x="38" y="432" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">Disponible</text>
+<rect x="24" y="510" width="876" height="90" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="538" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Los productos agotados se ocultan en el menú del cliente</text>
+<rect x="940" y="96" width="316" height="600" fill="#FBFBFB" stroke="#CCCCCC" stroke-width="1.5"/>
+<text x="958" y="128" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="start">Anotaciones (criterios CA)</text>
+<circle cx="966" cy="163" r="13" fill="#2B2B2B"/>
+<text x="966" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="988" y="168" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-1 Lista de productos</text>
+<text x="988" y="185" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">del catálogo.</text>
+<circle cx="966" cy="219" r="13" fill="#2B2B2B"/>
+<text x="966" y="224" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="988" y="224" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-1 Estado disponible</text>
+<text x="988" y="241" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">o agotado.</text>
+<circle cx="966" cy="275" r="13" fill="#2B2B2B"/>
+<text x="966" y="280" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="988" y="280" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-2 Cambiar a agotado</text>
+<text x="988" y="297" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">y volver a disponible.</text>
+<circle cx="966" cy="331" r="13" fill="#2B2B2B"/>
+<text x="966" y="336" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="988" y="336" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-2 y CA-3 Efecto en el menú</text>
+<text x="988" y="353" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">del cliente.</text>
+</svg>

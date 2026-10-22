@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Detalle del producto">
+<rect width="1280" height="720" fill="#FFFFFF"/>
+<rect x="0" y="0" width="1280" height="72" fill="#2B2B2B"/>
+<text x="24" y="46" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="start">Detalle del producto</text>
+<text x="1256" y="44" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#BFBFBF" text-anchor="end">Detalle de producto · Cliente</text>
+<rect x="24" y="120" width="380" height="380" fill="#DCDCDC" stroke="#9E9E9E" stroke-width="1.5"/><line x1="24" y1="120" x2="404" y2="500" stroke="#B5B5B5" stroke-width="1"/><line x1="404" y1="120" x2="24" y2="500" stroke="#B5B5B5" stroke-width="1"/><text x="214.0" y="304.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#444444" text-anchor="middle">Imagen del producto</text>
+<rect x="424" y="120" width="492" height="130" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="438" y="148" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Nombre del producto</text><text x="438" y="172" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">Bandeja paisa</text>
+<rect x="424" y="268" width="492" height="140" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="438" y="296" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Descripción</text><text x="438" y="320" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">Texto descriptivo del producto</text>
+<rect x="424" y="426" width="492" height="74" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="438" y="454" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Precio base</text><text x="438" y="478" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">$32.000</text>
+<rect x="424" y="540" width="240" height="80" rx="10" fill="#2B2B2B"/><text x="544.0" y="586.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ELEGIR OPCIONES</text>
+<rect x="688" y="540" width="228" height="80" rx="10" fill="#E4E4E4" stroke="#9E9E9E" stroke-width="1.5"/><text x="802.0" y="586.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">Volver al menú</text>
+<rect x="940" y="96" width="316" height="600" fill="#FBFBFB" stroke="#CCCCCC" stroke-width="1.5"/>
+<text x="958" y="128" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="start">Anotaciones (criterios CA)</text>
+<circle cx="966" cy="163" r="13" fill="#2B2B2B"/>
+<text x="966" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="988" y="168" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-1 Nombre y descripción</text>
+<text x="988" y="185" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">del producto.</text>
+<circle cx="966" cy="219" r="13" fill="#2B2B2B"/>
+<text x="966" y="224" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="988" y="224" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-1 Precio base del producto.</text>
+<circle cx="966" cy="258" r="13" fill="#2B2B2B"/>
+<text x="966" y="263" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="988" y="263" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-4 Acción principal con área</text>
+<text x="988" y="280" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">táctil de 88 px o más.</text>
+<circle cx="966" cy="314" r="13" fill="#2B2B2B"/>
+<text x="966" y="319" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="988" y="319" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-3 Volver conserva categoría</text>
+<text x="988" y="336" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">y posición del menú.</text>
+</svg>

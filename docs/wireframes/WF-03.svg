@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Opciones del producto">
+<rect width="1280" height="720" fill="#FFFFFF"/>
+<rect x="0" y="0" width="1280" height="72" fill="#2B2B2B"/>
+<text x="24" y="46" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="start">Opciones del producto</text>
+<text x="1256" y="44" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#BFBFBF" text-anchor="end">Variantes y complementos · Cliente</text>
+<text x="24" y="112" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="start">Tamaño</text>
+<rect x="24" y="124" width="150" height="44" rx="22" fill="#F0F0F0" stroke="#BDBDBD" stroke-width="1.5"/><text x="99.0" y="152.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#333333" text-anchor="middle">Personal</text>
+<rect x="186" y="124" width="150" height="44" rx="22" fill="#F0F0F0" stroke="#BDBDBD" stroke-width="1.5"/><text x="261.0" y="152.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#333333" text-anchor="middle">Mediana</text>
+<rect x="348" y="124" width="150" height="44" rx="22" fill="#F0F0F0" stroke="#BDBDBD" stroke-width="1.5"/><text x="423.0" y="152.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="normal" fill="#333333" text-anchor="middle">Grande</text>
+<text x="24" y="206" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="start">Complementos</text>
+<rect x="24" y="218" width="474" height="52" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="246" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Queso extra   +$2.000</text>
+<rect x="24" y="280" width="474" height="52" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="308" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Tocineta   +$3.000</text>
+<rect x="24" y="342" width="474" height="52" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="370" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Sin cebolla   $0</text>
+<rect x="24" y="414" width="474" height="110" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="442" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Indicaciones de preparación</text><text x="38" y="466" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">Opcionales del producto</text>
+<rect x="532" y="120" width="384" height="130" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="546" y="148" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Resumen de precio</text><text x="546" y="172" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">Base $32.000</text>
+<rect x="532" y="268" width="384" height="130" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="546" y="296" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Ajustes seleccionados</text><text x="546" y="320" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">Variante + complementos</text>
+<text x="556" y="438" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="start">Total del ítem  $41.000</text>
+<rect x="532" y="460" width="384" height="80" rx="10" fill="#2B2B2B"/><text x="724.0" y="506.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle">CONFIRMAR</text>
+<rect x="24" y="560" width="240" height="80" rx="10" fill="#E4E4E4" stroke="#9E9E9E" stroke-width="1.5"/><text x="144.0" y="606.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">Cancelar</text>
+<rect x="940" y="96" width="316" height="600" fill="#FBFBFB" stroke="#CCCCCC" stroke-width="1.5"/>
+<text x="958" y="128" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="start">Anotaciones (criterios CA)</text>
+<circle cx="966" cy="163" r="13" fill="#2B2B2B"/>
+<text x="966" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="988" y="168" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-1 Selección de la variante</text>
+<text x="988" y="185" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">obligatoria del producto.</text>
+<circle cx="966" cy="219" r="13" fill="#2B2B2B"/>
+<text x="966" y="224" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="988" y="224" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-2 Complementos con su</text>
+<text x="988" y="241" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">precio visible.</text>
+<circle cx="966" cy="275" r="13" fill="#2B2B2B"/>
+<text x="966" y="280" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="988" y="280" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-1 Total del ítem recalculado</text>
+<text x="988" y="297" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">en pantalla.</text>
+<circle cx="966" cy="331" r="13" fill="#2B2B2B"/>
+<text x="966" y="336" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="988" y="336" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-3 Confirmar bloqueado si</text>
+<text x="988" y="353" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">falta la variante.</text>
+</svg>
