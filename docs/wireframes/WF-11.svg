@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Aviso de pedido listo">
+<rect width="1280" height="720" fill="#FFFFFF"/>
+<rect x="0" y="0" width="1280" height="72" fill="#2B2B2B"/>
+<text x="24" y="46" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="start">Aviso de pedido listo</text>
+<text x="1256" y="44" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#BFBFBF" text-anchor="end">Aviso al cliente · Cliente</text>
+<rect x="24" y="120" width="876" height="280" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="148" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">¡Tu pedido está listo!</text><text x="38" y="172" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">Pedido #A-1042 · Mesa 5</text>
+<rect x="24" y="440" width="420" height="120" rx="10" fill="#2B2B2B"/><text x="234.0" y="506.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ENTENDIDO</text>
+<rect x="480" y="440" width="420" height="120" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="494" y="468" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Recoge tu pedido en el punto de entrega</text>
+<rect x="940" y="96" width="316" height="600" fill="#FBFBFB" stroke="#CCCCCC" stroke-width="1.5"/>
+<text x="958" y="128" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="start">Anotaciones (criterios CA)</text>
+<circle cx="966" cy="163" r="13" fill="#2B2B2B"/>
+<text x="966" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="988" y="168" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-1 Aviso visible al pasar</text>
+<text x="988" y="185" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">el pedido a Listo.</text>
+<circle cx="966" cy="219" r="13" fill="#2B2B2B"/>
+<text x="966" y="224" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="988" y="224" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-2 Número de pedido</text>
+<text x="988" y="241" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">y mesa en el aviso.</text>
+<circle cx="966" cy="275" r="13" fill="#2B2B2B"/>
+<text x="966" y="280" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="988" y="280" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-2 Cerrar el aviso</text>
+<text x="988" y="297" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">con un toque.</text>
+<circle cx="966" cy="331" r="13" fill="#2B2B2B"/>
+<text x="966" y="336" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="988" y="336" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-3 Avisos en orden</text>
+<text x="988" y="353" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">de llegada.</text>
+</svg>

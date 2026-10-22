@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Carrito de compra">
+<rect width="1280" height="720" fill="#FFFFFF"/>
+<rect x="0" y="0" width="1280" height="72" fill="#2B2B2B"/>
+<text x="24" y="46" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="start">Carrito de compra</text>
+<text x="1256" y="44" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#BFBFBF" text-anchor="end">Edición del carrito · Cliente</text>
+<rect x="24" y="120" width="520" height="104" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="148" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Bandeja paisa</text><text x="38" y="172" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">$32.000</text>
+<rect x="556" y="120" width="90" height="104" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="570" y="148" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">2</text>
+<rect x="654" y="120" width="80" height="104" rx="10" fill="#E4E4E4" stroke="#9E9E9E" stroke-width="1.5"/><text x="694.0" y="178.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">−</text>
+<rect x="742" y="120" width="80" height="104" rx="10" fill="#E4E4E4" stroke="#9E9E9E" stroke-width="1.5"/><text x="782.0" y="178.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">+</text>
+<rect x="830" y="120" width="70" height="104" rx="10" fill="#E4E4E4" stroke="#9E9E9E" stroke-width="1.5"/><text x="865.0" y="178.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">Quitar</text>
+<rect x="24" y="244" width="520" height="104" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="272" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Limonada natural</text><text x="38" y="296" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">$8.000</text>
+<rect x="556" y="244" width="90" height="104" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="570" y="272" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">1</text>
+<rect x="654" y="244" width="80" height="104" rx="10" fill="#E4E4E4" stroke="#9E9E9E" stroke-width="1.5"/><text x="694.0" y="302.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">−</text>
+<rect x="742" y="244" width="80" height="104" rx="10" fill="#E4E4E4" stroke="#9E9E9E" stroke-width="1.5"/><text x="782.0" y="302.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">+</text>
+<rect x="830" y="244" width="70" height="104" rx="10" fill="#E4E4E4" stroke="#9E9E9E" stroke-width="1.5"/><text x="865.0" y="302.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">Quitar</text>
+<rect x="24" y="368" width="520" height="104" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="396" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Brownie con helado</text><text x="38" y="420" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">$14.000</text>
+<rect x="556" y="368" width="90" height="104" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="570" y="396" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">1</text>
+<rect x="654" y="368" width="80" height="104" rx="10" fill="#E4E4E4" stroke="#9E9E9E" stroke-width="1.5"/><text x="694.0" y="426.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">−</text>
+<rect x="742" y="368" width="80" height="104" rx="10" fill="#E4E4E4" stroke="#9E9E9E" stroke-width="1.5"/><text x="782.0" y="426.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">+</text>
+<rect x="830" y="368" width="70" height="104" rx="10" fill="#E4E4E4" stroke="#9E9E9E" stroke-width="1.5"/><text x="865.0" y="426.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">Quitar</text>
+<rect x="24" y="504" width="520" height="160" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="532" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Subtotal $58.000</text><text x="38" y="556" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">Total $58.000</text>
+<rect x="660" y="560" width="240" height="80" rx="10" fill="#2B2B2B"/><text x="780.0" y="606.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle">CONTINUAR</text>
+<rect x="940" y="96" width="316" height="600" fill="#FBFBFB" stroke="#CCCCCC" stroke-width="1.5"/>
+<text x="958" y="128" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="start">Anotaciones (criterios CA)</text>
+<circle cx="966" cy="163" r="13" fill="#2B2B2B"/>
+<text x="966" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="988" y="168" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-1 Modificar la cantidad</text>
+<text x="988" y="185" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">del ítem.</text>
+<circle cx="966" cy="219" r="13" fill="#2B2B2B"/>
+<text x="966" y="224" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="988" y="224" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-3 Quitar un ítem con</text>
+<text x="988" y="241" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">recálculo del total.</text>
+<circle cx="966" cy="275" r="13" fill="#2B2B2B"/>
+<text x="966" y="280" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="988" y="280" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-1 Total recalculado</text>
+<text x="988" y="297" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">en pantalla.</text>
+<circle cx="966" cy="331" r="13" fill="#2B2B2B"/>
+<text x="966" y="336" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="988" y="336" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-4 Carrito vacío deshabilita</text>
+<text x="988" y="353" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">el botón continuar.</text>
+</svg>

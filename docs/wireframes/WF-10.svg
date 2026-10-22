@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Estado del pedido">
+<rect width="1280" height="720" fill="#FFFFFF"/>
+<rect x="0" y="0" width="1280" height="72" fill="#2B2B2B"/>
+<text x="24" y="46" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="start">Estado del pedido</text>
+<text x="1256" y="44" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#BFBFBF" text-anchor="end">Seguimiento · Cliente</text>
+<rect x="24" y="120" width="876" height="90" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="148" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Pedido #A-1042 · Mesa 5</text>
+<rect x="24" y="240" width="200" height="110" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="268" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Pagado</text>
+<rect x="240" y="240" width="200" height="110" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="254" y="268" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">En preparación</text>
+<rect x="456" y="240" width="200" height="110" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="470" y="268" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Listo</text>
+<rect x="672" y="240" width="200" height="110" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="686" y="268" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Entregado</text>
+<rect x="24" y="380" width="876" height="90" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="408" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Tiempo estimado: 15 min</text>
+<rect x="592" y="500" width="308" height="80" rx="10" fill="#2B2B2B"/><text x="746.0" y="546.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle">ACTUALIZAR</text>
+<rect x="940" y="96" width="316" height="600" fill="#FBFBFB" stroke="#CCCCCC" stroke-width="1.5"/>
+<text x="958" y="128" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="start">Anotaciones (criterios CA)</text>
+<circle cx="966" cy="163" r="13" fill="#2B2B2B"/>
+<text x="966" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="988" y="168" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-1 Número de pedido</text>
+<text x="988" y="185" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">y mesa.</text>
+<circle cx="966" cy="219" r="13" fill="#2B2B2B"/>
+<text x="966" y="224" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="988" y="224" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-1 Etapas del pedido</text>
+<text x="988" y="241" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">visibles.</text>
+<circle cx="966" cy="275" r="13" fill="#2B2B2B"/>
+<text x="966" y="280" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="988" y="280" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-3 Etapa actual según</text>
+<text x="988" y="297" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">el avance de los sectores.</text>
+<circle cx="966" cy="331" r="13" fill="#2B2B2B"/>
+<text x="966" y="336" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="988" y="336" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-4 Actualizar en menos</text>
+<text x="988" y="353" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">de 2 segundos.</text>
+</svg>

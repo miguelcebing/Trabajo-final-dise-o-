@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720" role="img" aria-label="Agregar al carrito">
+<rect width="1280" height="720" fill="#FFFFFF"/>
+<rect x="0" y="0" width="1280" height="72" fill="#2B2B2B"/>
+<text x="24" y="46" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="bold" fill="#FFFFFF" text-anchor="start">Agregar al carrito</text>
+<text x="1256" y="44" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="normal" fill="#BFBFBF" text-anchor="end">Cantidad y agregado · Cliente</text>
+<rect x="24" y="140" width="300" height="300" fill="#DCDCDC" stroke="#9E9E9E" stroke-width="1.5"/><line x1="24" y1="140" x2="324" y2="440" stroke="#B5B5B5" stroke-width="1"/><line x1="324" y1="140" x2="24" y2="440" stroke="#B5B5B5" stroke-width="1"/><text x="174.0" y="284.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#444444" text-anchor="middle">Producto</text>
+<rect x="344" y="140" width="300" height="300" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="358" y="168" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Nombre del producto</text><text x="358" y="192" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="normal" fill="#666666" text-anchor="start">$32.000</text>
+<rect x="344" y="470" width="80" height="80" rx="10" fill="#E4E4E4" stroke="#9E9E9E" stroke-width="1.5"/><text x="384.0" y="516.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">−</text>
+<rect x="432" y="470" width="90" height="80" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="446" y="498" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">1</text>
+<rect x="530" y="470" width="80" height="80" rx="10" fill="#E4E4E4" stroke="#9E9E9E" stroke-width="1.5"/><text x="570.0" y="516.0" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="bold" fill="#333333" text-anchor="middle">+</text>
+<rect x="660" y="470" width="240" height="80" rx="10" fill="#2B2B2B"/><text x="780.0" y="516.0" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="bold" fill="#FFFFFF" text-anchor="middle">AGREGAR AL CARRITO</text>
+<rect x="24" y="580" width="876" height="90" fill="#EFEFEF" stroke="#9E9E9E" stroke-width="1.5"/><text x="38" y="608" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="bold" fill="#333333" text-anchor="start">Producto agregado al carrito</text>
+<rect x="940" y="96" width="316" height="600" fill="#FBFBFB" stroke="#CCCCCC" stroke-width="1.5"/>
+<text x="958" y="128" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="bold" fill="#333333" text-anchor="start">Anotaciones (criterios CA)</text>
+<circle cx="966" cy="163" r="13" fill="#2B2B2B"/>
+<text x="966" y="168" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="988" y="168" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-3 Selector de cantidad antes</text>
+<text x="988" y="185" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">de agregar.</text>
+<circle cx="966" cy="219" r="13" fill="#2B2B2B"/>
+<text x="966" y="224" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="988" y="224" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-1 Acción agregar al carrito.</text>
+<circle cx="966" cy="258" r="13" fill="#2B2B2B"/>
+<text x="966" y="263" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="988" y="263" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-1 Confirmación visual</text>
+<text x="988" y="280" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">del agregado.</text>
+<circle cx="966" cy="314" r="13" fill="#2B2B2B"/>
+<text x="966" y="319" font-family="Arial, Helvetica, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="988" y="319" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">CA-4 Contador del carrito</text>
+<text x="988" y="336" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="normal" fill="#444444" text-anchor="start">actualizado.</text>
+</svg>
