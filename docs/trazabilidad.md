@@ -1,41 +1,44 @@
 # Matriz de trazabilidad
 
 Relaciona cada requerimiento con sus historias, wireframes, issue, actor, módulo y prioridad.
-La columna `Issue` se completa con el número real que GitHub asigne al crear cada issue (GitHub no permite reasignar números).
+
+Los números de issue son los reales del repositorio: HU-01 corresponde a la issue #136 y HU-21 a la #156.
+GitHub no permite reasignar números de issue, por eso la nomenclatura se mantiene en el título con el formato `[HU-XX]`.
 
 ## Requerimientos e historias
 
 | RF | HU | WF | Issue | Actor | Módulo | Prioridad |
 |---|---|---|---|---|---|---|
-| RF-01 | HU-01 | WF-01 | #— (por crear) | Cliente | Menú | Must |
-| RF-01 | HU-02 | WF-02 | #— (por crear) | Cliente | Menú | Must |
-| RF-02 | HU-03 | WF-03 | #— (por crear) | Cliente | Menú | Must |
-| RF-03 | HU-03 | WF-03 | #— (por crear) | Sistema | Menú | Must |
-| RF-04 | HU-04 | WF-04 | #— (por crear) | Cliente | Pedido | Must |
-| RF-04 | HU-05 | WF-05 | #— (por crear) | Cliente | Pedido | Must |
-| RF-05 | HU-05 | WF-05 | #— (por crear) | Cliente | Pedido | Must |
-| RF-06 | HU-06 | WF-06 | #— (por crear) | Cliente | Pedido | Must |
-| RF-07 | HU-07 | WF-07 | #— (por crear) | Cliente | Pedido | Must |
-| RF-08 | HU-12 | WF-12 | #— (por crear) | Cliente | Pedido | Should |
-| RF-09 | HU-21 | WF-21 | #— (por crear) | Cliente | Pago | Must |
-| RF-10 | HU-08 | WF-08 | #— (por crear) | Cliente | Pago | Must |
-| RF-10 | HU-09 | WF-09 | #— (por crear) | Cliente | Pedido | Must |
-| RF-11 | HU-13 | WF-13 | #— (por crear) | Sistema | Cocina | Must |
-| RF-11 | HU-16 | WF-16 | #— (por crear) | Sistema | Cocina | Must |
-| RF-12 | HU-13 | WF-13 | #— (por crear) | Cocina | Cocina | Must |
-| RF-12 | HU-14 | WF-14 | #— (por crear) | Cocina | Cocina | Must |
-| RF-12 | HU-16 | WF-16 | #— (por crear) | Cocina | Cocina | Must |
-| RF-13 | HU-15 | WF-15 | #— (por crear) | Cocina | Cocina | Must |
-| RF-14 | HU-10 | WF-10 | #— (por crear) | Cliente | Estado del pedido | Must |
-| RF-14 | HU-11 | WF-11 | #— (por crear) | Cliente | Estado del pedido | Must |
-| RF-15 | HU-17 | WF-17 | #— (por crear) | Administrador | Administración del menú | Should |
-| RF-15 | HU-18 | WF-18 | #— (por crear) | Administrador | Administración del menú | Should |
-| RF-15 | HU-19 | WF-19 | #— (por crear) | Administrador | Administración del menú | Should |
-| RF-15 | HU-20 | WF-20 | #— (por crear) | Administrador | Administración del menú | Should |
+| RF-01 | HU-01 | WF-01 | #136 | Cliente | Menú | Must |
+| RF-01 | HU-02 | WF-02 | #137 | Cliente | Menú | Must |
+| RF-02 | HU-03 | WF-03 | #138 | Cliente | Menú | Must |
+| RF-03 | HU-03 | WF-03 | #138 | Sistema | Menú | Must |
+| RF-04 | HU-04 | WF-04 | #139 | Cliente | Pedido | Must |
+| RF-04 | HU-05 | WF-05 | #140 | Cliente | Pedido | Must |
+| RF-05 | HU-05 | WF-05 | #140 | Cliente | Pedido | Must |
+| RF-06 | HU-06 | WF-06 | #141 | Cliente | Pedido | Must |
+| RF-07 | HU-07 | WF-07 | #142 | Cliente | Pedido | Must |
+| RF-08 | HU-12 | WF-12 | #147 | Cliente | Pedido | Should |
+| RF-09 | HU-21 | WF-21 | #156 | Cliente | Pago | Must |
+| RF-10 | HU-08 | WF-08 | #143 | Cliente | Pago | Must |
+| RF-10 | HU-09 | WF-09 | #144 | Cliente | Pedido | Must |
+| RF-11 | HU-13 | WF-13 | #148 | Sistema | Cocina | Must |
+| RF-11 | HU-16 | WF-16 | #151 | Sistema | Cocina | Must |
+| RF-12 | HU-13 | WF-13 | #148 | Cocina | Cocina | Must |
+| RF-12 | HU-14 | WF-14 | #149 | Cocina | Cocina | Must |
+| RF-12 | HU-16 | WF-16 | #151 | Cocina | Cocina | Must |
+| RF-13 | HU-15 | WF-15 | #150 | Cocina | Cocina | Must |
+| RF-14 | HU-10 | WF-10 | #145 | Cliente | Estado del pedido | Must |
+| RF-14 | HU-11 | WF-11 | #146 | Cliente | Estado del pedido | Must |
+| RF-15 | HU-17 | WF-17 | #152 | Administrador | Administración del menú | Should |
+| RF-15 | HU-18 | WF-18 | #153 | Administrador | Administración del menú | Should |
+| RF-15 | HU-19 | WF-19 | #154 | Administrador | Administración del menú | Should |
+| RF-15 | HU-20 | WF-20 | #155 | Administrador | Administración del menú | Should |
 
 ## Cobertura
 
 - **15 RF** y **21 HU**, sin duplicados.
+- **21 issues** creadas (#136 a #156) con el cuerpo de `docs/historias/HU-XX.md`, etiquetas y milestone de su módulo.
 - Todo RF tiene al menos una HU: verificado sobre la matriz.
 - Toda HU tiene un RF y un wireframe propio: verificado sobre la matriz.
 - Todo actor tiene HU: Cliente (13), Cocina (4), Administrador (4).
@@ -44,14 +47,14 @@ La columna `Issue` se completa con el número real que GitHub asigne al crear ca
 
 ## Historias por módulo
 
-| Módulo | Historias | Total |
-|---|---|---|
-| Menú | HU-01, HU-02, HU-03 | 3 |
-| Pedido | HU-04, HU-05, HU-06, HU-07, HU-09, HU-12 | 6 |
-| Pago | HU-08, HU-21 | 2 |
-| Cocina | HU-13, HU-14, HU-15, HU-16 | 4 |
-| Estado del pedido | HU-10, HU-11 | 2 |
-| Administración del menú | HU-17, HU-18, HU-19, HU-20 | 4 |
+| Módulo | Historias | Issues | Total |
+|---|---|---|---|
+| Menú | HU-01, HU-02, HU-03 | #136, #137, #138 | 3 |
+| Pedido | HU-04, HU-05, HU-06, HU-07, HU-09, HU-12 | #139, #140, #141, #142, #144, #147 | 6 |
+| Pago | HU-08, HU-21 | #143, #156 | 2 |
+| Cocina | HU-13, HU-14, HU-15, HU-16 | #148, #149, #150, #151 | 4 |
+| Estado del pedido | HU-10, HU-11 | #145, #146 | 2 |
+| Administración del menú | HU-17, HU-18, HU-19, HU-20 | #152, #153, #154, #155 | 4 |
 
 ## Orden de implementación sugerido
 
