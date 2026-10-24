@@ -48,9 +48,37 @@ Queda **fuera del alcance**: inventario, reportes, riel de transporte, reservas 
 | [Wireframes](docs/wireframes/README.md) | Galería de los 21 wireframes en SVG |
 | [Trazabilidad](docs/trazabilidad.md) | RF ↔ HU ↔ WF ↔ issue ↔ actor ↔ módulo |
 | [Insumos para diagramas](docs/insumos-diagramas.md) | Actores, casos de uso, estados, entidades, flujos y pantallas |
+| [Diagramas](diagramas/) | Vista de contexto y vista funcional exportadas en PNG, con sus fuentes `.vpp` |
 
 Las historias de usuario viven además como **issues** en GitHub, creadas con la plantilla
 [`.github/ISSUE_TEMPLATE/historia-de-usuario.md`](.github/ISSUE_TEMPLATE/historia-de-usuario.md).
+
+---
+
+## Diagramas
+
+Los diagramas se elaboraron en Visual Paradigm. En [`diagramas/`](diagramas/) están las dos
+exportaciones en PNG y sus fuentes editables (`.vpp`).
+
+### Vista de contexto (vista de sistema)
+
+Ubica el sistema en su entorno: con quién interactúa y qué intercambia con cada actor o sistema externo.
+
+![Vista de contexto del sistema](diagramas/diagrama%20vista%20sistema%20dise%C3%B1o.png)
+
+### Vista funcional (componentes)
+
+Descompone el sistema en componentes y las interfaces que **provisten** (lollipop) y que **requieren**
+(socket) entre ellos, con la trazabilidad a RF y HU.
+
+![Vista funcional por componentes](diagramas/diagrama%20vista%20funcional-%20componentes%20dise%C3%B1o.png)
+
+| Archivo | Contenido |
+|---|---|
+| [diagrama vista sistema diseño.png](diagramas/diagrama%20vista%20sistema%20dise%C3%B1o.png) | Vista de contexto exportada |
+| [diagrama vista funcional- componentes diseño.png](diagramas/diagrama%20vista%20funcional-%20componentes%20dise%C3%B1o.png) | Vista funcional por componentes exportada |
+| [diagrama vista funcional.vpp](diagramas/diagrama%20vista%20funcional.vpp) | Fuente editable (Visual Paradigm) |
+| [driagrama de vista diseño.vpp](diagramas/driagrama%20de%20vista%20dise%C3%B1o.vpp) | Fuente editable (Visual Paradigm) |
 
 ---
 
@@ -60,6 +88,7 @@ Las historias de usuario viven además como **issues** en GitHub, creadas con la
 ├── README.md
 ├── .github/
 │   └── ISSUE_TEMPLATE/        # Plantilla de historia de usuario y configuración
+├── diagramas/                 # Diagramas exportados (PNG) y fuentes .vpp
 └── docs/
     ├── requerimientos/        # Requerimientos funcionales (RF)
     ├── historias/             # Historias de usuario (HU-01 a HU-21)
