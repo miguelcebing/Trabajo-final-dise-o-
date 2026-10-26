@@ -79,6 +79,7 @@ Descompone el sistema en componentes y las interfaces que **provisten** (lollipo
 | [diagrama vista funcional- componentes diseño.png](diagramas/diagrama%20vista%20funcional-%20componentes%20dise%C3%B1o.png) | Vista funcional por componentes exportada |
 | [diagrama vista funcional.vpp](diagramas/diagrama%20vista%20funcional.vpp) | Fuente editable (Visual Paradigm) |
 | [driagrama de vista diseño.vpp](diagramas/driagrama%20de%20vista%20dise%C3%B1o.vpp) | Fuente editable (Visual Paradigm) |
+| [Diagrama vista logica diseño completo .vpp](diagramas/Diagrama%20vista%20logica%20dise%C3%B1o%20completo%20.vpp) | Fuente editable de la vista lógica (Visual Paradigm) |
 
 ---
 
