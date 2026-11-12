@@ -48,7 +48,7 @@ Queda **fuera del alcance**: inventario, reportes, riel de transporte, reservas 
 | [Wireframes](docs/wireframes/README.md) | Galería de los 21 wireframes en SVG |
 | [Trazabilidad](docs/trazabilidad.md) | RF ↔ HU ↔ WF ↔ issue ↔ actor ↔ módulo |
 | [Insumos para diagramas](docs/insumos-diagramas.md) | Actores, casos de uso, estados, entidades, flujos y pantallas |
-| [Diagramas](diagramas/) | Vista de contexto, vista funcional y vista lógica exportadas en PNG, con sus fuentes `.vpp` |
+| [Diagramas](diagramas/) | Vista de contexto, vista funcional y vista lógica exportadas en PNG/JPG, con sus fuentes `.vpp` |
 
 Las historias de usuario viven además como **issues** en GitHub, creadas con la plantilla
 [`.github/ISSUE_TEMPLATE/historia-de-usuario.md`](.github/ISSUE_TEMPLATE/historia-de-usuario.md).
@@ -58,34 +58,34 @@ Las historias de usuario viven además como **issues** en GitHub, creadas con la
 ## Diagramas
 
 Los diagramas se elaboraron en Visual Paradigm. En [`diagramas/`](diagramas/) están las
-exportaciones en PNG y sus fuentes editables (`.vpp`).
+exportaciones finales en PNG/JPG y sus fuentes editables (`.vpp`).
 
 ### Vista de contexto (vista de sistema)
 
 Ubica el sistema en su entorno: con quién interactúa y qué intercambia con cada actor o sistema externo.
 
-![Vista de contexto del sistema](diagramas/diagrama%20vista%20sistema%20dise%C3%B1o.png)
+![Vista de contexto del sistema](diagramas/Diagrama%20de%20contexto%20RestSmart%20finalizado.png)
 
 ### Vista funcional (componentes)
 
 Descompone el sistema en componentes y las interfaces que **provisten** (lollipop) y que **requieren**
 (socket) entre ellos, con la trazabilidad a RF y HU.
 
-![Vista funcional por componentes](diagramas/diagrama%20vista%20funcional-%20componentes%20dise%C3%B1o.png)
+![Vista funcional por componentes](diagramas/diagrama%20vista%20funcional%20finalizado.jpg)
 
 ### Vista lógica (modelo de clases)
 
 Modelo lógico completo de clases: atributos, operaciones, relaciones y multiplicidades del dominio.
 
-![Vista lógica de clases](diagramas/Diagrama%20vista%20logica%20dise%C3%B1o%20completo.png)
+![Vista lógica de clases](diagramas/diagrama%20vista%20logica%20dise%C3%B1o%20finalizado.jpg)
 
 | Archivo | Contenido |
 |---|---|
-| [diagrama vista sistema diseño.png](diagramas/diagrama%20vista%20sistema%20dise%C3%B1o.png) | Vista de contexto exportada |
-| [diagrama vista funcional- componentes diseño.png](diagramas/diagrama%20vista%20funcional-%20componentes%20dise%C3%B1o.png) | Vista funcional por componentes exportada |
-| [Diagrama vista logica diseño completo.png](diagramas/Diagrama%20vista%20logica%20dise%C3%B1o%20completo.png) | Vista lógica (modelo de clases) unida desde 5 capturas |
-| [diagrama vista funcional.vpp](diagramas/diagrama%20vista%20funcional.vpp) | Fuente editable (Visual Paradigm) |
-| [driagrama de vista diseño.vpp](diagramas/driagrama%20de%20vista%20dise%C3%B1o.vpp) | Fuente editable (Visual Paradigm) |
+| [Diagrama de contexto RestSmart finalizado.png](diagramas/Diagrama%20de%20contexto%20RestSmart%20finalizado.png) | Vista de contexto exportada |
+| [diagrama vista funcional finalizado.jpg](diagramas/diagrama%20vista%20funcional%20finalizado.jpg) | Vista funcional por componentes exportada |
+| [diagrama vista logica diseño finalizado.jpg](diagramas/diagrama%20vista%20logica%20dise%C3%B1o%20finalizado.jpg) | Vista lógica (modelo de clases) completa |
+| [diagrama vista funcional.vpp](diagramas/diagrama%20vista%20funcional.vpp) | Fuente editable de la vista funcional (Visual Paradigm) |
+| [driagrama de vista diseño.vpp](diagramas/driagrama%20de%20vista%20dise%C3%B1o.vpp) | Fuente editable de la vista de contexto (Visual Paradigm) |
 | [Diagrama vista logica diseño completo .vpp](diagramas/Diagrama%20vista%20logica%20dise%C3%B1o%20completo%20.vpp) | Fuente editable de la vista lógica (Visual Paradigm) |
 
 ---
@@ -96,7 +96,7 @@ Modelo lógico completo de clases: atributos, operaciones, relaciones y multipli
 ├── README.md
 ├── .github/
 │   └── ISSUE_TEMPLATE/        # Plantilla de historia de usuario y configuración
-├── diagramas/                 # Diagramas exportados (PNG) y fuentes .vpp
+├── diagramas/                 # Diagramas exportados (PNG/JPG) y fuentes .vpp
 └── docs/
     ├── requerimientos/        # Requerimientos funcionales (RF)
     ├── historias/             # Historias de usuario (HU-01 a HU-21)
