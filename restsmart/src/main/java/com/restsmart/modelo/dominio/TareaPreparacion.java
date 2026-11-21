@@ -12,8 +12,6 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @Document(collection = "tareasPreparacion")
 public class TareaPreparacion {
 
-	private static final long MINUTOS_LIMITE = 30;
-
 	@Id
 	private Integer id;
 
@@ -120,13 +118,6 @@ public class TareaPreparacion {
 		}
 		LocalDateTime fin = fechaHoraCompletada == null ? LocalDateTime.now() : fechaHoraCompletada;
 		return Duration.between(fechaHoraCreacion, fin).toMinutes();
-	}
-
-	public boolean estaVencida() {
-		if (fechaHoraCreacion == null || estaCompletada()) {
-			return false;
-		}
-		return fechaHoraCreacion.plusMinutes(MINUTOS_LIMITE).isBefore(LocalDateTime.now());
 	}
 
 	public List<ItemPedido> obtenerDetalleCompleto() {
