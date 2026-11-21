@@ -2,7 +2,7 @@
 
 Implementación del Sistema de Autoservicio para Restaurante **RestSmart** con **Java 21** y **Spring Boot** (solo Spring Boot), persistencia en **MongoDB Atlas**.
 
-Este documento describe la estructura del código. La explicación detallada está en [`../informes/`](../informes/).
+Este documento describe la estructura del **backend**. El frontend se implementará por separado.
 
 ---
 
@@ -141,7 +141,7 @@ La regla de dependencia es **hacia adentro**: presentación → negocio → dato
 - Las referencias a `Categoria`, `Producto`, `Mesa` y `Pedido` usan **`@DBRef`**.
 - Los IDs son `Integer` y se generan con la colección `secuencias` (no se usa `ObjectId`).
 
-Detalle completo en [`../informes/02-mongodb.md`](../informes/02-mongodb.md).
+La persistencia se detalla en la sección anterior y en la vista lógica de los diagramas.
 
 ---
 

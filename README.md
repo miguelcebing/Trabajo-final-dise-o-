@@ -4,7 +4,7 @@
 
 Restaurante con autoservicio digital: el cliente consulta el menú en pantallas táctiles, arma y paga su pedido desde la misma pantalla, y la cocina lo recibe organizada por sectores de preparación.
 
-> **Estado:** análisis, diseño e implementación. El código fuente está en la carpeta [`restsmart/`](restsmart/). Los requerimientos, historias de usuario y wireframes de este repositorio son la especificación vigente.
+> **Estado:** análisis, diseño e implementación. El backend está en la carpeta [`restsmart/`](restsmart/). Los requerimientos, historias de usuario y wireframes de este repositorio son la especificación vigente.
 
 ---
 
@@ -55,10 +55,11 @@ Las historias de usuario viven además como **issues** en GitHub, creadas con la
 
 ---
 
-## Código fuente
+## Backend (código fuente)
 
-La carpeta [`restsmart/`](restsmart/) contiene la implementación en **Java 21 con Spring Boot**
-(solo Spring Boot), organizada en las cuatro capas de la vista de desarrollo:
+La carpeta [`restsmart/`](restsmart/) contiene **únicamente el backend** (API REST) en **Java 21 con
+Spring Boot** (solo Spring Boot), organizada en las cuatro capas de la vista de desarrollo.
+El **frontend** se implementará por separado.
 
 | Paquete | Capa |
 |---|---|
@@ -67,8 +68,7 @@ La carpeta [`restsmart/`](restsmart/) contiene la implementación en **Java 21 c
 | `com.restsmart.datos.repository` / `.secuencia` | Datos / Repository (MongoDB) + secuencias |
 | `com.restsmart.modelo.dominio` / `.enumeracion` | Modelo de dominio + enumeraciones |
 
-La estructura detallada está en [`restsmart/README.md`](restsmart/README.md). Las explicaciones
-completas del código y de MongoDB están en [`informes/`](informes/).
+La estructura detallada está en [`restsmart/README.md`](restsmart/README.md).
 
 La conexión a MongoDB Atlas se toma de la variable de entorno `MDB_MCP_CONNECTION_STRING`
 (no hay credenciales en el repositorio).
@@ -140,8 +140,7 @@ sector y pantalla de administración (navegador web) contra el servidor de aplic
 ├── README.md
 ├── .github/
 │   └── ISSUE_TEMPLATE/        # Plantilla de historia de usuario y configuración
-├── restsmart/                 # Código fuente: backend Spring Boot (Java 21 + MongoDB)
-├── informes/                  # Explicación detallada del código y de MongoDB
+├── restsmart/                 # Backend: API REST Spring Boot (Java 21 + MongoDB)
 ├── diagramas/                 # Diagramas exportados (PNG/JPG) y fuentes .vpp
 └── docs/
     ├── requerimientos/        # Requerimientos funcionales (RF)

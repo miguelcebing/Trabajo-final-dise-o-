@@ -7,3 +7,6 @@ opencode.json
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Informes locales (no se publican en el repositorio)
+informes/
