@@ -1,4 +1,4 @@
-package com.restsmart.datos;
+package com.restsmart.datos.secuencia;
 
 import org.bson.Document;
 import org.springframework.data.mongodb.core.FindAndModifyOptions;

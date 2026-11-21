@@ -6,9 +6,10 @@ import org.springframework.stereotype.Service;
 
 import com.restsmart.datos.repository.PedidoRepository;
 import com.restsmart.datos.repository.TareaPreparacionRepository;
-import com.restsmart.modelo.dominio.EstadoPedido;
+import com.restsmart.modelo.dominio.enumeracion.EstadoPedido;
 import com.restsmart.modelo.dominio.Pedido;
 import com.restsmart.modelo.dominio.TareaPreparacion;
+import com.restsmart.negocio.contrato.iConsultarEstado;
 
 @Service
 public class SeguimientoPedidoService implements iConsultarEstado {

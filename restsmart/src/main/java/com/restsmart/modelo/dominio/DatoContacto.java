@@ -1,5 +1,7 @@
 package com.restsmart.modelo.dominio;
 
+import com.restsmart.modelo.dominio.enumeracion.TipoContacto;
+
 public class DatoContacto {
 
 	private String nombre;

@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.restsmart.modelo.dominio.SectorCocina;
+import com.restsmart.modelo.dominio.enumeracion.SectorCocina;
 import com.restsmart.modelo.dominio.TareaPreparacion;
 import com.restsmart.negocio.service.GestionCocinaService;
 

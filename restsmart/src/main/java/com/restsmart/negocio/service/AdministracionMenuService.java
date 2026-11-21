@@ -2,13 +2,13 @@ package com.restsmart.negocio.service;
 
 import org.springframework.stereotype.Service;
 
-import com.restsmart.datos.GeneradorSecuencia;
+import com.restsmart.datos.secuencia.GeneradorSecuencia;
 import com.restsmart.datos.repository.CategoriaRepository;
 import com.restsmart.datos.repository.ProductoRepository;
 import com.restsmart.modelo.dominio.Administrador;
 import com.restsmart.modelo.dominio.Categoria;
 import com.restsmart.modelo.dominio.Producto;
-import com.restsmart.modelo.dominio.SectorCocina;
+import com.restsmart.modelo.dominio.enumeracion.SectorCocina;
 
 @Service
 public class AdministracionMenuService {

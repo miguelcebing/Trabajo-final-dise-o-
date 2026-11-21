@@ -1,4 +1,4 @@
-package com.restsmart.presentacion.controller;
+package com.restsmart.presentacion.dto;
 
 import java.util.List;
 

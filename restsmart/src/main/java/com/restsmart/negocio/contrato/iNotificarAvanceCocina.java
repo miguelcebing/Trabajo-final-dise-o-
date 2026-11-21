@@ -1,4 +1,4 @@
-package com.restsmart.negocio.service;
+package com.restsmart.negocio.contrato;
 
 public interface iNotificarAvanceCocina {
 }

@@ -9,6 +9,9 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.restsmart.modelo.dominio.enumeracion.EstadoTarea;
+import com.restsmart.modelo.dominio.enumeracion.SectorCocina;
+
 @Document(collection = "tareasPreparacion")
 public class TareaPreparacion {
 

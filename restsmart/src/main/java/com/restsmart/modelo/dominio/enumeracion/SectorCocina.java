@@ -1,4 +1,4 @@
-package com.restsmart.modelo.dominio;
+package com.restsmart.modelo.dominio.enumeracion;
 
 public enum SectorCocina {
 	Bebidas,

@@ -11,6 +11,11 @@ import org.springframework.data.annotation.Transient;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import com.restsmart.modelo.dominio.enumeracion.EstadoPedido;
+import com.restsmart.modelo.dominio.enumeracion.EstadoTarea;
+import com.restsmart.modelo.dominio.enumeracion.SectorCocina;
+import com.restsmart.modelo.dominio.enumeracion.TipoContacto;
+
 @Document(collection = "pedidos")
 public class Pedido {
 

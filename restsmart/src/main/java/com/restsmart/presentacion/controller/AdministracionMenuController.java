@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.restsmart.modelo.dominio.Categoria;
 import com.restsmart.modelo.dominio.Producto;
-import com.restsmart.modelo.dominio.SectorCocina;
+import com.restsmart.modelo.dominio.enumeracion.SectorCocina;
 import com.restsmart.negocio.service.AdministracionMenuService;
 
 @RestController

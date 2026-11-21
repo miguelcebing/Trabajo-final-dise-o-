@@ -1,5 +1,7 @@
 package com.restsmart.modelo.dominio;
 
+import com.restsmart.modelo.dominio.enumeracion.SectorCocina;
+
 public class Administrador {
 
 	private Integer id;

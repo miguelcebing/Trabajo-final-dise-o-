@@ -13,6 +13,8 @@ import com.restsmart.modelo.dominio.Complemento;
 import com.restsmart.modelo.dominio.OpcionProducto;
 import com.restsmart.modelo.dominio.Producto;
 import com.restsmart.modelo.dominio.Variante;
+import com.restsmart.negocio.contrato.iAdministrarCatalogo;
+import com.restsmart.negocio.contrato.iConsultaMenu;
 
 @Service
 public class GestionMenuService implements iConsultaMenu, iAdministrarCatalogo {

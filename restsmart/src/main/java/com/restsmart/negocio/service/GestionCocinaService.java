@@ -7,13 +7,14 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.restsmart.datos.GeneradorSecuencia;
+import com.restsmart.datos.secuencia.GeneradorSecuencia;
 import com.restsmart.datos.repository.PedidoRepository;
 import com.restsmart.datos.repository.TareaPreparacionRepository;
 import com.restsmart.modelo.dominio.Pedido;
-import com.restsmart.modelo.dominio.SectorCocina;
+import com.restsmart.modelo.dominio.enumeracion.SectorCocina;
 import com.restsmart.modelo.dominio.SesionCocina;
 import com.restsmart.modelo.dominio.TareaPreparacion;
+import com.restsmart.negocio.contrato.iNotificarAvanceCocina;
 
 @Service
 public class GestionCocinaService implements iNotificarAvanceCocina {

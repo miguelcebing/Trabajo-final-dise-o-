@@ -62,10 +62,13 @@ La carpeta [`restsmart/`](restsmart/) contiene la implementación en **Java 21 c
 
 | Paquete | Capa |
 |---|---|
-| `com.restsmart.presentacion.controller` | Presentación / Controller |
-| `com.restsmart.negocio.service` | Negocio / Service |
-| `com.restsmart.datos.repository` | Datos / Repository (MongoDB) |
-| `com.restsmart.modelo.dominio` | Modelo de dominio |
+| `com.restsmart.presentacion.controller` / `.dto` | Presentación / Controller + DTO |
+| `com.restsmart.negocio.service` / `.contrato` | Negocio / Service + contratos |
+| `com.restsmart.datos.repository` / `.secuencia` | Datos / Repository (MongoDB) + secuencias |
+| `com.restsmart.modelo.dominio` / `.enumeracion` | Modelo de dominio + enumeraciones |
+
+La estructura detallada está en [`restsmart/README.md`](restsmart/README.md). Las explicaciones
+completas del código y de MongoDB están en [`informes/`](informes/).
 
 La conexión a MongoDB Atlas se toma de la variable de entorno `MDB_MCP_CONNECTION_STRING`
 (no hay credenciales en el repositorio).
@@ -138,6 +141,7 @@ sector y pantalla de administración (navegador web) contra el servidor de aplic
 ├── .github/
 │   └── ISSUE_TEMPLATE/        # Plantilla de historia de usuario y configuración
 ├── restsmart/                 # Código fuente: backend Spring Boot (Java 21 + MongoDB)
+├── informes/                  # Explicación detallada del código y de MongoDB
 ├── diagramas/                 # Diagramas exportados (PNG/JPG) y fuentes .vpp
 └── docs/
     ├── requerimientos/        # Requerimientos funcionales (RF)

@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.restsmart.modelo.dominio.EstadoPedido;
+import com.restsmart.modelo.dominio.enumeracion.EstadoPedido;
 import com.restsmart.modelo.dominio.Pedido;
 import com.restsmart.negocio.service.SeguimientoPedidoService;
 

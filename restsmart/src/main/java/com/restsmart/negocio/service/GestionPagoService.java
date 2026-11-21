@@ -2,13 +2,14 @@ package com.restsmart.negocio.service;
 
 import org.springframework.stereotype.Service;
 
-import com.restsmart.datos.GeneradorSecuencia;
+import com.restsmart.datos.secuencia.GeneradorSecuencia;
 import com.restsmart.datos.repository.PedidoRepository;
 import com.restsmart.modelo.dominio.DatoContacto;
-import com.restsmart.modelo.dominio.EstadoPago;
+import com.restsmart.modelo.dominio.enumeracion.EstadoPago;
 import com.restsmart.modelo.dominio.Pago;
 import com.restsmart.modelo.dominio.Pedido;
 import com.restsmart.modelo.dominio.iPasarelaPago;
+import com.restsmart.negocio.contrato.iProcesarPago;
 
 @Service
 public class GestionPagoService implements iProcesarPago {

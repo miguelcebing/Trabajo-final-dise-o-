@@ -4,6 +4,8 @@ import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.restsmart.modelo.dominio.enumeracion.SectorCocina;
+
 public class SesionCocina {
 
 	private Integer id;

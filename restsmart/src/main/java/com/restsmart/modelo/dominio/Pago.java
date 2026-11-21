@@ -2,6 +2,8 @@ package com.restsmart.modelo.dominio;
 
 import java.time.LocalDateTime;
 
+import com.restsmart.modelo.dominio.enumeracion.EstadoPago;
+
 public class Pago {
 
 	private Integer id;

@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.restsmart.datos.GeneradorSecuencia;
+import com.restsmart.datos.secuencia.GeneradorSecuencia;
 import com.restsmart.datos.repository.MesaRepository;
 import com.restsmart.datos.repository.PedidoRepository;
 import com.restsmart.datos.repository.ProductoRepository;
