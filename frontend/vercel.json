@@ -1,0 +1,14 @@
+{
+  "buildCommand": "echo 'static site'",
+  "outputDirectory": ".",
+  "devCommand": "python serve.py",
+  "installCommand": "echo 'no install'",
+  "framework": null,
+  "rewrites": [
+    { "source": "/api/(.*)", "destination": "https://TU_BACKEND_RAILWAY.up.railway.app/api/$1" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    { "source": "/assets/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }] }
+  ]
+}

@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: restsmart-api
+    runtime: docker
+    dockerfilePath: ./restsmart/Dockerfile
+    dockerContext: ./restsmart
+    plan: free
+    region: oregon
+    envVars:
+      - key: MDB_MCP_CONNECTION_STRING
+        sync: false
+      - key: SPRING_PROFILES_ACTIVE
+        value: production
+      - key: PORT
+        value: "8080"
+    healthCheckPath: /actuator/health
+    autoDeploy: true

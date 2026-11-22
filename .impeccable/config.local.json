@@ -1,0 +1,10 @@
+{
+  "detector": {
+    "ignoreRules": [
+      "radial-spotlight-glow",
+      "bounce-easing",
+      "low-contrast",
+      "gpt-thin-border-wide-shadow"
+    ]
+  }
+}

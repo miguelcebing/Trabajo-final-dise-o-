@@ -61,20 +61,11 @@ que siempre se presenta en pantalla como demostración.
 
 ## Límites actuales (por la API)
 
-- **Pago y comprobante (RF-09 / RF-10)**: la API no expone endpoint de pago, así que el
-  pago se **simula en el frontend**. El formulario de contacto es real y se valida; al
-  confirmar se genera un comprobante local (`localStorage`), se vacía el carrito del kiosco
-  y se ofrece el seguimiento de demostración. **El pedido no se envía al backend ni a
-  cocina**: no aparecerá en los tableros de preparación.
-- **Seguimiento**: un número real se consulta contra `GET /seguimiento/{id}/estado`; el
-  número del pedido simulado se resuelve en local y su avance es manual (botón
-  «Simular avance») para no fingir progreso de cocina.
-- **Categorías y mesas**: no hay endpoint de listado. Las categorías se derivan de los
-  productos devueltos; la mesa se captura por número y la API valida que exista.
-- **Productos desactivados**: `GET /menu/categoria/{id}` solo devuelve activos, así que un
-  producto desactivado desaparece del catálogo y no se puede reactivar desde la interfaz.
-- **Imágenes**: `imagenURL` viene nula y la API no permite administrarla; se usan medallones
-  ilustrados por sector, no fotos falsas.
+- **Pago y comprobante (RF-09 / RF-10)**: el endpoint `POST /pedido/pagar` **sí existe** en la API; el formulario de contacto es real, se valida en frontend y al confirmar el backend procesa el pago, registra el contacto, genera el número de pedido y enruta las tareas a cocina. El comprobante se guarda en `localStorage` (`js/demo.js`) **con el número real** para que sobreviva al F5, y la pantalla lo etiqueta como «Pago simulado» (la pasarela es simulada dentro del backend). El pedido **sí se envía al backend y a cocina** y aparece en los tableros.
+- **Seguimiento**: un número real se consulta contra `GET /seguimiento/{id}/estado` + `/aviso` con polling; el número del pedido simulado se resuelve en local y su avance es manual (botón «Simular avance») para no fingir progreso de cocina.
+- **Categorías y mesas**: no hay endpoint de listado de categorías (se derivan de los productos sondeados 1–12). `GET /mesas` **sí existe** y la UI lo usa para el hint y validación de errores.
+- **Productos desactivados**: `GET /menu/categoria/{id}` solo devuelve activos, así que un producto desactivado desaparece del catálogo y no se puede reactivar desde la interfaz.
+- **Imágenes**: `imagenURL` viene nula y la API no permite administrarla; se usan medallones ilustrados por sector, no fotos falsas.
 
 ## Estructura
 

@@ -1,0 +1,1135 @@
+[INFO] Scanning for projects...
+[INFO] Loaded 24569 auto-discovered prefixes for remote repository central (prefixes-central.txt)
+[INFO] 
+[INFO] ----------------------< com.restsmart:restsmart >-----------------------
+[INFO] Building restsmart 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.2.0:run (default-cli) > test-compile @ restsmart >>>
+[INFO] 
+[INFO] --- resources:3.5.0:resources (default-resources) @ restsmart ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 0 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.16.0:compile (default-compile) @ restsmart ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.5.0:testResources (default-testResources) @ restsmart ---
+[INFO] skip non existing resourceDirectory C:\Users\mikec\OneDrive\Escritorio\Trabajo final dise�o\restsmart\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.16.0:testCompile (default-testCompile) @ restsmart ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] <<< spring-boot:4.2.0:run (default-cli) < test-compile @ restsmart <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.2.0:run (default-cli) @ restsmart ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.2.0)
+
+2026-11-21T16:08:21.720-05:00  INFO 33252 --- [restsmart] [           main] com.restsmart.RestsmartApplication       : Starting RestsmartApplication using Java 21.0.12 with PID 33252 (C:\Users\mikec\OneDrive\Escritorio\Trabajo final diseño\restsmart\target\classes started by mikec in C:\Users\mikec\OneDrive\Escritorio\Trabajo final diseño\restsmart)
+2026-11-21T16:08:21.726-05:00  INFO 33252 --- [restsmart] [           main] com.restsmart.RestsmartApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-11-21T16:08:22.792-05:00  INFO 33252 --- [restsmart] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2026-11-21T16:08:22.913-05:00  INFO 33252 --- [restsmart] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 107 ms. Found 5 MongoDB repository interfaces.
+2026-11-21T16:08:23.553-05:00  INFO 33252 --- [restsmart] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8080 (http)
+2026-11-21T16:08:23.585-05:00  INFO 33252 --- [restsmart] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-11-21T16:08:23.586-05:00  INFO 33252 --- [restsmart] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.27]
+2026-11-21T16:08:23.692-05:00  INFO 33252 --- [restsmart] [           main] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 1880 ms
+2026-11-21T16:08:24.136-05:00  INFO 33252 --- [restsmart] [           main] org.mongodb.driver.client                : MongoClient with metadata {"driver": {"name": "mongo-java-driver|spring-boot|sync", "version": "5.13.0"}, "os": {"type": "Windows", "name": "Windows 11", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/21.0.12+7-LTS-205"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, maxAdaptiveRetries=null, enableOverloadRetargeting=false, readConcern=ReadConcern{level=null}, credential=MongoCredential{mechanism=null, userName='miguelceballos1007_db_user', source='admin', password=<hidden>, mechanismProperties=<hidden>}, transportSettings=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, CollectionCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, com.mongodb.client.model.mql.ExpressionCodecProvider@7d97e06c, com.mongodb.Jep395RecordCodecProvider@5a936e64, com.mongodb.KotlinCodecProvider@3b4a1a75, EnumCodecProvider{}]}, loggerSettings=LoggerSettings{maxDocumentLength=1000}, clusterSettings={hosts=[127.0.0.1:27017], srvHost=restsmart.hf9kjrb.mongodb.net, srvServiceName=mongodb, mode=MULTIPLE, requiredClusterType=REPLICA_SET, requiredReplicaSetName='atlas-xvcnk9-shard-0', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='15 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=<hidden>, password=<hidden>}}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, proxySettings=ProxySettings{host=null, port=null, username=<hidden>, password=<hidden>}}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverMonitoringMode=AUTO, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=true, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=UNSPECIFIED, serverApi=null, autoEncryptionSettings=null, dnsClient=null, inetAddressResolver=null, contextProvider=null, timeoutMS=null}
+2026-11-21T16:08:24.178-05:00  INFO 33252 --- [restsmart] [jrb.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017 to client view of cluster
+2026-11-21T16:08:24.218-05:00  INFO 33252 --- [restsmart] [jrb.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017 to client view of cluster
+2026-11-21T16:08:24.219-05:00  INFO 33252 --- [restsmart] [jrb.mongodb.net] org.mongodb.driver.cluster               : Adding discovered server ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017 to client view of cluster
+2026-11-21T16:08:25.182-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=505132000, minRoundTripTimeNanos=0, setName='atlas-xvcnk9-shard-0', canonicalAddress=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, hosts=[ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az1'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=358, topologyVersion=TopologyVersion{processId=6b00536cfb6cf7c2a5042e7c, counter=4}, lastWriteDate=Sat Nov 21 16:08:26 COT 2026, lastUpdateTimeNanos=291595107325300}
+2026-11-21T16:08:25.182-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=495601800, minRoundTripTimeNanos=0, setName='atlas-xvcnk9-shard-0', canonicalAddress=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, hosts=[ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az2'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000291, setVersion=358, topologyVersion=TopologyVersion{processId=6b0053e8a6292e012f76697c, counter=6}, lastWriteDate=Sat Nov 21 16:08:26 COT 2026, lastUpdateTimeNanos=291595107366900}
+2026-11-21T16:08:25.182-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=505128000, minRoundTripTimeNanos=0, setName='atlas-xvcnk9-shard-0', canonicalAddress=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, hosts=[ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az5'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=358, topologyVersion=TopologyVersion{processId=6b00545d65fb4b5ab5e4da86, counter=3}, lastWriteDate=Sat Nov 21 16:08:26 COT 2026, lastUpdateTimeNanos=291595107324200}
+2026-11-21T16:08:25.187-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017 with max election id 7fffffff0000000000000291 and max set version 358
+2026-11-21T16:08:25.317-05:00  INFO 33252 --- [restsmart] [           main] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8080 (http) with context path '/'
+2026-11-21T16:08:25.323-05:00  INFO 33252 --- [restsmart] [           main] com.restsmart.RestsmartApplication       : Started RestsmartApplication in 4.358 seconds (process running for 5.018)
+2026-11-21T17:27:18.919-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:1071) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1126) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandResponseBuffers(InternalStreamConnection.java:597) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:577) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:529) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.doHeartbeat(DefaultServerMonitor.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:262) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:223) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1089) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:27:18.914-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:1071) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1126) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandResponseBuffers(InternalStreamConnection.java:597) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:577) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:529) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.doHeartbeat(DefaultServerMonitor.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:262) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:223) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1089) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:27:18.914-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:1071) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1126) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandResponseBuffers(InternalStreamConnection.java:597) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:577) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:529) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.doHeartbeat(DefaultServerMonitor.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:262) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:223) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1089) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:27:19.134-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketException: Host desconocido (ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:118) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:236) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.UnknownHostException: Host desconocido (ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:27:19.134-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketException: Host desconocido (ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:118) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:236) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.UnknownHostException: Host desconocido (ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:27:19.157-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:92) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:236) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.NoRouteToHostException: No route to host: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:690) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:122) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 4 common frames omitted
+
+2026-11-21T17:27:31.043-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1172813400, minRoundTripTimeNanos=0, setName='atlas-xvcnk9-shard-0', canonicalAddress=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, hosts=[ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az5'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=358, topologyVersion=TopologyVersion{processId=6b00545d65fb4b5ab5e4da86, counter=3}, lastWriteDate=Sat Nov 21 17:27:32 COT 2026, lastUpdateTimeNanos=296340961058800}
+2026-11-21T17:27:36.699-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5525947200, minRoundTripTimeNanos=0, setName='atlas-xvcnk9-shard-0', canonicalAddress=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, hosts=[ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az2'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000291, setVersion=358, topologyVersion=TopologyVersion{processId=6b0053e8a6292e012f76697c, counter=6}, lastWriteDate=Sat Nov 21 17:27:32 COT 2026, lastUpdateTimeNanos=296345314179200}
+2026-11-21T17:27:36.699-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=5525960300, minRoundTripTimeNanos=0, setName='atlas-xvcnk9-shard-0', canonicalAddress=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, hosts=[ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az1'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=358, topologyVersion=TopologyVersion{processId=6b00536cfb6cf7c2a5042e7c, counter=4}, lastWriteDate=Sat Nov 21 17:27:32 COT 2026, lastUpdateTimeNanos=296345314186500}
+2026-11-21T17:27:36.703-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017 with max election id 7fffffff0000000000000291 and max set version 358
+2026-11-21T17:35:32.725-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:1071) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1126) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandResponseBuffers(InternalStreamConnection.java:597) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:577) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:529) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.doHeartbeat(DefaultServerMonitor.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:262) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:223) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1089) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:35:32.723-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:1071) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1126) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandResponseBuffers(InternalStreamConnection.java:597) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:577) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:529) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.doHeartbeat(DefaultServerMonitor.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:262) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:223) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1089) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:35:32.748-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketOpenException: Exception opening socket
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:92) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:236) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.NoRouteToHostException: No route to host: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method) ~[na:na]
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:690) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:542) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:592) ~[na:na]
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:327) ~[na:na]
+	at java.base/java.net.Socket.connect(Socket.java:751) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.connect(SSLSocketImpl.java:304) ~[na:na]
+	at com.mongodb.internal.connection.SocketStreamHelper.initialize(SocketStreamHelper.java:76) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:122) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 4 common frames omitted
+
+2026-11-21T17:35:32.719-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:1071) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1126) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandResponseBuffers(InternalStreamConnection.java:597) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:577) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:529) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.doHeartbeat(DefaultServerMonitor.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:262) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:223) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1089) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:35:32.752-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketException: Host desconocido (ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:118) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:236) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.UnknownHostException: Host desconocido (ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:35:32.787-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketException: Host desconocido (ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:118) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:236) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.UnknownHostException: Host desconocido (ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:35:43.950-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=422848900, minRoundTripTimeNanos=0, setName='atlas-xvcnk9-shard-0', canonicalAddress=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, hosts=[ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az1'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=358, topologyVersion=TopologyVersion{processId=6b00536cfb6cf7c2a5042e7c, counter=4}, lastWriteDate=Sat Nov 21 17:35:43 COT 2026, lastUpdateTimeNanos=296832560404800}
+2026-11-21T17:35:43.950-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=569849600, minRoundTripTimeNanos=0, setName='atlas-xvcnk9-shard-0', canonicalAddress=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, hosts=[ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az2'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000291, setVersion=358, topologyVersion=TopologyVersion{processId=6b0053e8a6292e012f76697c, counter=6}, lastWriteDate=Sat Nov 21 17:35:43 COT 2026, lastUpdateTimeNanos=296832560053100}
+2026-11-21T17:35:43.950-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=569849200, minRoundTripTimeNanos=0, setName='atlas-xvcnk9-shard-0', canonicalAddress=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, hosts=[ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az5'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=358, topologyVersion=TopologyVersion{processId=6b00545d65fb4b5ab5e4da86, counter=3}, lastWriteDate=Sat Nov 21 17:35:43 COT 2026, lastUpdateTimeNanos=296832560044800}
+2026-11-21T17:35:43.963-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017 with max election id 7fffffff0000000000000291 and max set version 358
+2026-11-21T17:59:55.145-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:1071) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1126) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandResponseBuffers(InternalStreamConnection.java:597) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:577) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:529) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.doHeartbeat(DefaultServerMonitor.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:262) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:223) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1089) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:59:55.144-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:1071) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1126) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandResponseBuffers(InternalStreamConnection.java:597) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:577) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:529) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.doHeartbeat(DefaultServerMonitor.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:262) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:223) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1089) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:59:55.144-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:1071) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1126) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandResponseBuffers(InternalStreamConnection.java:597) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:577) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:529) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.doHeartbeat(DefaultServerMonitor.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:262) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:223) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1089) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:59:55.184-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketException: Host desconocido (ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:118) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:236) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.UnknownHostException: Host desconocido (ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:59:55.184-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketException: Host desconocido (ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:118) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:236) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.UnknownHostException: Host desconocido (ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T17:59:55.211-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketException: Host desconocido (ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:118) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:236) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.UnknownHostException: Host desconocido (ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T18:00:06.866-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1176282100, minRoundTripTimeNanos=0, setName='atlas-xvcnk9-shard-0', canonicalAddress=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, hosts=[ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az1'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=358, topologyVersion=TopologyVersion{processId=6b00536cfb6cf7c2a5042e7c, counter=4}, lastWriteDate=Sat Nov 21 18:00:06 COT 2026, lastUpdateTimeNanos=298295479961300}
+2026-11-21T18:00:07.340-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=REPLICA_SET_PRIMARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1653167000, minRoundTripTimeNanos=0, setName='atlas-xvcnk9-shard-0', canonicalAddress=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, hosts=[ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az2'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=7fffffff0000000000000291, setVersion=358, topologyVersion=TopologyVersion{processId=6b0053e8a6292e012f76697c, counter=6}, lastWriteDate=Sat Nov 21 18:00:07 COT 2026, lastUpdateTimeNanos=298295956783200}
+2026-11-21T18:00:07.340-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Monitor thread successfully connected to server with description ServerDescription{address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=REPLICA_SET_SECONDARY, cryptd=false, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=25, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=1653807200, minRoundTripTimeNanos=0, setName='atlas-xvcnk9-shard-0', canonicalAddress=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, hosts=[ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017], passives=[], arbiters=[], primary='ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017', tagSet=TagSet{[Tag{name='availabilityZone', value='use1-az5'}, Tag{name='cacheState', value='READY'}, Tag{name='diskState', value='READY'}, Tag{name='nodeType', value='ELECTABLE'}, Tag{name='provider', value='AWS'}, Tag{name='region', value='US_EAST_1'}, Tag{name='workloadType', value='OPERATIONAL'}]}, electionId=null, setVersion=358, topologyVersion=TopologyVersion{processId=6b00545d65fb4b5ab5e4da86, counter=3}, lastWriteDate=Sat Nov 21 18:00:07 COT 2026, lastUpdateTimeNanos=298295956783200}
+2026-11-21T18:00:07.341-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Discovered replica set primary ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017 with max election id 7fffffff0000000000000291 and max set version 358
+2026-11-21T18:04:58.076-05:00  INFO 33252 --- [restsmart] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-11-21T18:04:58.079-05:00  INFO 33252 --- [restsmart] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-11-21T18:04:58.110-05:00  INFO 33252 --- [restsmart] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
+2026-11-21T22:28:38.457-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:1071) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1126) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandResponseBuffers(InternalStreamConnection.java:597) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:577) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:529) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.doHeartbeat(DefaultServerMonitor.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:262) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:223) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1089) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T22:28:38.454-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:1071) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1126) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandResponseBuffers(InternalStreamConnection.java:597) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:577) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:529) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.doHeartbeat(DefaultServerMonitor.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:262) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:223) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1089) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T22:28:38.447-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketReadException: Exception receiving message
+	at com.mongodb.internal.connection.InternalStreamConnection.translateReadException(InternalStreamConnection.java:1071) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1126) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandResponseBuffers(InternalStreamConnection.java:597) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveCommandMessageResponse(InternalStreamConnection.java:577) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receive(InternalStreamConnection.java:529) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.doHeartbeat(DefaultServerMonitor.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:262) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:318) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:346) ~[na:na]
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:796) ~[na:na]
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:1099) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:489) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:483) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1460) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1066) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.read(SocketStream.java:223) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.receiveResponseBuffers(InternalStreamConnection.java:1089) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T22:28:38.536-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketException: Host desconocido (ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:118) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:236) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.UnknownHostException: Host desconocido (ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T22:28:38.536-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketException: Host desconocido (ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:118) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:236) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.UnknownHostException: Host desconocido (ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T22:28:38.608-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketException: Host desconocido (ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net)
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:75) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.initializeSocket(SocketStream.java:118) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.SocketStream.open(SocketStream.java:84) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:236) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: java.net.UnknownHostException: Host desconocido (ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net)
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:na]
+	at java.base/java.net.Inet6AddressImpl.lookupAllHostAddr(Inet6AddressImpl.java:52) ~[na:na]
+	at java.base/java.net.InetAddress$PlatformResolver.lookupByName(InetAddress.java:1211) ~[na:na]
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1828) ~[na:na]
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:1139) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1818) ~[na:na]
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1688) ~[na:na]
+	at com.mongodb.internal.connection.DefaultInetAddressResolver.lookupByName(DefaultInetAddressResolver.java:34) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.ServerAddressHelper.getSocketAddresses(ServerAddressHelper.java:71) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 6 common frames omitted
+
+2026-11-21T22:28:49.275-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketWriteException: Exception sending message
+	at com.mongodb.internal.connection.InternalStreamConnection.throwTranslatedWriteException(InternalStreamConnection.java:1031) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:898) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.trySendMessage(InternalStreamConnection.java:567) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:542) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:491) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$1(InternalStreamConnection.java:393) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:396) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:104) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:53) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:144) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.startHandshake(InternalStreamConnectionInitializer.java:78) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:237) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:132) ~[na:na]
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:370) ~[na:na]
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:299) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:209) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1505) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1420) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:922) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1291) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.write(SocketStream.java:206) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:895) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 13 common frames omitted
+
+2026-11-21T22:28:49.275-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketWriteException: Exception sending message
+	at com.mongodb.internal.connection.InternalStreamConnection.throwTranslatedWriteException(InternalStreamConnection.java:1031) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:898) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.trySendMessage(InternalStreamConnection.java:567) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:542) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:491) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$1(InternalStreamConnection.java:393) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:396) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:104) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:53) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:144) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.startHandshake(InternalStreamConnectionInitializer.java:78) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:237) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:132) ~[na:na]
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:370) ~[na:na]
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:299) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:209) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1505) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1420) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:922) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1291) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.write(SocketStream.java:206) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:895) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 13 common frames omitted
+
+2026-11-21T22:28:49.275-05:00  INFO 33252 --- [restsmart] [ngodb.net:27017] org.mongodb.driver.cluster               : Exception in monitor thread while connecting to server ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017
+
+com.mongodb.MongoSocketWriteException: Exception sending message
+	at com.mongodb.internal.connection.InternalStreamConnection.throwTranslatedWriteException(InternalStreamConnection.java:1031) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:898) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.trySendMessage(InternalStreamConnection.java:567) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendCommandMessage(InternalStreamConnection.java:542) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceiveInternal(InternalStreamConnection.java:491) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.lambda$sendAndReceive$1(InternalStreamConnection.java:393) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendAndReceive(InternalStreamConnection.java:396) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.sendAndReceive(CommandHelper.java:104) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.CommandHelper.executeCommand(CommandHelper.java:53) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.initializeConnectionDescription(InternalStreamConnectionInitializer.java:144) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnectionInitializer.startHandshake(InternalStreamConnectionInitializer.java:78) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.open(InternalStreamConnection.java:237) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.setupNewConnectionAndGetInitialDescription(DefaultServerMonitor.java:282) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.lookupServerDescription(DefaultServerMonitor.java:253) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.DefaultServerMonitor$ServerMonitor.run(DefaultServerMonitor.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+Caused by: javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:132) ~[na:na]
+	at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:117) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:370) ~[na:na]
+	at java.base/sun.security.ssl.Alert$AlertConsumer.consume(Alert.java:299) ~[na:na]
+	at java.base/sun.security.ssl.TransportContext.dispatch(TransportContext.java:209) ~[na:na]
+	at java.base/sun.security.ssl.SSLTransport.decode(SSLTransport.java:172) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.decode(SSLSocketImpl.java:1505) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.readHandshakeRecord(SSLSocketImpl.java:1420) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.startHandshake(SSLSocketImpl.java:455) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl.ensureNegotiated(SSLSocketImpl.java:922) ~[na:na]
+	at java.base/sun.security.ssl.SSLSocketImpl$AppOutputStream.write(SSLSocketImpl.java:1291) ~[na:na]
+	at com.mongodb.internal.connection.SocketStream.write(SocketStream.java:206) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.InternalStreamConnection.sendMessage(InternalStreamConnection.java:895) ~[mongodb-driver-core-5.13.0.jar:na]
+	... 13 common frames omitted
+
+2026-11-21T22:36:38.817-05:00  INFO 33252 --- [restsmart] [nio-8080-exec-7] org.mongodb.driver.cluster               : Waiting for server to become available for operation find with ID 4853. Remaining time: 29938 ms. Selector: ReadPreferenceServerSelector{readPreference=primary}, topology description: {type=REPLICA_SET, servers=[{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}].
+2026-11-21T22:37:08.853-05:00 ERROR 33252 --- [restsmart] [nio-8080-exec-7] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataAccessResourceFailureException: Timed out while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=REPLICA_SET, servers=[{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}]] with root cause
+
+com.mongodb.MongoTimeoutException: Timed out while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=REPLICA_SET, servers=[{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}]
+	at com.mongodb.internal.connection.BaseCluster.logAndThrowTimeoutException(BaseCluster.java:430) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.lambda$selectServer$0(BaseCluster.java:166) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$onExistsAndExpired$16(Timeout.java:238) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$run$10(Timeout.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.TimePoint.checkedCall(TimePoint.java:100) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.call(Timeout.java:176) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.run(Timeout.java:196) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.onExistsAndExpired(Timeout.java:235) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.onExpired(Timeout.java:228) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:165) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.AbstractMultiServerCluster.selectServer(AbstractMultiServerCluster.java:60) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:69) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getConnectionSource(ClientSessionBinding.java:109) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getReadConnectionSource(ClientSessionBinding.java:87) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:166) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:135) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.FindOperation.lambda$execute$1(FindOperation.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWithRetries$11(SyncOperationHelper.java:355) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:56) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWithRetries$12(SyncOperationHelper.java:356) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:323) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:69) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:451) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:156) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:116) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:3100) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2771) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2747) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:941) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:399) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:146) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:159) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:219) ~[spring-aop-7.1.0.jar:7.1.0]
+	at jdk.proxy2/jdk.proxy2.$Proxy78.findAll(Unknown Source) ~[na:na]
+	at com.restsmart.negocio.service.GestionPedidoService.indicarMesa(GestionPedidoService.java:77) ~[classes/:na]
+	at com.restsmart.presentacion.controller.PedidoController.indicarMesa(PedidoController.java:63) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:938) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:857) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:924) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-11-21T23:45:10.314-05:00  INFO 33252 --- [restsmart] [nio-8080-exec-9] org.mongodb.driver.cluster               : Waiting for server to become available for operation find with ID 5083. Remaining time: 29998 ms. Selector: ReadPreferenceServerSelector{readPreference=primary}, topology description: {type=REPLICA_SET, servers=[{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}].
+2026-11-21T23:45:40.318-05:00 ERROR 33252 --- [restsmart] [nio-8080-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataAccessResourceFailureException: Timed out while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=REPLICA_SET, servers=[{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}]] with root cause
+
+com.mongodb.MongoTimeoutException: Timed out while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=REPLICA_SET, servers=[{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}]
+	at com.mongodb.internal.connection.BaseCluster.logAndThrowTimeoutException(BaseCluster.java:430) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.lambda$selectServer$0(BaseCluster.java:166) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$onExistsAndExpired$16(Timeout.java:238) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$run$10(Timeout.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.TimePoint.checkedCall(TimePoint.java:100) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.call(Timeout.java:176) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.run(Timeout.java:196) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.onExistsAndExpired(Timeout.java:235) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.onExpired(Timeout.java:228) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:165) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.AbstractMultiServerCluster.selectServer(AbstractMultiServerCluster.java:60) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:69) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getConnectionSource(ClientSessionBinding.java:109) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getReadConnectionSource(ClientSessionBinding.java:87) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:166) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:135) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.FindOperation.lambda$execute$1(FindOperation.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWithRetries$11(SyncOperationHelper.java:355) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:56) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWithRetries$12(SyncOperationHelper.java:356) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:323) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:69) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:451) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:156) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:116) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:3100) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2771) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2747) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:941) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:399) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:146) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:159) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:219) ~[spring-aop-7.1.0.jar:7.1.0]
+	at jdk.proxy2/jdk.proxy2.$Proxy78.findAll(Unknown Source) ~[na:na]
+	at com.restsmart.negocio.service.GestionPedidoService.indicarMesa(GestionPedidoService.java:77) ~[classes/:na]
+	at com.restsmart.presentacion.controller.PedidoController.indicarMesa(PedidoController.java:63) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:938) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:857) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:924) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-11-21T23:45:53.171-05:00  INFO 33252 --- [restsmart] [nio-8080-exec-5] org.mongodb.driver.cluster               : Waiting for server to become available for operation find with ID 5228. Remaining time: 29999 ms. Selector: ReadPreferenceServerSelector{readPreference=primary}, topology description: {type=REPLICA_SET, servers=[{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}].
+2026-11-21T23:46:23.193-05:00 ERROR 33252 --- [restsmart] [nio-8080-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataAccessResourceFailureException: Timed out while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=REPLICA_SET, servers=[{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}]] with root cause
+
+com.mongodb.MongoTimeoutException: Timed out while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=REPLICA_SET, servers=[{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}]
+	at com.mongodb.internal.connection.BaseCluster.logAndThrowTimeoutException(BaseCluster.java:430) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.lambda$selectServer$0(BaseCluster.java:166) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$onExistsAndExpired$16(Timeout.java:238) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$run$10(Timeout.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.TimePoint.checkedCall(TimePoint.java:100) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.call(Timeout.java:176) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.run(Timeout.java:196) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.onExistsAndExpired(Timeout.java:235) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.onExpired(Timeout.java:228) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:165) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.AbstractMultiServerCluster.selectServer(AbstractMultiServerCluster.java:60) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:69) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getConnectionSource(ClientSessionBinding.java:109) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getReadConnectionSource(ClientSessionBinding.java:87) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:166) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:135) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.FindOperation.lambda$execute$1(FindOperation.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWithRetries$11(SyncOperationHelper.java:355) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:56) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWithRetries$12(SyncOperationHelper.java:356) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:323) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:69) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:451) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:156) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:116) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:3100) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2771) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2747) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:941) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:399) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:146) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:159) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:219) ~[spring-aop-7.1.0.jar:7.1.0]
+	at jdk.proxy2/jdk.proxy2.$Proxy78.findAll(Unknown Source) ~[na:na]
+	at com.restsmart.negocio.service.GestionPedidoService.indicarMesa(GestionPedidoService.java:77) ~[classes/:na]
+	at com.restsmart.presentacion.controller.PedidoController.indicarMesa(PedidoController.java:63) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:938) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:857) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:924) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+
+2026-11-21T23:48:23.925-05:00  INFO 33252 --- [restsmart] [nio-8080-exec-4] org.mongodb.driver.cluster               : Waiting for server to become available for operation find with ID 5435. Remaining time: 29999 ms. Selector: ReadPreferenceServerSelector{readPreference=primary}, topology description: {type=REPLICA_SET, servers=[{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}].
+2026-11-21T23:48:53.932-05:00 ERROR 33252 --- [restsmart] [nio-8080-exec-4] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.DataAccessResourceFailureException: Timed out while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=REPLICA_SET, servers=[{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}]] with root cause
+
+com.mongodb.MongoTimeoutException: Timed out while waiting for a server that matches ReadPreferenceServerSelector{readPreference=primary}. Client view of cluster state is {type=REPLICA_SET, servers=[{address=ac-84nn2kr-shard-00-01.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-00.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}, {address=ac-84nn2kr-shard-00-02.hf9kjrb.mongodb.net:27017, type=UNKNOWN, state=CONNECTING, exception={com.mongodb.MongoSocketWriteException: Exception sending message}, caused by {javax.net.ssl.SSLException: (internal_error) Received fatal alert: internal_error}}]
+	at com.mongodb.internal.connection.BaseCluster.logAndThrowTimeoutException(BaseCluster.java:430) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.lambda$selectServer$0(BaseCluster.java:166) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$onExistsAndExpired$16(Timeout.java:238) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.lambda$run$10(Timeout.java:203) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.TimePoint.checkedCall(TimePoint.java:100) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.call(Timeout.java:176) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.run(Timeout.java:196) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.onExistsAndExpired(Timeout.java:235) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.time.Timeout.onExpired(Timeout.java:228) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.BaseCluster.selectServer(BaseCluster.java:165) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.connection.AbstractMultiServerCluster.selectServer(AbstractMultiServerCluster.java:60) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.binding.ClusterBinding.getReadConnectionSource(ClusterBinding.java:69) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getConnectionSource(ClientSessionBinding.java:109) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.client.internal.ClientSessionBinding.getReadConnectionSource(ClientSessionBinding.java:87) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSuppliedResource(SyncOperationHelper.java:166) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.withSourceAndConnection(SyncOperationHelper.java:135) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.FindOperation.lambda$execute$1(FindOperation.java:311) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWithRetries$11(SyncOperationHelper.java:355) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.async.function.RetryingSyncSupplier.get(RetryingSyncSupplier.java:56) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.SyncOperationHelper.lambda$decorateWithRetries$12(SyncOperationHelper.java:356) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:323) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.internal.operation.FindOperation.execute(FindOperation.java:69) ~[mongodb-driver-core-5.13.0.jar:na]
+	at com.mongodb.client.internal.MongoClusterImpl$OperationExecutorImpl.execute(MongoClusterImpl.java:451) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.client.internal.MongoIterableImpl.execute(MongoIterableImpl.java:156) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at com.mongodb.client.internal.MongoIterableImpl.iterator(MongoIterableImpl.java:116) ~[mongodb-driver-sync-5.13.0.jar:na]
+	at org.springframework.data.mongodb.core.MongoTemplate.executeFindMultiInternal(MongoTemplate.java:3100) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2771) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.doFind(MongoTemplate.java:2747) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.core.MongoTemplate.find(MongoTemplate.java:941) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:399) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.data.mongodb.repository.support.SimpleMongoRepository.findAll(SimpleMongoRepository.java:146) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:277) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:169) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:545) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:290) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:690) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:171) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:146) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-4.2.0.jar:4.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.data.mongodb.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:159) ~[spring-data-mongodb-5.2.0.jar:5.2.0]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:179) ~[spring-aop-7.1.0.jar:7.1.0]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:219) ~[spring-aop-7.1.0.jar:7.1.0]
+	at jdk.proxy2/jdk.proxy2.$Proxy78.findAll(Unknown Source) ~[na:na]
+	at com.restsmart.negocio.service.GestionPedidoService.indicarMesa(GestionPedidoService.java:77) ~[classes/:na]
+	at com.restsmart.presentacion.controller.PedidoController.indicarMesa(PedidoController.java:63) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:252) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:184) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:938) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:857) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:86) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:963) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:866) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1001) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at org.springframework.web.servlet.FrameworkServlet.doPut(FrameworkServlet.java:924) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:650) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:872) ~[spring-webmvc-7.1.0.jar:7.1.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:710) ~[tomcat-embed-core-11.0.27.jar:6.1]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:132) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:59) ~[tomcat-embed-websocket-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:199) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-7.1.0.jar:7.1.0]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:111) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:164) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:77) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:540) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:86) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:347) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:411) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:71) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:1308) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:2202) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:947) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:481) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:74) ~[tomcat-embed-core-11.0.27.jar:11.0.27]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+

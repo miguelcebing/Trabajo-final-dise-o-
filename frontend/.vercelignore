@@ -1,0 +1,5 @@
+serve.py
+gen_guia.py
+guia-mongodb.docx
+*.log
+*.md
