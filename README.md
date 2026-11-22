@@ -4,7 +4,11 @@
 
 Restaurante con autoservicio digital: el cliente consulta el menú en pantallas táctiles, arma y paga su pedido desde la misma pantalla, y la cocina lo recibe organizada por sectores de preparación.
 
-> **Estado:** análisis, diseño e implementación. El backend está en la carpeta [`restsmart/`](restsmart/) y el frontend en [`frontend/`](frontend/). Los requerimientos, historias de usuario y wireframes de este repositorio son la especificación vigente.
+> **Estado:** análisis, diseño e implementación **completos y desplegados en producción**.
+> - **Frontend:** https://frontend-six-lyart-29.vercel.app
+> - **Backend API:** https://trabajo-final-dise-o.onrender.com
+> - **Health check:** https://trabajo-final-dise-o.onrender.com/actuator/health
+> - Backend fuente en [`restsmart/`](restsmart/), frontend en [`frontend/`](frontend/).
 
 ---
 
@@ -180,3 +184,81 @@ sector y pantalla de administración (navegador web) contra el servidor de aplic
 - Miguel Felipe Ceballos Ramírez
 
 Proyecto académico — uso educativo.
+
+---
+
+## Despliegue en producción
+
+### URLs públicas
+
+| Componente | URL | Tecnología |
+|---|---|---|
+| **Frontend (SPA)** | https://frontend-six-lyart-29.vercel.app | Vercel (estático + rewrites `/api/*`) |
+| **Backend API** | https://trabajo-final-dise-o.onrender.com | Render Free Tier (Docker, Spring Boot 4.2) |
+| **Health check** | https://trabajo-final-dise-o.onrender.com/actuator/health | Spring Boot Actuator |
+| **API base** | https://trabajo-final-dise-o.onrender.com/api/... | REST JSON |
+
+### Arquitectura de despliegue
+
+```
+┌─────────────────┐     HTTPS /api/*      ┌──────────────────┐
+│  Vercel (CDN)   │ ────────────────────▶ │  Render (Docker) │
+│  frontend/      │  rewrite en vercel.json│  restsmart.jar   │
+└─────────────────┘                       └────────┬─────────┘
+                                                    │
+                                             MongoDB Atlas
+                                             (cluster TLS)
+```
+
+- **Frontend**: archivos estáticos servidos por Vercel; `vercel.json` reescribe `/api/*` al backend en Render (mismo origen → sin CORS en navegador).
+- **Backend**: contenedor Docker multi-stage (Maven build → JRE 21 alpine ~60 MB) en Render Free Tier; `autoDeploy: true` en `render.yaml`.
+- **Base de datos**: MongoDB Atlas (cluster compartido, TLS), URI en variable `MDB_MCP_CONNECTION_STRING` en Render.
+- **CORS**: `WebConfig.java` permite solo el origen del frontend Vercel.
+
+### Variables de entorno (Render → Settings → Environment)
+
+| Key | Value |
+|---|---|
+| `MDB_MCP_CONNECTION_STRING` | `mongodb+srv://usuario:pass@cluster.mongodb.net/restsmart?retryWrites=true&w=majority` |
+| `SPRING_PROFILES_ACTIVE` | `production` |
+
+### Cómo desplegar cambios (cero config extra)
+
+```bash
+# 1. Haces tus cambios y commit
+git add -A
+git commit -m "tu mensaje"
+git push origin main
+
+# 2. Ambos redeploys son automáticos:
+#    - Vercel: detecta push a main → rebuild estático
+#    - Render: autoDeploy=true → rebuild Docker + deploy
+```
+
+### Recomendaciones / Limitaciones actuales
+
+| Tema | Estado | Nota |
+|---|---|---|
+| **Cold start Render (free)** | ⚠️ | Primer request tras inactividad tarda 30-90 s; health check `/actuator/health` responde `{"status":"UP"}` cuando listo |
+| **HTTPS / TLS** | ✅ | Vercel y Render terminan TLS; Atlas exige TLS |
+| **CORS** | ✅ | Configurado en `WebConfig.java` solo para origen Vercel |
+| **MongoDB Atlas IP** | ✅ | Network Access → `0.0.0.0/0` (o IPs fijas de Render) |
+| **Pago simulado** | ✅ | Backend genera `PAGO-<UUID>`; frontend etiqueta "Pago simulado" |
+| **Autenticación Admin** | ❌ | Pendiente: cualquier usuario accede a `/admin/*` |
+| **WebSockets / SSE** | ❌ | Polling 12-20 s en cocina y seguimiento; migración a SSE recomendada |
+| **Tests E2E** | ❌ | Pendiente: Playwright/Cypress contra URLs de producción |
+| **Custom domain** | ❌ | Opcional: `vercel domains add` + `render custom domains` |
+
+### Desarrollo local (sin cambios)
+
+```powershell
+# Terminal 1 - Backend (requiere MDB_MCP_CONNECTION_STRING local o Atlas)
+cd restsmart
+.\mvnw.cmd spring-boot:run
+
+# Terminal 2 - Frontend + proxy local
+python frontend/serve.py
+# Abre http://127.0.0.1:5173
+```
+
+> **Nota**: el backend no tiene hot-reload; tras cambios en Java: Ctrl+C y volver a ejecutar.
