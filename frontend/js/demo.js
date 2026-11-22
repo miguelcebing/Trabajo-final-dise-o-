@@ -1,7 +1,7 @@
-/* Pago simulado (RF-09 / RF-10).
-   La API no expone pago, comprobante ni seguimiento de un pedido recién pagado,
-   así que esta pieza vive solo en el navegador. Siempre se presenta en la
-   interfaz como demostración y nunca se envía al backend ni a cocina. */
+/* Comprobante de pago simulado (RF-09 / RF-10).
+   El pago pasa por la API (POST /pedido/pagar): el pedido se confirma y enruta
+   a cocina desde el backend. Esta pieza conserva en el navegador el comprobante
+   y la máquina de estados local usada por la vista de seguimiento. */
 
 const STORAGE_KEY = "restsmart.demoOrder";
 
@@ -47,7 +47,7 @@ function demoNumber() {
   return Number(`${stamp}${time}`.slice(-9));
 }
 
-export function createDemoOrder({ cart, table, contact }) {
+export function createDemoOrder({ cart, table, contact, numero }) {
   const items = (cart?.items || []).map((item) => ({
     nombre: item.producto?.nombre || "Producto",
     cantidad: item.cantidad || 0,
@@ -58,7 +58,7 @@ export function createDemoOrder({ cart, table, contact }) {
   }));
 
   return saveDemoOrder({
-    numero: demoNumber(),
+    numero: numero ?? demoNumber(),
     creado: new Date().toISOString(),
     estado: "Pagado",
     mesa: table?.numero ?? null,

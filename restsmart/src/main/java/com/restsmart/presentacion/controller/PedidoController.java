@@ -14,14 +14,18 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.restsmart.presentacion.dto.SeleccionOpcionesRequest;
+import com.restsmart.datos.repository.PedidoRepository;
 import com.restsmart.modelo.dominio.Carrito;
 import com.restsmart.modelo.dominio.Complemento;
+import com.restsmart.modelo.dominio.DatoContacto;
 import com.restsmart.modelo.dominio.ItemPedido;
 import com.restsmart.modelo.dominio.Mesa;
 import com.restsmart.modelo.dominio.OpcionProducto;
 import com.restsmart.modelo.dominio.OpcionSeleccionada;
+import com.restsmart.modelo.dominio.PasarelaPago;
 import com.restsmart.modelo.dominio.Pedido;
 import com.restsmart.modelo.dominio.Producto;
+import com.restsmart.negocio.service.GestionPagoService;
 import com.restsmart.negocio.service.GestionPedidoService;
 
 @RestController
@@ -30,8 +34,18 @@ public class PedidoController {
 
 	private final GestionPedidoService gestionPedidoService;
 
-	public PedidoController(GestionPedidoService gestionPedidoService) {
+	private final GestionPagoService gestionPagoService;
+
+	private final PasarelaPago pasarelaPago;
+
+	private final PedidoRepository pedidoRepository;
+
+	public PedidoController(GestionPedidoService gestionPedidoService, GestionPagoService gestionPagoService,
+			PasarelaPago pasarelaPago, PedidoRepository pedidoRepository) {
 		this.gestionPedidoService = gestionPedidoService;
+		this.gestionPagoService = gestionPagoService;
+		this.pasarelaPago = pasarelaPago;
+		this.pedidoRepository = pedidoRepository;
 	}
 
 	@PostMapping("/items")
@@ -66,6 +80,14 @@ public class PedidoController {
 	@GetMapping("/resumen")
 	public Carrito verResumenPedido() {
 		return gestionPedidoService.verResumen(null);
+	}
+
+	@PostMapping("/pagar")
+	public Pedido pagar(@RequestBody DatoContacto datos) {
+		Pedido pedido = gestionPedidoService.confirmarPedido(null, null);
+		Pedido conContacto = gestionPagoService.registrarDatosContacto(pedido, datos);
+		gestionPagoService.procesarPago(conContacto, pasarelaPago);
+		return pedidoRepository.findById(conContacto.getId()).orElse(conContacto);
 	}
 
 	@DeleteMapping("/{pedidoId}")

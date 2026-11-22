@@ -110,6 +110,9 @@ public class GestionPedidoService {
 		if (mesaFinal == null) {
 			throw new IllegalArgumentException("Debe indicarse una mesa");
 		}
+		if (actual == null || actual.getItems() == null || actual.getItems().isEmpty()) {
+			throw new IllegalArgumentException("El carrito esta vacio: agrega productos antes de pagar");
+		}
 		Pedido pedido = actual.confirmarPedido(mesaFinal);
 		pedido.setId(generadorSecuencia.siguiente("pedido"));
 		pedido.calcularTotal();

@@ -277,7 +277,7 @@ function parseRoute() {
     if (a === "historial") {
       return { mode, view: "historial", sector: SECTORS.includes(b) ? b : state.sector };
     }
-    return { mode, view: "tareas", sector: SECTORS.includes(a) ? a : state.sector };
+    return { mode, view: "tareas", sector: SECTORS.includes(b) ? b : state.sector };
   }
   return { mode, view: a === "nuevo" ? "nuevo" : "catalogo" };
 }

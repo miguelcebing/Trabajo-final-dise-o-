@@ -134,6 +134,20 @@ export const setTable = (tableNumber) =>
 export const summary = () =>
   request("/pedido/resumen", { fallback: "No se pudo cargar el carrito." });
 
+export const listMesas = () =>
+  request("/mesas", { fallback: "No se pudo cargar el listado de mesas." });
+
+export const payOrder = ({ nombre, medio, valor }) =>
+  request("/pedido/pagar", {
+    method: "POST",
+    body: {
+      nombre,
+      medio: /correo/i.test(medio || "") ? "Correo" : "Telefono",
+      valor,
+    },
+    fallback: "No se pudo procesar el pago.",
+  });
+
 export const cancelOrder = (orderId) =>
   request(`/pedido/${orderId}`, {
     method: "DELETE",
@@ -277,6 +291,8 @@ export const api = {
   removeItem,
   setTable,
   summary,
+  listMesas,
+  payOrder,
   cancelOrder,
   kitchenTasks,
   kitchenTask,

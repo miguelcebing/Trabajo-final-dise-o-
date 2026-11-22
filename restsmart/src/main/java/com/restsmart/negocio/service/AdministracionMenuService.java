@@ -38,7 +38,11 @@ public class AdministracionMenuService {
 		if (!producto.validarCamposObligatorios()) {
 			throw new IllegalArgumentException("Los datos del producto no son validos");
 		}
-		producto.setId(generadorSecuencia.siguiente("producto"));
+		Integer id = generadorSecuencia.siguiente("producto");
+		while (productoRepository.existsById(id)) {
+			id = generadorSecuencia.siguiente("producto");
+		}
+		producto.setId(id);
 		return productoRepository.save(producto);
 	}
 

@@ -8,6 +8,8 @@ import java.util.stream.Collectors;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.annotation.Transient;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -137,6 +139,7 @@ public class Pedido {
 		this.datoContacto = datoContacto;
 	}
 
+	@JsonIgnore
 	public List<TareaPreparacion> getTareas() {
 		return tareas;
 	}

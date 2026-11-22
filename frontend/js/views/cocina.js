@@ -1,6 +1,6 @@
 import { api, ApiError } from "../api.js";
 import { icon } from "../icons.js";
-import { ui } from "../ui.js";
+import { ui, SECTORS } from "../ui.js";
 
 const { escapeHtml: esc, toast, openSheet, emptyState, offlinePanel, sectorLabel, orderLabel, elapsed } =
   ui;
@@ -68,9 +68,19 @@ async function renderBoard(root, ctx) {
       <div class="view__head">
         <div class="view__head-main">
           <h1>${esc(sectorLabel(sector))}</h1>
-          <p class="view__sub">Tareas de preparación que la API asignó a este sector.</p>
+          <p class="view__sub">Sector activo: <strong>${esc(
+            sectorLabel(sector)
+          )}</strong> · tareas que la API asignó a este sector.</p>
         </div>
         <div class="view__tools">
+          <select class="sector-select" data-sector-select aria-label="Sector de cocina activo">
+            ${SECTORS.map(
+              (entry) =>
+                `<option value="${entry}" ${
+                  entry === sector ? "selected" : ""
+                }>${esc(sectorLabel(entry))}</option>`
+            ).join("")}
+          </select>
           <span class="pill" data-count>${icon("clock", 15)}Cargando…</span>
           <button class="icon-btn" type="button" data-action="refresh" aria-label="Actualizar tareas">
             ${icon("refresh", 20)}
@@ -225,6 +235,10 @@ async function renderBoard(root, ctx) {
 
   root.querySelector('[data-action="refresh"]')?.addEventListener("click", () => load());
 
+  root.querySelector("[data-sector-select]")?.addEventListener("change", (event) => {
+    ctx.navigate({ mode: "cocina", view: "tareas", sector: event.currentTarget.value });
+  });
+
   load();
   timer = window.setInterval(() => load({ silent: true }), 20000);
 }
@@ -236,9 +250,19 @@ async function renderHistory(root, ctx) {
       <div class="view__head">
         <div class="view__head-main">
           <h1>Historial · ${esc(sectorLabel(sector))}</h1>
-          <p class="view__sub">Tareas completadas por este sector en el turno actual.</p>
+          <p class="view__sub">Sector activo: <strong>${esc(
+            sectorLabel(sector)
+          )}</strong> · tareas completadas por este sector en el turno actual.</p>
         </div>
         <div class="view__tools">
+          <select class="sector-select" data-sector-select aria-label="Sector de cocina activo">
+            ${SECTORS.map(
+              (entry) =>
+                `<option value="${entry}" ${
+                  entry === sector ? "selected" : ""
+                }>${esc(sectorLabel(entry))}</option>`
+            ).join("")}
+          </select>
           <button class="icon-btn" type="button" data-action="refresh" aria-label="Actualizar historial">
             ${icon("refresh", 20)}
           </button>
@@ -314,6 +338,11 @@ async function renderHistory(root, ctx) {
   };
 
   root.querySelector('[data-action="refresh"]')?.addEventListener("click", () => load());
+
+  root.querySelector("[data-sector-select]")?.addEventListener("change", (event) => {
+    ctx.navigate({ mode: "cocina", view: "historial", sector: event.currentTarget.value });
+  });
+
   load();
 }
 

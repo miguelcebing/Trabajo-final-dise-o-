@@ -884,6 +884,7 @@ function renderTable(root, ctx) {
         <div class="table-display" aria-live="polite">
           <span>Mesa</span><b data-table-value>${buffer || "—"}</b>
         </div>
+        <p class="tiny muted" data-mesas-hint>Cargando mesas disponibles…</p>
         <div class="keypad" role="group" aria-label="Teclado numérico de mesa">
           ${[1, 2, 3, 4, 5, 6, 7, 8, 9]
             .map(
@@ -922,6 +923,30 @@ function renderTable(root, ctx) {
   const valueEl = root.querySelector("[data-table-value]");
   const errorEl = root.querySelector("[data-table-error]");
   const confirmBtn = root.querySelector('[data-action="confirm-table"]');
+  let availableTables = [];
+
+  api
+    .listMesas()
+    .then((mesas) => {
+      if (!ctx.isCurrent()) return;
+      ctx.setOnline(true);
+      availableTables = (mesas || [])
+        .filter((mesa) => mesa?.habilitada !== false && Number.isFinite(mesa?.numero))
+        .map((mesa) => mesa.numero)
+        .sort((a, b) => a - b);
+      const hint = root.querySelector("[data-mesas-hint]");
+      if (hint && availableTables.length) {
+        hint.textContent = `Mesas habilitadas: ${availableTables.length} (${tablesText(
+          availableTables
+        )}).`;
+      }
+    })
+    .catch((err) => {
+      if (!ctx.isCurrent()) return;
+      if (err instanceof ApiError && err.offline) ctx.setOnline(false);
+      const hint = root.querySelector("[data-mesas-hint]");
+      if (hint) hint.textContent = "No se pudo cargar el listado de mesas.";
+    });
 
   const paint = () => {
     if (valueEl) valueEl.textContent = buffer || "—";
@@ -966,7 +991,17 @@ function renderTable(root, ctx) {
         root.innerHTML = `<div class="view is-entering">${offlinePanel()}</div>`;
         return;
       }
-      error = err instanceof ApiError ? err.message : "No se pudo confirmar la mesa.";
+      if (
+        err instanceof ApiError &&
+        err.status >= 400 &&
+        err.status < 500 &&
+        availableTables.length &&
+        !availableTables.includes(number)
+      ) {
+        error = `La mesa ${number} no existe. Mesas habilitadas: ${tablesText(availableTables)}.`;
+      } else {
+        error = err instanceof ApiError ? err.message : "No se pudo confirmar la mesa.";
+      }
       confirmBtn.disabled = false;
       paint();
     }
@@ -1140,6 +1175,13 @@ function contactError(name, medium, value) {
   return "";
 }
 
+function tablesText(numbers) {
+  if (!numbers?.length) return "";
+  const first = numbers[0];
+  const last = numbers[numbers.length - 1];
+  return last - first + 1 === numbers.length ? `${first} a ${last}` : numbers.join(", ");
+}
+
 function formatWhen(iso) {
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) return "";
@@ -1205,7 +1247,7 @@ async function renderPayment(root, ctx) {
       <div class="view__head">
         <div class="view__head-main">
           <h1>Pago</h1>
-          <p class="view__sub">Confirma tus datos de contacto y valida el pedido. El pago se simula en esta pantalla.</p>
+          <p class="view__sub">Confirma tus datos de contacto y valida el pedido. El pago se simula, pero el pedido sí se envía a la API y aparece en cocina.</p>
         </div>
         <div class="view__tools">
           <span class="pill">${icon("table", 15)}Mesa ${
@@ -1244,7 +1286,7 @@ async function renderPayment(root, ctx) {
           </form>
           <div class="notice notice--demo">
             ${icon("info", 19)}
-            <span><strong>Pago simulado.</strong> La confirmación ocurre en esta pantalla: el pedido no se envía al backend ni a cocina, y queda marcado como demostración.</span>
+            <span><strong>Pago simulado (sin pasarela real).</strong> El pedido se confirma contra la API y aparece en el tablero del sector de cocina que le corresponda.</span>
           </div>
         </section>
         <aside class="pay-total glass">
@@ -1310,22 +1352,57 @@ async function renderPayment(root, ctx) {
     }
     if (payLabel) payLabel.textContent = "Procesando…";
 
+    const contact = { nombre: name.trim(), medio: medium, valor: value.trim() };
+    const sectores = [
+      ...new Set((cart.items || []).map((item) => item.producto?.sector).filter(Boolean)),
+    ];
+
     await new Promise((resolve) => window.setTimeout(resolve, PAY_DELAY_MS));
 
+    let pedido = null;
+    try {
+      pedido = await api.payOrder(contact);
+      ctx.setOnline(true);
+    } catch (err) {
+      if (!ctx.isCurrent()) return;
+      if (err instanceof ApiError && err.offline) ctx.setOnline(false);
+      form.querySelectorAll("input, select").forEach((field) => {
+        field.disabled = false;
+      });
+      if (payBtn) {
+        payBtn.disabled = false;
+        payBtn.classList.remove("is-loading");
+      }
+      if (payLabel) payLabel.textContent = `Pagar ${money(cart.total)}`;
+      if (errorEl) {
+        errorEl.textContent = err instanceof ApiError ? err.message : "No se pudo procesar el pago.";
+      }
+      return;
+    }
+
     const order = createDemoOrder({
-      cart: ctx.state.cart,
-      table: ctx.state.table,
-      contact: { nombre: name.trim(), medio: medium, valor: value.trim() },
+      cart,
+      table,
+      contact,
+      numero: pedido?.numeroPedido,
     });
 
     try {
-      await clearCart(ctx);
+      const fresh = await api.summary();
+      ctx.updateCart(fresh);
     } catch {
-      /* clearCart ya notifica el error; el comprobante no depende de ello */
+      ctx.updateCart({ items: [], total: 0, sesionId: "kiosco" });
     }
 
     if (!ctx.isCurrent()) return;
-    toast(`Pedido #${order.numero} confirmado (pago simulado).`, "success");
+    toast(
+      sectores.length
+        ? `Pedido #${order.numero} confirmado y enviado a cocina (${sectores
+            .map((entry) => sectorLabel(entry))
+            .join(", ")}).`
+        : `Pedido #${order.numero} confirmado (pago simulado).`,
+      "success"
+    );
     ctx.navigate({ mode: "cliente", view: "comprobante" });
   });
 
@@ -1416,7 +1493,7 @@ function renderReceipt(root, ctx) {
           </div>
           <div class="notice notice--demo">
             ${icon("info", 19)}
-            <span><strong>Demostración.</strong> Este pedido no fue enviado al backend ni a cocina: no aparecerá en los tableros de preparación.</span>
+            <span><strong>Pago simulado.</strong> El pedido sí se envió a la API: aparece en el tablero del sector de cocina que le corresponda.</span>
           </div>
         </section>
         <aside class="summary-actions glass">
