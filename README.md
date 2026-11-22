@@ -4,7 +4,7 @@
 
 Restaurante con autoservicio digital: el cliente consulta el menú en pantallas táctiles, arma y paga su pedido desde la misma pantalla, y la cocina lo recibe organizada por sectores de preparación.
 
-> **Estado:** análisis, diseño e implementación. El backend está en la carpeta [`restsmart/`](restsmart/). Los requerimientos, historias de usuario y wireframes de este repositorio son la especificación vigente.
+> **Estado:** análisis, diseño e implementación. El backend está en la carpeta [`restsmart/`](restsmart/) y el frontend en [`frontend/`](frontend/). Los requerimientos, historias de usuario y wireframes de este repositorio son la especificación vigente.
 
 ---
 
@@ -80,6 +80,28 @@ cd restsmart
 
 ---
 
+## Frontend (código fuente)
+
+La carpeta [`frontend/`](frontend/) contiene la **interfaz estática** (HTML + CSS +
+JavaScript vanilla, sin build step) con la dirección visual **liquid glass +
+claymorphism** y animaciones. Cubre las 21 historias de usuario: cliente (menú, carrito,
+mesa, resumen, pago, comprobante y seguimiento), cocina por sector y administración.
+
+```powershell
+# terminal 2, desde la raíz del repositorio
+python frontend/serve.py
+```
+
+Luego abrir <http://127.0.0.1:5173>. El proxy sirve `frontend/` y reenvía `/api/*` al
+backend en `127.0.0.1:8080` (no hace falta tocar CORS ni modificar el backend).
+
+El **pago es simulado en el frontend** (la API no expone RF-09/RF-10): el comprobante y
+el seguimiento del pedido simulado viven en el navegador y quedan marcados como
+demostración; los pedidos reales se consultan por número contra `/seguimiento`.
+Detalles, rutas y límites en [`frontend/README.md`](frontend/README.md).
+
+---
+
 ## Diagramas
 
 Los diagramas se elaboraron en Visual Paradigm. En [`diagramas/`](diagramas/) están las
@@ -141,6 +163,7 @@ sector y pantalla de administración (navegador web) contra el servidor de aplic
 ├── .github/
 │   └── ISSUE_TEMPLATE/        # Plantilla de historia de usuario y configuración
 ├── restsmart/                 # Backend: API REST Spring Boot (Java 21 + MongoDB)
+├── frontend/                  # Frontend estático (HTML/CSS/JS) + proxy local
 ├── diagramas/                 # Diagramas exportados (PNG/JPG) y fuentes .vpp
 └── docs/
     ├── requerimientos/        # Requerimientos funcionales (RF)

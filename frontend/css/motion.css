@@ -1,0 +1,306 @@
+@keyframes drift-a {
+  from {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  to {
+    transform: translate3d(-70px, 50px, 0) scale(1.14);
+  }
+}
+
+@keyframes drift-b {
+  from {
+    transform: translate3d(0, 0, 0) scale(1.05);
+  }
+  to {
+    transform: translate3d(60px, -60px, 0) scale(0.92);
+  }
+}
+
+@keyframes drift-c {
+  from {
+    transform: translate3d(0, 0, 0) scale(0.95);
+  }
+  to {
+    transform: translate3d(80px, -40px, 0) scale(1.12);
+  }
+}
+
+@keyframes shimmer {
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scrim-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scrim-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes dialog-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes sheet-in {
+  from {
+    opacity: 0;
+    transform: translateX(34px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes sheet-out {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(34px);
+  }
+}
+
+@keyframes sheet-up {
+  from {
+    opacity: 0;
+    transform: translateY(44px);
+    filter: blur(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes toast-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes toast-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+}
+
+@keyframes view-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.985);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@keyframes orb-pop {
+  0% {
+    transform: scale(1);
+  }
+  28% {
+    transform: scale(1.16, 0.86);
+  }
+  52% {
+    transform: scale(0.9, 1.14);
+  }
+  74% {
+    transform: scale(1.05, 0.96);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes orb-ring {
+  0% {
+    opacity: 0.75;
+    transform: scale(0.4);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2.4);
+  }
+}
+
+@keyframes price-tick {
+  0% {
+    transform: translateY(6px);
+    opacity: 0.2;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes ready-pulse {
+  0%,
+  100% {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.14),
+      0 0 0 0 rgba(143, 214, 160, 0.3);
+  }
+  50% {
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.14),
+      0 0 0 8px rgba(143, 214, 160, 0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.view.is-entering {
+  animation: view-in 0.42s var(--ease-out) both;
+}
+
+.reveal {
+  animation: card-in 0.5s var(--ease-out) both;
+  animation-delay: calc(var(--i, 0) * 55ms);
+}
+
+.is-spinning {
+  animation: spin 0.9s linear infinite;
+}
+
+.cart-orb.is-fed {
+  animation: orb-pop 0.62s var(--ease-spring); /* impeccable-disable-line bounce-easing: orb pop uses the claymorphism spring on purpose */
+}
+
+.orb-ring {
+  position: fixed;
+  z-index: 80;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  border: 2px solid var(--mango);
+  pointer-events: none;
+  animation: orb-ring 0.7s var(--ease-out) forwards;
+}
+
+.fly-orb {
+  position: fixed;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  pointer-events: none;
+  color: var(--espresso);
+  background: linear-gradient(158deg, var(--clay-peach-light), var(--clay-peach) 55%, var(--clay-peach-deep));
+  box-shadow: var(--shadow-clay);
+  overflow: hidden;
+}
+
+.fly-orb svg {
+  width: 55%;
+  height: 55%;
+}
+
+.price.is-updating {
+  animation: price-tick 0.26s var(--ease-out) both;
+}
+
+.toast.is-leaving {
+  animation: toast-out 0.26s var(--ease-soft) forwards;
+}
+
+.scrim.is-closing {
+  animation: scrim-out 0.24s var(--ease-soft) forwards;
+}
+
+.sheet.is-closing {
+  animation: sheet-out 0.24s var(--ease-soft) forwards;
+}
+
+@supports (view-transition-name: none) {
+  ::view-transition-old(root) {
+    animation: scrim-out 0.16s var(--ease-soft) both;
+  }
+
+  ::view-transition-new(root) {
+    animation: view-in 0.34s var(--ease-out) both;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .ambient__blob {
+    animation: none !important;
+  }
+
+  .view.is-entering,
+  .reveal,
+  .toast,
+  .dialog,
+  .sheet {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    filter: none !important;
+  }
+}

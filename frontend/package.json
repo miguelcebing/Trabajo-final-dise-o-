@@ -1,0 +1,6 @@
+{
+  "name": "restsmart-frontend",
+  "private": true,
+  "type": "module",
+  "description": "RestSmart static frontend served by the local proxy in serve.py"
+}
