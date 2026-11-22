@@ -5,7 +5,7 @@
   "installCommand": "echo 'no install'",
   "framework": null,
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "https://TU_BACKEND_RAILWAY.up.railway.app/api/$1" },
+    { "source": "/api/(.*)", "destination": "https://trabajo-final-dise-o.onrender.com/api/$1" },
     { "source": "/(.*)", "destination": "/index.html" }
   ],
   "headers": [
