@@ -1,5 +1,7 @@
 const API_BASE = "/api";
 const DEFAULT_TIMEOUT = 9000;
+const READ_TIMEOUT = 45000;
+const READ_RETRY_DELAY = 1000;
 const CATEGORY_PROBE_LIMIT = 12;
 
 export class ApiError extends Error {
@@ -10,11 +12,24 @@ export class ApiError extends Error {
     this.path = path;
     this.payload = payload;
     this.cause = cause;
-    this.offline = status === 0;
+    this.offline = status === 0 || status === 502 || status === 503 || status === 504;
   }
 }
 
-async function request(path, { method = "GET", body, query, fallback, timeout = DEFAULT_TIMEOUT } = {}) {
+async function request(path, options = {}) {
+  if ((options.method ?? "GET") !== "GET") return requestOnce(path, options);
+
+  const readOptions = { timeout: READ_TIMEOUT, ...options };
+  try {
+    return await requestOnce(path, readOptions);
+  } catch (error) {
+    if (!(error instanceof ApiError) || !error.offline) throw error;
+    await new Promise((resolve) => window.setTimeout(resolve, READ_RETRY_DELAY));
+    return requestOnce(path, readOptions);
+  }
+}
+
+async function requestOnce(path, { method = "GET", body, query, fallback, timeout = DEFAULT_TIMEOUT } = {}) {
   const url = new URL(`${API_BASE}${path}`, window.location.origin);
   if (query) {
     for (const [key, value] of Object.entries(query)) {
@@ -37,8 +52,10 @@ async function request(path, { method = "GET", body, query, fallback, timeout = 
   }
 
   let response;
+  let raw;
   try {
     response = await fetch(url, options);
+    raw = await response.text();
   } catch (error) {
     throw new ApiError(
       "No se pudo contactar la API. Verifica que el backend y el proxy estén en ejecución.",
@@ -48,12 +65,14 @@ async function request(path, { method = "GET", body, query, fallback, timeout = 
     window.clearTimeout(timer);
   }
 
-  const raw = await response.text();
   let payload = null;
   if (raw) {
     try {
       payload = JSON.parse(raw);
     } catch {
+      if (response.ok) {
+        throw new ApiError("La API devolvió una respuesta que no es JSON.", { path });
+      }
       payload = raw;
     }
   }
