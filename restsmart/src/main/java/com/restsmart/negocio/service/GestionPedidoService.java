@@ -1,21 +1,27 @@
 package com.restsmart.negocio.service;
 
 import java.util.List;
+import java.util.UUID;
 
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.SessionScope;
 
 import com.restsmart.datos.secuencia.GeneradorSecuencia;
 import com.restsmart.datos.repository.MesaRepository;
 import com.restsmart.datos.repository.PedidoRepository;
 import com.restsmart.datos.repository.ProductoRepository;
 import com.restsmart.modelo.dominio.Carrito;
+import com.restsmart.modelo.dominio.Complemento;
 import com.restsmart.modelo.dominio.ItemPedido;
 import com.restsmart.modelo.dominio.Mesa;
 import com.restsmart.modelo.dominio.OpcionSeleccionada;
+import com.restsmart.modelo.dominio.OpcionProducto;
 import com.restsmart.modelo.dominio.Pedido;
 import com.restsmart.modelo.dominio.Producto;
+import com.restsmart.modelo.dominio.Variante;
 
 @Service
+@SessionScope
 public class GestionPedidoService {
 
 	private final ProductoRepository productoRepository;
@@ -50,7 +56,20 @@ public class GestionPedidoService {
 		if (!encontrado.estadoDisponible()) {
 			throw new IllegalArgumentException("El producto no esta disponible");
 		}
-		carrito.agregarProducto(encontrado, cantidad, opciones);
+		List<OpcionProducto> seleccion = opciones == null ? List.of() : opciones.stream()
+				.map(OpcionSeleccionada::getOpcion).toList();
+		Variante variante = seleccion.stream().filter(Variante.class::isInstance)
+				.map(Variante.class::cast).findFirst().orElse(null);
+		List<Complemento> complementos = seleccion.stream().filter(Complemento.class::isInstance)
+				.map(Complemento.class::cast).toList();
+		List<OpcionSeleccionada> opcionesDelCatalogo = encontrado.resolverOpciones(variante, complementos).stream()
+				.map(opcion -> {
+					OpcionSeleccionada aplicada = new OpcionSeleccionada();
+					aplicada.setOpcion(opcion);
+					aplicada.setPrecioAplicado(opcion.getPrecioAdicional());
+					return aplicada;
+				}).toList();
+		carrito.agregarProducto(encontrado, cantidad, opcionesDelCatalogo);
 		carrito.getItems().stream()
 				.filter(i -> i.getId() == null)
 				.forEach(i -> i.setId(generadorSecuencia.siguiente("itemPedido")));
@@ -124,7 +143,7 @@ public class GestionPedidoService {
 
 	private Carrito nuevoCarrito() {
 		Carrito nuevo = new Carrito();
-		nuevo.setSesionId("kiosco");
+		nuevo.setSesionId(UUID.randomUUID().toString());
 		return nuevo;
 	}
 }

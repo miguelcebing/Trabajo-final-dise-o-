@@ -84,6 +84,9 @@ public class PedidoController {
 
 	@PostMapping("/pagar")
 	public Pedido pagar(@RequestBody DatoContacto datos) {
+		if (datos == null || !datos.validarCamposObligatorios()) {
+			throw new IllegalArgumentException("Completa el nombre y los datos de contacto antes de pagar");
+		}
 		Pedido pedido = gestionPedidoService.confirmarPedido(null, null);
 		Pedido conContacto = gestionPagoService.registrarDatosContacto(pedido, datos);
 		gestionPagoService.procesarPago(conContacto, pasarelaPago);
@@ -107,6 +110,9 @@ public class PedidoController {
 		}
 		if (request.complementos() != null) {
 			for (Complemento complemento : request.complementos()) {
+				if (complemento == null) {
+					throw new IllegalArgumentException("El complemento no puede estar vacío");
+				}
 				opciones.add(aSeleccionada(complemento));
 			}
 		}
@@ -116,7 +122,6 @@ public class PedidoController {
 	private OpcionSeleccionada aSeleccionada(OpcionProducto opcion) {
 		OpcionSeleccionada seleccionada = new OpcionSeleccionada();
 		seleccionada.setOpcion(opcion);
-		seleccionada.setPrecioAplicado(opcion.getPrecioAdicional());
 		return seleccionada;
 	}
 }

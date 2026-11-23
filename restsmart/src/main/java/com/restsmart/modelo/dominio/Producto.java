@@ -131,12 +131,12 @@ public class Producto {
 
 	public boolean validarSeleccion(Variante variante, List<Complemento> seleccionados) {
 		List<Complemento> elegidos = seleccionados == null ? List.of() : seleccionados;
-		if (variante != null) {
-			boolean varianteOfertada = variantes.stream()
-					.anyMatch(v -> v.getNombre() != null && v.getNombre().equals(variante.getNombre()));
-			if (!varianteOfertada) {
-				return false;
-			}
+		if (variante != null && buscarOpcion(variantes, variante) == null) {
+			return false;
+		}
+		if (elegidos.stream().anyMatch(c -> buscarOpcion(complementos, c) == null)
+				|| elegidos.stream().map(Complemento::getNombre).distinct().count() != elegidos.size()) {
+			return false;
 		}
 		for (Complemento ofertado : complementos) {
 			if (ofertado.esObligatorio()) {
@@ -151,16 +151,35 @@ public class Producto {
 	}
 
 	public double calcularPrecioItem(Variante variante, List<Complemento> seleccionados) {
-		double total = precioBase;
+		return precioBase + resolverOpciones(variante, seleccionados).stream()
+				.mapToDouble(OpcionProducto::getPrecioAdicional)
+				.sum();
+	}
+
+	public List<OpcionProducto> resolverOpciones(Variante variante, List<Complemento> seleccionados) {
+		if (!validarSeleccion(variante, seleccionados)) {
+			throw new IllegalArgumentException("La selección de opciones no es válida");
+		}
+		List<OpcionProducto> opciones = new ArrayList<>();
 		if (variante != null) {
-			total += variante.calcularPrecioAdicional();
+			opciones.add(buscarOpcion(variantes, variante));
 		}
 		if (seleccionados != null) {
 			for (Complemento complemento : seleccionados) {
-				total += complemento.getPrecioAdicional();
+				opciones.add(buscarOpcion(complementos, complemento));
 			}
 		}
-		return total;
+		return opciones;
+	}
+
+	private <T extends OpcionProducto> T buscarOpcion(List<T> catalogo, T seleccion) {
+		if (seleccion == null || seleccion.getNombre() == null) {
+			return null;
+		}
+		return catalogo.stream()
+				.filter(opcion -> seleccion.getNombre().equals(opcion.getNombre()))
+				.findFirst()
+				.orElse(null);
 	}
 
 	public void actualizarPrecioDescripcion(double precioBase, String descripcion) {

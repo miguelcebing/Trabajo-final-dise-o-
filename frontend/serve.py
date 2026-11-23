@@ -108,14 +108,13 @@ class RestSmartHandler(SimpleHTTPRequestHandler):
     # ---------- proxy ----------
 
     def proxy(self):
-        target_path = self.path[len(API_PREFIX) :] or "/"
-        target = f"{BACKEND}{target_path}"
+        target = f"{BACKEND}{self.path}"
 
         length = int(self.headers.get("Content-Length") or 0)
         body = self.rfile.read(length) if length else None
 
         request = urllib.request.Request(target, data=body, method=self.command)
-        for header in ("Content-Type", "Accept", "Accept-Language"):
+        for header in ("Content-Type", "Accept", "Accept-Language", "Cookie"):
             value = self.headers.get(header)
             if value:
                 request.add_header(header, value)
